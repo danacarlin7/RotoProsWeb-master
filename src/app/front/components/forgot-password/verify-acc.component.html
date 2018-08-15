@@ -1,0 +1,39 @@
+<section class="loginDetails frgtPasswdDetails">
+  <div class="common-loader" *ngIf="isLoading">
+    <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+    <h2>  Verifying...</h2>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="loginDetailsWrapper">
+          <div class="loginLftWrapper">
+            <img src="../../../../assets/images/login_lft_img.png" alt="" class="img-responsive"/>
+          </div>
+          <div class="loginRghtWrapper">
+            <div class="formWrapper">
+              <h3><span class="licnWrapper"><img src="../../../../assets/images/login_title_icn.png" alt=""
+                                                 class="img-responsive"/></span><span>Verify email account</span>
+              </h3>
+              <p>Enter your email address and we'll email you a link to verify your Email.</p>
+              <div #signUpError>
+                <div class="alert alert-danger fade in" *ngIf="isError">
+                  {{errorMsg}}
+                </div>
+              </div>
+              <h4 *ngIf="isMailSent">A mail with reset link has been sent to you.Please check your email account.</h4>
+              <form>
+                <div class="form-group">
+                  <label class="srOnly">Email</label>
+                  <input type="text" name="eId" placeholder="Email" #emailId>
+                </div>
+                <input type="button" value="Submit" class="formBtn" (click)="onBtnSubmitClick(emailId.value)">
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,279 @@
+<section class="sectionHedin">
+  <div class="container ">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="lineupHedin">
+          <h1>Articles</h1>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="articleSection mPlaceDSection" *ngIf="activeSingle">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="mPlaceDWrap">
+          <div class="mPlaceWrap">
+            <div class="mPlaceItm article-details">
+              <div class="mPlaceTp">
+                <div class="mPlaceInfoWrap">
+                  <button class="btn" (click)="goBackToTab()">Back</button>
+                  <h3>{{activeSingle.title.rendered}}</h3>
+                  <div class="article_content" [innerHTML]="activeSingle.content.rendered"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="articleSection" *ngIf="!activeSingle">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="dTabs">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <!--<li role="presentation"
+                [class.active]="activeTab == 'trending'"
+                (click)="onTabChanged('trending')"><a role="tab" data-toggle="tab">Trending Topics</a></li>-->
+            <li role="presentation" [class.active]="activeTab == category.id" (click)="onTabChanged(category)" *ngFor="let category of categories;"><a role="tab" data-toggle="tab">{{ category.name }}</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active">
+              <div class="dTabs dTabsInner" *ngIf="(activeTab=='trending')">
+                <!-- Nav tabs -->
+                <ul *ngIf="activeTab =='trending'" class="nav nav-tabs" role="tablist">
+                  <li role="presentation" (click)="onTabChanged(subtab)" [class.active]="subActiveTab == subtab" *ngFor="let subtab of subTrendingTabs;">
+                    <a role="tab" data-toggle="tab">{{ subTrendingTabsLabels[subtab] }}</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active">
+                    <div class="mPlaceWrap">
+                      <div class="row" *ngIf="subActiveTab == 'week'">
+                        <div class="col-sm-12" *ngIf="week.length>0">
+                          <div *ngFor="let post of week;">
+                            <div [innerHtml]="post.content.rendered"></div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 text-center" *ngIf="week.length == 0">
+                          <h3>There is no Article of the Week.</h3>
+                        </div>
+                      </div>
+                      <div class="ap_1" *ngIf="(subActiveTab == 'hot') && hot.length>0">
+                        <div class="row">
+                          <div class="col-sm-6"><img src="assets/images/article_1.jpg"></div>
+                          <div class="col-sm-6">
+                            <div class="ap_1_h">
+                              <div class="ap_1_h_c" *ngFor="let post of hot;">
+                                <div class="f_category_content fullwidth">
+                                  <h5>{{post.title.rendered}}</h5>
+                                  <p>{{post.extract}}</p>
+                                  <button class="btn btn_read btn-primary" (click)="switchToSingle(post)">Read More
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" *ngIf="(subActiveTab == 'hot') && hot.length==0">
+                        <div class="col-sm-12 text-center">
+                          <h3>There is no Hot Topics today.</h3>
+                        </div>
+                      </div>
+                      <div class="tab-content" *ngIf="subActiveTab == 'featured'">
+                        <div role="tabpanel" class="tab-pane active">
+                          <div class="mPlaceWrap">
+                            <div class="mPlaceItm" *ngFor="let post of featured" (click)="switchToSingle(post)">
+                              <div class="mPlaceTp">
+                                <div class="mPlaceImgWrap">
+                                  <img *ngIf="findMedia(post.featured_media)!=false" src="{{findMedia(post.featured_media)}}" alt="" class="img-responsive">
+                                </div>
+                                <div class="mPlaceInfoWrap">
+                                  {{post.id}}
+                                  <a class="mPlaceHedin">{{post.title.rendered}}</a>
+                                  <p class="mPlacePara">{{post.extract}}</p>
+                                  <!--<p class="mPlaceWrtr">Posted By: <a href="javascript:void(0)">Derek Carty</a></p>-->
+                                  <p class="mPlaceWrtr">Posted Date: <a href="javascript:void(0)">{{post.date | date:'dd
+                                    MMM yyyy h:m a'}}</a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-content" *ngIf="subActiveTab == 'top'">
+                        <div role="tabpanel" class="tab-pane active">
+                          <div class="mPlaceWrap">
+                            <div class="mPlaceItm" *ngFor="let post of top" (click)="switchToSingle(post)">
+                              <div class="mPlaceTp">
+                                <div class="mPlaceImgWrap">
+                                  <img *ngIf="findMedia(post.featured_media)!=false" src="{{findMedia(post.featured_media)}}" alt="" class="img-responsive">
+                                </div>
+                                <div class="mPlaceInfoWrap">
+                                  <a class="mPlaceHedin">{{post.title.rendered}}</a>
+                                  <p class="mPlacePara">{{post.extract}}</p>
+                                  <!--<p class="mPlaceWrtr">Posted By: <a href="javascript:void(0)">Derek Carty</a></p>-->
+                                  <p class="mPlaceWrtr">Posted Date: <a href="javascript:void(0)">{{post.date | date:'dd
+                                    MMM yyyy h:m a'}}</a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-content" *ngIf="subActiveTab == 'recent'">
+                        <div role="tabpanel" class="tab-pane active">
+                          <div class="mPlaceWrap">
+                            <div class="mPlaceItm" *ngFor="let post of recent" (click)="switchToSingle(post)">
+                              <div class="mPlaceTp">
+                                <div class="mPlaceImgWrap">
+                                  <img *ngIf="findMedia(post.featured_media)!=false" src="{{findMedia(post.featured_media)}}" alt="" class="img-responsive">
+                                </div>
+                                <div class="mPlaceInfoWrap">
+                                  <a class="mPlaceHedin">{{post.title.rendered}}</a>
+                                  <p class="mPlacePara">{{post.extract}}</p>
+                                  <!--<p class="mPlaceWrtr">Posted By: <a href="javascript:void(0)">Derek Carty</a></p>-->
+                                  <p class="mPlaceWrtr">Posted Date: <a href="javascript:void(0)">{{post.date | date:'dd
+                                    MMM yyyy h:m a'}}</a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-content" *ngIf="subActiveTab == 'newest'">
+                        <div role="tabpanel" class="tab-pane active">
+                          <div class="mPlaceWrap">
+                            <div class="mPlaceItm" *ngFor="let post of newest" (click)="switchToSingle(post)">
+                              <div class="mPlaceTp">
+                                <div class="mPlaceImgWrap">
+                                  <img *ngIf="findMedia(post.featured_media)!=false" src="{{findMedia(post.featured_media)}}" alt="" class="img-responsive">
+                                </div>
+                                <div class="mPlaceInfoWrap">
+                                  <a class="mPlaceHedin">{{post.title.rendered}}</a>
+                                  <p class="mPlacePara">{{post.extract}}</p>
+                                  <!--<p class="mPlaceWrtr">Posted By: <a href="javascript:void(0)">Derek Carty</a></p>-->
+                                  <p class="mPlaceWrtr">Posted Date: <a href="javascript:void(0)">{{post.date | date:'dd
+                                    MMM yyyy h:m a'}}</a></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <div role="tabpanel" *ngFor="let category of categories;" class="tab-pane active" id="NFL">
+              <div class="dTabs dTabsInner" *ngIf="(activeTab==category.id) && !hasPosts(category.id)">
+                <h3>There is no {{ category.name }} Articles.</h3>
+              </div>
+              <div class="dTabs dTabsInner" *ngIf="(activeTab==category.id) && hasPosts(category.id)" id="cat-{{category.id}}">
+                <!-- Nav tabs -->
+                <ul *ngIf="activeTab =='trending'" class="nav nav-tabs" role="tablist">
+                  <li role="presentation" (click)="onTabChanged(subtab)" [class.active]="subActiveTab == subtab" *ngFor="let subtab of subTrendingTabs;">
+                    <a role="tab" data-toggle="tab">{{ subTrendingTabsLabels[subtab] }}</a></li>
+                </ul>
+                <!--
+                <ul *ngIf="activeTab !='trending'" class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a aria-controls="All" role="tab" data-toggle="tab">All</a></li>
+                  <li role="presentation"><a aria-controls="Urgent" role="tab" data-toggle="tab">Urgent</a></li>
+                  <li role="presentation"><a aria-controls="Important" role="tab" data-toggle="tab">Important</a>
+                  </li>
+                  <li role="presentation"><a aria-controls="Noteworthy" role="tab" data-toggle="tab">Noteworthy</a>
+                  </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="All">
+                    <div class="mPlaceWrap" infinite-scroll debounce [infiniteScrollDistance]="2" [infiniteScrollThrottle]="300" (scrolled)="onScroll(category)">
+                      <div class="mPlaceItm" *ngFor="let post of posts[category.id]" (click)="switchToSingle(post)">
+                        <div class="mPlaceTp">
+                          <div class="mPlaceImgWrap">
+                            <img *ngIf="findMedia(post.featured_media)!=false" src="{{findMedia(post.featured_media)}}" alt="" class="img-responsive">
+                          </div>
+                          <div class="mPlaceInfoWrap">
+                            <a class="mPlaceHedin">{{post.title.rendered}}</a>
+                            <p class="mPlacePara">{{post.extract}}</p>
+                            <!--<p class="mPlaceWrtr">Posted By: <a href="javascript:void(0)">Derek Carty</a></p>-->
+                            <p class="mPlaceWrtr">Posted Date: <a href="javascript:void(0)">{{post.date | date:'dd MMM
+                              yyyy h:m a'}}</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="loading text-center" *ngIf="isLoading" style="display: flex;justify-content: center">
+                        <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+                      </div>
+                      <div class="text-center load-more-block" *ngIf="false && category.loaded<category.count">
+                        <button class="btn btn-info btn-load-more" (click)="loadMorePosts(category)">Load More ...
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div data-toggle="modal" data-target="#myModalCond" id="openModel">
+</div>
+
+<div class="modal fade" id="myModalCond" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 0">
+        <section class="articleSection mPlaceDSection" style="padding: 0;margin: 0;background: none">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="mPlaceDWrap">
+                  <div class="mPlaceWrap">
+                    <div *ngIf="isLoginError">
+                      <div class="alert alert-warning fade in center">
+                        Please <a [routerLink]="'/login'" data-dismiss="modal"> login </a>to see content of this article.
+                      </div>
+                    </div>
+
+                    <div *ngIf="isSubscribeError">
+                      <div class="alert alert-warning fade in center">
+                        Please <a [routerLink]="'/subscribe'" data-dismiss="modal"> subcribe </a>to see content of this article.
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

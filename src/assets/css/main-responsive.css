@@ -1,0 +1,311 @@
+/* 
+    Created on : 26-Jun-2017, 02:35:24
+    Author     : Nihad
+*/
+
+@media (max-width:767px)
+{
+    body {
+
+    }
+
+    /*
+    Forms
+    */
+
+    .form-inline .form-control {
+        margin-bottom: 10px;
+    }
+
+    .text-right.sm-text-left {
+        text-align: left
+    }
+
+    .table-container.table-responsive {
+        width: auto ;
+    }
+
+    /*Navigation Bar*/ 
+    .navbar-first ul {
+        text-align: center;
+        margin: 0 ;
+    }
+    .navbar-first .navbar-nav>li {
+        display: inline-block ;    
+    }
+
+    .navbar-first .navbar-nav>li>a {
+        font-size: 9px;
+        padding: 1px 7px;
+        line-height: 15px;
+    }
+
+    .navbar-opp .navbar-brand {
+        height: auto ;
+        padding: 10px 10px;
+    }
+
+    .navbar-brand>img {
+        max-width: 110px;
+    }
+
+    .navbar-toggle {
+        margin-top: 2px;
+        margin-right: 11px ;
+        padding: 0;
+    }
+
+    .navbar-toggle img {
+        max-width: 25px ;
+    }
+
+    .container-nav {
+        position: relative ;
+        padding: 9px 0px ;        
+    }
+    .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+        margin-left: 0px;
+        margin-right: 0px ;
+    }
+
+    .navbar-nav.nav-buttons {
+        position: absolute ;
+        top: 10px ;
+        right: 42px ;
+        padding: 0 ;
+        margin: 0 ;
+    }
+
+    .navbar-nav>li>a.btn-search {
+        padding: 4px 8px;
+        margin: 0;
+    }
+    .navbar-nav>li.dropdown {
+        margin-right: 4px;
+    }
+    .navbar-nav>li.dropdown>a {
+        padding: 6.5px 6px;
+        font-size: 11px ;
+        line-height: 13px;
+    }
+
+
+    /*
+    Content
+    */
+    .content-title {
+        text-align: center ;
+        margin-bottom: 20px ;
+    }
+
+    .title-container .col-border-b {
+        border-bottom: 1px solid #eeeff0;
+        margin-bottom: 7px; 
+    }
+    .title-container .btn {
+        width: 100% ;
+        margin-bottom: 7px;
+    }
+
+    .no-padding-right {
+        padding-right: 15px ;
+    }
+
+    .table-filtes-container input, .table-filtes-container select {
+        margin-bottom: 7px; 
+    }
+
+
+    /*
+    Footer
+    */
+    footer>.container {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    footer h3 {
+        font-size: 16px;
+        margin-bottom: 10px ;
+    }
+
+    footer p {
+        font-size: 13px;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+
+    footer a.gray-yellow {
+        font-size: 13px;
+        line-height: 24px ;
+    }
+
+    .footer-title {
+        font-size: 16px ;
+        margin-bottom: 10px ;
+    }
+    .footer-title:after {
+        content: none ;
+    }
+
+    footer a.img-btn>img {
+        max-width: 28px;
+    }
+    footer>.footer-bottom>.container {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .footer-bottom p {
+        text-align: center !important ;
+        font-size: 12px;
+        line-height: 21px;
+    }
+}
+
+@media (min-width: 768px)
+{
+
+}
+
+@media (max-width:1200px)
+{  
+    
+    .input-group .form-control,
+    .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+        z-index: initial ;
+    }
+    .md-text-center {
+        text-align: center ; 
+    }
+
+    .navbar.navbar-opp {
+        z-index: 1;    
+    }
+
+    #navbar.navbar-collapse {
+        position: fixed;
+        z-index: 9999;
+        background: rgba(0,0,0,0.92) ;
+        width: 100%;
+        height: 100%!important;
+        top: 0;
+        right: 100%;
+        transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        overflow: auto;
+    }
+
+    #navbar.navbar-collapse.in {
+        right: 0 ;
+    }
+
+    .closeBtn {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        max-width: 18px;
+        cursor: pointer;
+    }
+
+
+    #navbar .navbar-nav.main-nav>li>a {
+        font-size: 12px ;
+        text-align: center ;
+        display: block;
+        padding: 11px 25px;
+        border-bottom: 1px solid #333;
+    }
+    #navbar .navbar-nav.main-nav>li:last-child>a {
+        border-bottom: 0px ;
+    }
+
+    .content-title {
+        margin-bottom: 20px;
+    }
+
+    .navbar-nav>li>a.btn-search>img {
+        max-width: 18px ;
+        opacity: 1;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        display: initial ;
+    }
+    .navbar-nav>li.dropdown {
+        background-color: #000;
+    }
+    .navbar-nav .dropdown-menu .dropdown-header, .navbar-nav .dropdown-menu>li>a {
+        color: #fff;
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 767px) and (max-width:1200px) {
+    .navbar-toggle { 
+        display: block !important ;
+    }
+
+    .navbar-header {
+        float: none;
+    }
+    .container-nav #navbar .navbar-nav>li,
+    .container-nav #navbar .navbar-right.main-nav {
+        float: none!important;
+    }
+    .container-fluid.container-nav {
+        position: relative ;
+    }
+
+    .navbar-opp .navbar-brand {
+        padding: 20px 15px;
+        height: 65px;
+    }
+
+    .navbar-nav.nav-buttons {
+        position: absolute ;
+        top: 0px;
+        right: 77px;
+    }
+
+    .navbar-first {
+        padding-right: 15px;
+    }
+    .navbar-first .navbar-nav>li>a {
+        padding: 10px 15px;
+        font-size: 12px;
+        line-height: 21px;
+    }
+
+    .navbar-nav>li>a.btn-search {
+        padding: 6.5px 12px;
+    }
+
+    .navbar-nav>li.dropdown>a {
+        padding: 5px 13px;
+        font-size: 14px ;
+        line-height: 21px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .filter-form #draftkings-select {
+        width: 170px;
+        max-width: 100% ;
+    }.filter-form #main-select, .filter-form #mlb-select {
+        width: 130px;
+        max-width: 100% ;
+    }
+    .table-filtes-container.section-gray input.file-upl {
+        background-color: #fff;
+        width: 310px;
+    }
+    .table-filtes-container.section-gray select#download-select {
+        width: 200px;
+        max-width: 100%;
+    }
+    
+}

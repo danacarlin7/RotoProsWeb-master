@@ -1,0 +1,22 @@
+.c3-ygrid{
+  stroke: #f3f3f3 !important;
+  stroke-dasharray: 0,0;
+}
+.c3-ygrid-line.gridMax line {
+  stroke: #4ac53a;
+}
+.c3-ygrid-line.gridMax text {
+  fill: #4ac53a;
+}
+
+.c3-ygrid-line.gridMin line {
+  stroke: #f00;
+}
+.c3-ygrid-line.gridMin text {
+  fill: #f00;
+}
+
+/*.c3-circle {
+  stroke-width: 1px;
+  stroke: #ddd;
+}*/

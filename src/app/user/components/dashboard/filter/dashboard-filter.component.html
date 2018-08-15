@@ -1,0 +1,86 @@
+<div class="topFiltrWrapper">
+  <div class="dashboardName">
+    <h1>Dashboard</h1>
+  </div>
+  <div class="topFilter">
+    <div class="form-group slctWrapper">
+      <label class="srOnly">Filter By Year</label>
+      <div class="dropdownSelect">
+        <a href="javascript:void(0)" class="dropdownSelectClick form-control">Filter By Year</a>
+        <ul class="dropdownSelectMenu">
+          <li (click)="filterTimePeriodChanged('week')"><a>Filter By Week</a></li>
+          <li (click)="filterTimePeriodChanged('month')"><a>Filter By Month</a></li>
+          <li (click)="filterTimePeriodChanged('year')"><a>Filter By Year</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="form-control" (click)="onBtnPreviousClicked()">Prev</button>
+      <button class="form-control" (click)="onBtnNextClicked()">Next</button>
+    </div>
+    <div class="form-group dteWrapper">
+      <input type="text" class="form-control datepicker" placeholder="Select date">
+    </div>
+    <div class="form-group">
+      <button class="form-control" (click)="onBtnTodayClicked()">Today</button>
+    </div>
+    <!--<div class="form-group slctWrapper slctWrapperCat">
+      <label class="srOnly">Category</label>
+      <div class="dropdownSelect">
+        <a href="javascript:void(0)" class="dropdownSelectClick form-control">{{category ? category.label : 'Category'
+          }}</a>
+        <ul class="dropdownSelectMenu">
+          <li *ngFor="let currCategory of categoryTypes" (click)="category = currCategory;dispatchFilterChangeEvent()">
+            <a>{{currCategory.label}}</a>
+          </li>
+          <li *ngIf="category" class="divider"></li>
+          <li *ngIf="category" (click)="category = null;dispatchFilterChangeEvent()"><a>clear <i class="fa fa-times"
+                                                                                                 aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>-->
+    <div class="form-group slctWrapper">
+      <label class="srOnly">Site</label>
+      <div class="dropdownSelect">
+        <a href="javascript:void(0)" class="dropdownSelectClick form-control">{{siteType ? siteType : 'Site'}} </a>
+        <ul class="dropdownSelectMenu">
+          <li (click)="siteType = 'DraftKings';dispatchFilterChangeEvent()"><a>DraftKings</a></li>
+          <li *ngIf="siteType" class="divider"></li>
+          <li *ngIf="siteType" (click)="siteType = null;dispatchFilterChangeEvent()">
+            <a>clear <i class="fa fa-times" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+      <!--<select class="form-control">
+        <option>Site</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>-->
+    </div>
+    <div class="form-group slctWrapper">
+      <label class="srOnly">Sport</label>
+      <div class="dropdownSelect">
+        <a href="javascript:void(0)" class="dropdownSelectClick form-control">{{sportType ? sportType : 'Sport' }} </a>
+        <ul class="dropdownSelectMenu">
+          <li (click)="sportType = 'Golf';dispatchFilterChangeEvent()"><a>Golf</a></li>
+          <li (click)="sportType = 'NBA';dispatchFilterChangeEvent()"><a>NBA</a></li>
+          <li (click)="sportType = 'NFL';dispatchFilterChangeEvent()"><a>NFL</a></li>
+          <li (click)="sportType = 'NHL';dispatchFilterChangeEvent()"><a>NHL</a></li>
+          <li (click)="sportType = 'Soccer';dispatchFilterChangeEvent()"><a>Soccer</a></li>
+          <li *ngIf="sportType" class="divider"></li>
+          <li *ngIf="sportType" (click)="sportType = null;dispatchFilterChangeEvent()"><a>clear <i class="fa fa-times"
+                                                                                                   aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+      <!--<select class="form-control">
+        <option>Sport</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>-->
+    </div>
+  </div>
+</div>

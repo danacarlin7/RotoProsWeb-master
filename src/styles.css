@@ -1,0 +1,335 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.common-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100000;
+}
+
+.dashboardContainer .topFiltrWrapper .topFilter .form-group {
+  width: auto;
+}
+
+.dropzone.dz-wrapper .dz-message {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tblScrlCntntWrap {
+  max-height: 523px;
+  height: 523px;
+  overflow-y: auto;
+}
+
+.dashboardContainer .topFiltrWrapper .topFilter .form-group.slctWrapper {
+  width: 15%;
+}
+
+.my-pagination .pagination .page-item > a {
+  color: #8f8f8f;
+}
+
+.my-pagination .pagination.pull-right {
+  display: none;
+}
+
+.my-pagination .pagination .page-item.active > a {
+  color: #ffffff;
+  background-color: #f8c534;
+  border-color: #f8c534;
+}
+
+.tFormat table tfoot tr:hover {
+  background: #f7f5f5;
+  box-shadow: 0 0 0 0 rgba(255, 102, 102, 0);
+}
+
+.loginDetails .formWrapper form input[type="button"]:disabled, .loginDetails .formWrapper form input[type="submit"]:disabled {
+  background: #ddd;
+  border: none;
+  color: #333;
+}
+
+.my-alert {
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.ngx-pagination .current {
+  color: #fff !important;
+  padding: 6px 12px !important;
+  background: #f8c534 !important;
+}
+
+.ngx-pagination .disabled {
+  color: #cacaca !important;
+  cursor: default !important;
+  padding: 6px 12px !important;
+}
+
+header .topHeader .topNavbar > ul > li.active > a {
+  color: #f8c534 !important;
+}
+
+#my-progress-bar .mat-progress-bar-buffer {
+  background-color: rgb(86, 86, 86) !important;
+}
+
+#my-progress-bar .mat-progress-bar-fill::after {
+  background-color: #f8c534 !important;
+}
+
+mfPaginator {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.pagination {
+  width: auto;
+  order: 2;
+}
+
+ul.pagination.pull-right {
+  width: auto;
+  order: 1;
+}
+
+.page-item .page-link {
+  color: #666;
+  background-color: #ffffff;
+}
+
+.page-item.active .page-link {
+  color: #ffffff;
+  background-color: #f8c534;
+}
+
+mfDefaultSorter a {
+  color: #000;
+}
+
+.article-details .row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.player-position-opt {
+  width: 100%;
+}
+
+.player-position-opt .ui-multiselect {
+  width: 100%;
+}
+
+.player-position-opt .ui-multiselect-label-container {
+  color: #000;
+}
+
+.used-player-position-opt .ui-multiselect-label-container {
+  color: #fff;
+}
+
+.used-player-position-opt .ui-state-default {
+  border: 1px solid #333333;
+  background: #333333;
+  color: #fff;
+}
+
+.player-position-opt .ui-multiselect-label-container label {
+  font-weight: inherit;
+}
+
+.player-position-opt .ui-multiselect-header {
+  background-color: #fff !important;
+}
+
+.used-player-position-opt .ui-multiselect-header {
+  background-color: #f7f5f5 !important;
+}
+
+.used-player-position-opt .ui-widget-content {
+  background-color: #f7f5f5 !important;
+}
+
+.player-position-opt .ui-multiselect-trigger {
+
+}
+
+.player-position-opt .ui-multiselect-filter-container {
+
+}
+
+.player-position-opt .ui-multiselect-panel {
+
+}
+
+.player-position-opt .ui-multiselect-item {
+  background-color: #fff !important;
+  border: none !important;
+  border-bottom: 1px solid #dcdcdc !important;
+  color: #000 !important;
+}
+
+.used-player-position-opt .ui-multiselect-item {
+  background-color: #f7f5f5 !important;
+}
+
+.player-position-opt .ui-multiselect-item.ui-state-highlight {
+  background-color: #fff !important;
+  border: none !important;
+  border-bottom: 1px solid #dcdcdc !important;
+  color: #000 !important;
+}
+
+.used-player-position-opt .ui-multiselect-item.ui-state-highlight {
+  background-color: #f7f5f5 !important;
+}
+
+.filter-range-container {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+}
+
+@media (max-width: 767px) {
+  header .topHeader .topNavbar {
+    overflow: visible;
+  }
+}
+
+.home-profile .dropdown .dropdown-menu li {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.home-profile .dropdown .dropdown-menu li:last-child {
+  border-bottom: 0px;
+}
+
+.home-profile .dropdown .dropdown-menu li a {
+  line-height: 22px;
+  font-family: 'Open Sans';
+}
+
+.home-profile .dropdown .dropdown-menu li a:hover {
+  color: #f8c534;
+}
+
+.home-profile img {
+  border-radius: 50%;
+  max-width: 40px !important;
+}
+
+.home-profile .profileName {
+  max-width: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.home-profile #profileDrpdwn {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border-radius: 0px;
+  border: 0px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 25.33px;
+  padding: 0px;
+}
+
+.home-profile #profileDrpdwn:hover, .home-profile #profileDrpdwn:focus {
+  color: #FFF;
+}
+
+.home-profile .dropdown .dropdown-menu {
+  left: initial;
+  right: 0px;
+}
+
+.home-profile .dropdown .dropdown-menu:after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #FFF transparent;
+  z-index: 9998;
+}
+
+@media (max-width: 768px) {
+  .home-profile img {
+    border-radius: 50%;
+    max-width: 30px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  header .bottomHeader .rightNav {
+    width: auto !important;
+  }
+}
+
+.generate-lineup_btn_disabled {
+  background: #f8c534 !important;
+  background-color: #f8c534 !important;
+  color: #000 !important;
+  border: 1px solid #f8c534 !important;
+}
+
+.generate-lineup_btn_disabled:hover {
+  background: #f8c534 !important;
+  background-color: #f8c534 !important;
+  color: #000 !important;
+  border: 1px solid #f8c534 !important;
+}
+
+.table-filter-listBox .ui-widget-header {
+  background-color: #FFFFFF;
+}
+
+.table-filter-listBox .ui-state-highlight {
+  background-color: #FFFFFF !important;
+  border: 1px solid #FFFFFF !important;
+  color: #000000;
+}
+
+.table-filter-listBox .ui-listbox-list {
+  max-height: 200px;
+}
+
+.table-filter-listBox .ui-listbox-item {
+  text-align: left !important;
+}
+
+.table-filter-listBox .ui-widget-header {
+  background-color: #ffffff !important;
+}
+
+rp-sign-up .loginDetails .loginDetailsWrapper {
+  display: block;
+}
+
+.loginDetails .loginDetailsWrapper .signupRghtWrapper {
+  width: 100%;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+  line-height: 1;
+  height: calc(100vh - 85px);
+  object-fit: cover;
+  object-position: center;
+}

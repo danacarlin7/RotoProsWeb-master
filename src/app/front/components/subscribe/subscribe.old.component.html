@@ -1,0 +1,135 @@
+<!-- Login Page Starts -->
+<section class="loginDetails">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-lg-7">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RpRcXAlSXio?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-5">
+        <div class="loginDetailsWrapper" style="width: 100%">
+          <!--<div class="loginLftWrapper">
+            &lt;!&ndash;<img src="../../../../assets/images/login_lft_img.png" alt="" class="img-responsive"/>&ndash;&gt;
+          </div>-->
+          <div class="loginRghtWrapper signupRghtWrapper" style="width: 100%">
+            <div class="mainTab">
+              <div class="tab">
+                <ul>
+                  <li style="width: 100%">
+                    <a href="#VIPPackages " class="tablinks active">All Access Packages</a>
+                  </li>
+                </ul>
+              </div>
+              <div id="VIPPackages" class="tabcontent" style="display:block;min-height: 400px">
+                <div class="rp-plan-container">
+                  <div *ngIf="showPartialSignUpMsg">
+                    Please Complete your sign up process by subscribing to any of Rotopors plans.
+                    <br><br>
+                  </div>
+                  <div class="common-loader" *ngIf="isLoading">
+                    <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+                  </div>
+                  <div style="display: flex;justify-content: center;align-items: center" *ngIf="!plans || !plans.length">
+                    <span>No Package Found</span>
+                  </div>
+                  <div class="rp-plan" *ngFor="let plan of plans">
+                    <div class="plan-name">{{plan.name}}</div>
+                    <div class="plan-price">
+                      <span *ngIf="params.id">
+                        <span class="discount-text" *ngIf="params.discount_type === 'flat'">{{(plan.amount / 100) - params.discount_rate | currency:'USD':true}}</span>
+                      <span class="discount-text" *ngIf="params.discount_type === 'percentage'">{{(plan.amount / 100) * (1 - (params.discount_rate / 100)) | currency:'USD':true}}</span>
+                      </span>
+                      <span *ngIf="!params.id">
+                        <span>{{(plan.amount / 100) | currency:'USD':true}}</span>
+                      </span>
+                    </div>
+                    <div class="plan-time">{{'/'+plan.interval_count+' '+plan.interval}}</div>
+                    <div class="plan-trial-period">{{'('+plan.trial_period_days+'-days free trial)'}}</div>
+                    <!-- <button class="btn-subscribe btn-lg btn-primary" (click)="onBtnSubscribeClick(plan)">Subscribe
+                    </button> -->
+                    <button class="btn-subscribe btn-lg btn-primary" (click)="couponClicked(plan)">Subscribe
+                    </button>
+                    <!-- <button class="btn-subscribe btn-lg btn-primary" (click)="open(content, plan)">Subscribe
+                    </button> -->
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Login Page Ends -->
+
+<template #couponTemplateRef let-couponDialog="dialogRef">
+  <div class="downloadModal">
+    <div class="modal-header">
+      <button type="button" class="close" (click)="couponDialog.close(true)"><span aria-hidden="true">&times;</span>
+      </button>
+      <h1 class="modal-title" style="font-size: 26px" id="myModalLabel">Enter Your Coupon</h1>
+    </div>
+    <div class="modal-body" style="margin: -10px 0px 40px;
+    padding: 10px;">
+      <div class="alert alert-danger fade in" *ngIf="errorMsg" style="    padding: 10px;
+    text-align: center;
+    margin: 15px 20px;">
+        {{errorMsg }}
+      </div>
+      <div class="form-group form-group col-xs-4 col-xs-offset-4">
+        <label class="srOnly">Coupon Code</label>
+        <input type="text"
+               class="col-xs-12"
+               name="cId"
+               placeholder="Code"
+               #couponCode style="height: 36px;">
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="onBtnSubscribeClick(couponDialog, couponCode.value);"><span
+       area-hidden="true"></span> Apply
+      </button>
+      <button type="button" class="btn btn-default" (click)="onBtnSubscribeClick(couponDialog, false);">Skip</button>
+    </div>
+  </div>
+</template>
+
+
+<!-- <ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Enter Coupon Code</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+				      <span aria-hidden="true">&times;</span>
+				    </button>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal" id="signup" novalidate (ngSubmit)="onBtnSubscribeClick()">
+
+
+      <div class="alert alert-warning fade in" *ngIf="coupon.errorMsg">
+        {{ coupon.errorMsg }}
+      </div>
+
+      <div class="form-group">
+        <label class="srOnly">Coupon Code</label>
+        <input placeholder="Code"
+               class="form-control" type="text" name="code"  [(ngModel)]="coupon.code" style="height: 36px;">
+      </div>
+
+      <div class="form-group m-b-0 m-l-30">
+        <div class="offset-sm-1 col-sm-11">
+          <button type="submit" class="btn btn-info waves-effect waves-light m-t-10 m-r-20">Apply</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template> -->

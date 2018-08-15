@@ -1,0 +1,113 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content">
+                        <h4 class="title">Member Admin</h4>
+                        <div class="toolbar">
+                            <button class="btn btn-primary btn-fill" (click)="downloadMembers()">Download CSV</button>
+                            <!--        Here you can write extra buttons/actions for the toolbar              -->
+                        </div>
+                        <div class="fresh-table">
+                            <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                                <thead>
+                                    <tr>
+                                      <th>{{ headerRow[0] }}</th>
+                                      <th>{{ headerRow[1] }}</th>
+                                      <th>{{ headerRow[2] }}</th>
+                                      <th>{{ headerRow[3] }}</th>
+                                      <th>{{ headerRow[4] }}</th>
+                                      <th class="disabled-sorting">{{ headerRow[5] }}</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                      <th *ngFor="let i of [0, 1, 2, 3, 4]">
+                                        <input id="column{{i}}_search" type="text" placeholder="Search">
+                                      </th>
+                                      <th></th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr *ngFor="let member of allMembers" [id]="member.id">
+                                        <td><a [routerLink]="member.id">{{member.name}}</a></td>
+                                        <td>{{member.email}}</td>
+                                        <td>{{member.isSubscribe}}</td>
+                                        <td>{{member.createdAt}}</td>
+                                        <td>{{member.lastSubscription}}</td>
+                                        <td>
+                                            <button class="btn btn-simple btn-info btn-icon like" (click)="openModal(member, subscribeTemplateRef)"><i class="ti-heart"></i></button>
+                                            <button class="btn btn-simple btn-warning btn-icon edit" (click)="openModal(member, unsubscribeTemplateRef)"><i class="ti-pencil-alt"></i></button>
+                                            <button class="btn btn-simple btn-danger btn-icon remove" (click)="openModal(member, deleteTemplateRef)"><i class="ti-close"></i></button>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- end content-->
+                </div>
+                <!--  end card  -->
+            </div>
+            <!-- end col-md-12 -->
+        </div>
+        <!-- end row -->
+    </div>
+</div>
+
+<template #subscribeTemplateRef>
+  <div id="subscribeModal">
+    <div class="modal-body">
+      <h1 class="modal-title text-center">Subscribe Member</h1>
+
+      <div *ngIf="modalData.isSubscribe">
+        <h2>{{ modalData.name }} is already subscribed to:</h2>
+        <div *ngFor="let plan of modalData.subscriptions">
+          <p>{{ plan.plan_id }}</p>
+        </div>
+      </div>
+
+      <div *ngIf="!modalData.isSubscribe">
+        plans here
+        <form #subscribeForm="ngForm" (ngSubmit)="subscribeMember(subscribeForm)">
+          <div *ngFor="let plan of subscriptionPlans">
+            <input name="planID" type="radio" [id]="plan._id" [value]="plan._id" ngModel>
+            <label [for]="plan._id">{{ plan.plan_id }}</label>
+          </div>
+          <button type="submit" class="subscribe-button btn btn-primary btn-fill btn-wd text-center">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</template>
+
+<template #unsubscribeTemplateRef>
+  <div id="unsubscribeModal">
+    <div class="modal-body">
+      <h1 class="modal-title text-center">Unsubscribe Member</h1>
+
+      <h3>Subscriptions for {{ modalData.name }}</h3>
+      <form #unsubscribeForm="ngForm" (ngSubmit)="unsubscribeMember(unsubscribeForm, modalData.id)">
+        <div *ngFor="let plan of modalData.subscriptions">
+          <input ngModel type="radio" name="planID" [id]="plan.subscription_id" [value]="plan.subscription_id">
+          <label [for]="plan.subscription_id">{{ plan.plan_id }}</label>
+        </div>
+        <button type="submit" class="subscribe-button btn btn-warning btn-fill btn-wd text-center">Unsubscribe</button>
+      </form>
+
+    </div>
+  </div>
+</template>
+
+<template #deleteTemplateRef>
+  <div id="deleteModal">
+    <div class="modal-body">
+      <h1 class="modal-title text-center">Delete User</h1>
+      <h3>Are you sure you want to delete user {{ modalData.name }}</h3><br>
+      <button type="button" class="btn btn-danger btn-fill btn-wd text-center" (click)="deleteUser(modalData.id)">Confirm</button>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,70 @@
+.dUpldBxLft {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.file-drop-zone {
+  min-height: initial;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.file-drop-zone > div {
+  flex: 1;
+}
+
+.ol-list {
+
+}
+
+.info_image {
+
+}
+
+.info_p {
+
+}
+
+.modal-dialog {
+  width: 800px !important;
+}
+
+.info-title {
+  font-size: 20px;
+}
+
+.info-list {
+  margin-left: 20px;
+}
+
+.info-list li {
+  margin: 5px auto;
+}
+
+.pro-tip {
+  font-size: 16px;
+  font-style: italic;
+}
+
+
+.block-drop-zone{
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-zone-msg{
+  font-size: 20px;
+  color: #fff;
+  z-index: 21;
+}

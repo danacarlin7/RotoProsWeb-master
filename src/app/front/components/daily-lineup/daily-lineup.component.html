@@ -1,0 +1,153 @@
+<section class="sectionHedin">
+  <!-- <div class="container-fluid "> -->
+  <div class="container">
+
+    <div class="common-loader" *ngIf="isLoading">
+      <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+    </div>
+    <div class="row">
+      <div class="col-xs-12  sidePad">
+        <div class="lineupHedin" style="text-align:center">
+          <h1>Daily Lineups</h1>
+
+          <span style="font-size: 18px;">MLB starting lineups updated live as they are released.</span>
+        </div>
+        <!-- <div class="dTabs"> -->
+          <!-- Nav tabs -->
+          <!-- <rp-tab-view [tabs]="lineupTabs"
+                       [activeTab]="activeTab"
+                       (tabChanged)="onLineupTabChanged($event)"></rp-tab-view>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="lineupSection">
+  <div class="container">
+    <div class="row lineupWrapper">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="dTabs">
+
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="DLineup">
+
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                  <a (click)="getData('MLB', 'today')"
+                     role="tab"
+                     data-toggle="tab"
+                     aria-controls="All">Today
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#Urgent"
+                     (click)="getData('MLB', 'yesterday')"
+                     role="tab"
+                     data-toggle="tab"
+                     aria-controls="Urgent">Yesterday
+                  </a>
+                </li>
+                <!-- <li role="presentation">
+                  <a (click)="getData('MLB', '7days')"
+                     href="#Important"
+                     aria-controls="Important"
+                     role="tab"
+                     data-toggle="tab">Last 7 Days</a>
+                </li>
+                <li role="presentation">
+                  <a (click)="getData('MLB', 'cmonth')"
+                     href="#Noteworthy"
+                     aria-controls="Noteworthy"
+                     role="tab"
+                     data-toggle="tab">This Month</a>
+                </li> -->
+              </ul>
+
+              <div class="lineupItmWrap">
+                <div class="lineupItm" *ngFor="let currLineup of lineupRecords | sortgrid: 'sort_date'">
+                  <div class="lineupTeamName">
+                    <div class="lineUpTeamNameWraper">
+                      <div class="lineUpTeamNameWrap">
+                        <p class="teamName">{{currLineup.first_team.name}}</p>
+                        <img [attr.src]="currLineup.first_team.logo_url" alt="" class="img-responsive"/>
+                      </div>
+
+                    </div>
+                    <div class="lineUpTeamNameWraper">
+                      <div class="lineUpTeamNameWrap">
+                        <p class="teamName">{{currLineup.second_team.name}}</p>
+                        <img [attr.src]="currLineup.second_team.logo_url" alt="" class="img-responsive" />
+                      </div>
+
+                    </div>
+                    <div class="lineupMatchTime">
+                      <p>{{currLineup.game_time}}</p>
+                    </div>
+                    <div class="lineupMatchDate" *ngIf="activeFilter !== 'today'">
+                      <p>{{currLineup.game_date | date:'EEE, MMM d, y'}}</p>
+                    </div>
+                  </div>
+                  <div class="lineupPlayerName">
+                    <ul class="lineupPlayerWrap">
+                      <li *ngIf="currLineup.first_team.lineup_players.length == 0">
+                        <span style="width: 125px;color: #7373d6;">Lineup Pending...</span>
+                      </li>
+                      <li *ngFor="let currPlayer of currLineup.first_team.lineup_players">
+                          <span>{{currPlayer.player_position}}</span>
+                          {{currPlayer.player_first_name+' '+currPlayer.player_last_name}}
+                      </li>
+
+                      <li>
+                        <div class="col-xs-12">&nbsp;</div>
+                      </li>
+
+                      <li>
+                          <div style="display: inline-block;">{{currLineup.first_team.name}}:</div>
+                          <p class="pitcher"> {{currLineup.first_team.pitcher.player_first_name+' '+currLineup.first_team.pitcher.player_last_name}} </p>
+                      </li>
+                      <li>
+                          <div style="display: inline-block;">{{currLineup.second_team.name}}:</div>
+                          <p class="pitcher"> {{currLineup.second_team.pitcher.player_first_name+' '+currLineup.second_team.pitcher.player_last_name}} </p>
+                      </li>
+
+                    </ul>
+                    <ul class="lineupPlayerWrap">
+                      <li *ngIf="currLineup.second_team.lineup_players.length == 0">
+                        <span style="width: 125px;color: #7373d6;">Lineup Pending...</span>
+                      </li>
+                      <li *ngFor="let currPlayer of currLineup.second_team.lineup_players">
+                          <span>{{currPlayer.player_position}}</span>
+                          {{currPlayer.player_first_name+' '+currPlayer.player_last_name}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-12 text-center" *ngIf="!isLoading">
+                  <h3 *ngIf="lineupRecords.length == 0">There is no lineups for Today.</h3>
+                </div>
+              </div>
+
+              <!-- <div class="pagination">
+                 <ul>
+                   <li><a href="javascript:void(0)"><span aria-hidden="true">&laquo;</span></a></li>
+                   <li class="active"><a href="javascript:void(0)">1</a></li>
+                   <li><a href="javascript:void(0)">2</a></li>
+                   <li><a href="javascript:void(0)">3</a></li>
+                   <li><a href="javascript:void(0)">...</a></li>
+                   <li><a href="javascript:void(0)">29</a></li>
+                   <li><a href="javascript:void(0)">30</a></li>
+                   <li><a href="javascript:void(0)"><span aria-hidden="true">&raquo;</span></a></li>
+                 </ul>
+               </div>-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

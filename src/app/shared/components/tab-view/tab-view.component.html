@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" *ngFor="let tab of tabs" (click)="onCohortTabChanged(tab)"
+      [class.active]="activeTab == tab.value"><a aria-controls="Contests"
+                                                 role="tab" data-toggle="tab">{{tab.label}}</a></li>
+</ul>

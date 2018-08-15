@@ -1,0 +1,146 @@
+<!--<div *ngIf="userRole != 'provider'"> -->
+    <section class="sectionHedin">
+    	<div class="container " style="margin: auto;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                	<div class="lineupHedin linUpHedin">
+                    	<h1>Lineups</h1>
+                    </div>
+                    <div class="sectionHedinBtn clearfix">
+                    	<a href="javascript:void(0)" *ngFor="let operator of operators" id="{{operator}}" (click)="showSlatesForOperator($event.target.id);" [ngClass]="{'active': (operator == currentOperator) }">{{operator}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="linUpSection">
+    	<div class="container" style="margin: auto;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                	<div class="dTabs">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" *ngFor="let sport of sports" [ngClass]="{'active': (sport == currentSport)}"><a href="javascript:void(0)" role="tab" data-toggle="tab" id="{{sport}}" (click)="showSlatesForSport($event.target.id);">{{sport}}</a></li>
+                        </ul>
+                        <div class="linUpFrm">
+                        	<div class="form-group slctWrapper">
+                                <label class="srOnly">Filter By Slate</label>
+                                <div class="dropdownSelect">
+                                	<a  href="javascript:void(0)" class="dropdownSelectClick form-control">{{currentSlate}}</a>
+                                    <ul class="dropdownSelectMenu">
+                                    	<li><a href="javascript:void(0)" *ngFor="let slate of slates" id="{{slate.SlateID}}--{{slate.Slate}}" (click)="setSlate( $event.target.id);">{{slate.Slate}}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group slctWrapper">
+                                <label class="srOnly">Filter By Year</label>
+                                <div class="dropdownSelect">
+                                    <a  href="javascript:void(0)" class="dropdownSelectClick form-control">Filter By Year</a>
+                                    <ul class="dropdownSelectMenu">
+                                        <li><a href="javascript:void(0)" (click)="currentFilter = 1;">Filter By Year</a></li>
+                                        <li><a href="javascript:void(0)" (click)="currentFilter = 2;">Filter By Month</a></li>
+                                        <li><a href="javascript:void(0)" (click)="currentFilter = 3;">Filter By Week</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group dteWrapper">
+                                <input type="text" class="form-control datepicker" name="dateFrom" placeholder="Date" value="{{currentDateStr}}">
+                            </div>
+
+                            <div class="form-group clearfix">
+                            	<div class="form-group">
+                                    <button type="button" class="form-control" (click)="setDate(false);">Prev</button>
+                                </div>
+                                <div class="form-group">
+                                     <button type="button" class="form-control" (click)="setDate(true);">Next</button>
+                                </div>
+
+                                <button type="button" class="form-control btn-yellow" (click)="getDataForLineups();">GetLineups</button>
+                            </div>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="NFL">
+
+                           		<div *ngFor="let currLineup of currPageHiddenLineups" class="lneUpSection clearfix">
+                                	<div class="lneUpSecLft">
+                                    	<div class="lneUpImgBx">
+                                        	<img src="assets/images/dashboard_profile_img.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="lneUpNameBx">
+                                        	<p>{{currLineup['ProviderName']}}</p>
+                                            <a href="javascript:void(0)" (click)="downloadLineup(currLineup['_id']);">Download Lineup</a>
+                                        </div>
+                                        <div class="lneUpIcn">
+                                        	<img src="assets/images/a_icn.png" alt="" class="img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="lneUpSecRght">
+                                    	<h4 class="lneUpHedin">{{currLineup['LineupName']}}</h4>
+                                        <div class="tFormat">
+                                            <div class="table-responsive">
+                                                <table cellspacing="0" cellpadding="0" border="0">
+                                                    <thead>
+                                                    <tr class="dHedin">
+                                                        <th width="15%">Pos</th>
+                                                        <th width="20%">Player Name</th>
+                                                        <th width="15%">B. Ord</th>
+                                                        <th width="20%">Opp</th>
+                                                        <th width="15%">Proj</th>
+                                                        <th width="15%">Salary</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr *ngFor="let player of currLineup['Lineup']" [ngClass]="{'dtSubs': player.hasOwnProperty('_id')}">
+                                                          <td *ngIf="!player.hasOwnProperty('_id')">{{player['Position']}}</td>
+                                                          <td *ngIf="!player.hasOwnProperty('_id')">{{player['Name']}}</td>
+                                                          <td *ngIf="!player.hasOwnProperty('_id')">{{(player['Player'] == null) ? '' : player['Player']['OperatorPosition']}} <span class="grnDot"></span></td>
+                                                          <td *ngIf="!player.hasOwnProperty('_id')">
+                                                            <span *ngIf="player['Player'] != null">
+                                                              <span *ngIf="player['Player']['IsHomeTeam'] == 'Y'"><b>{{player['Player']['Team']}}</b></span>
+                                                              <span *ngIf="player['Player']['IsHomeTeam'] != 'Y'">{{player['Player']['Opposition']}}</span>
+                                                              @
+                                                              <span *ngIf="player['Player']['IsHomeTeam'] != 'Y'"><b>{{player['Player']['Team']}}</b></span>
+                                                              <span *ngIf="player['Player']['IsHomeTeam'] == 'Y'">{{player['Player']['Opposition']}}</span>
+                                                            </span>
+                                                          </td>
+                                                          <td *ngIf="!player.hasOwnProperty('_id')">{{(player['Player'] == null) ? '' : player['Player']['FantasyPoints' + currentOperator]}}</td>
+                                                          <td *ngIf="!player.hasOwnProperty('_id')">${{(player['Player'] == null) ? '' : player['Player']['OperatorSalary']}}</td>
+                                                          <td *ngIf="player.hasOwnProperty('_id')" colspan="6"><a href="javascript:void(0)" (click)="showSubscribePage();">Subscribe to View More</a></td>
+                                                        </tr>
+                                                    <tr class="proTotal">
+                                                    	<td colspan="4">Totals</td>
+                                                        <td>{{currLineup['TotalPoints']}}</td>
+                                                        <td>{{currLineup['TotalSalary']}}</td>
+                                                    </tr>
+                                                    <!--<tr class="lastTRw">-->
+                                                    	<!--<td colspan="3">{{currLineup['LineupName']}}</td>-->
+                                                        <!--<td colspan="3">FANTASY [ CRUNCHER ]</td>-->
+                                                    <!--</tr>-->
+
+                                                </tbody></table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pagination">
+                                    <ul>
+                                        <li (click)="currentLineupsPage = 1; showPagination();"><a href="javascript:void(0)"><span aria-hidden="true">«</span></a></li>
+                                    </ul>
+                                    <ul *ngFor="let page of pagesToShow">
+                                        <li [ngClass]="{'active': currentLineupsPage == page}" (click)="currentLineupsPage = (page < 0 ? -page : page); showPagination();"><a href="javascript:void(0)">{{(page < 0) ? '...' : page}}</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li (click)="currentLineupsPage = numHiddenLineupPages; showPagination();"><a href="javascript:void(0)"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       	</div>
+    </section>
+<!--</div>-->

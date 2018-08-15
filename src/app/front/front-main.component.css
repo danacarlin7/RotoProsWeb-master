@@ -1,0 +1,33 @@
+.scroll-top-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  right: 30px;
+  color: #f8c534;
+  background-color: #000000;
+  bottom: -50px;
+  transition: bottom 150ms ease-in;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.scroll-top-btn.active {
+  bottom: 30px;
+  transition: bottom 150ms ease-out;
+}
+
+.scroll-top-btn::before {
+  font-size: 36px;
+  line-height: 36px;
+  position: absolute;
+  top: 5px;
+  left: 14px;
+  content: '\f106';
+  font-family: FontAwesome, "sans-serif";
+}
+
+/*f106*/

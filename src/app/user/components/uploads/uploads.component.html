@@ -1,0 +1,236 @@
+<!-- DashBoard Home Starts -->
+<section class="dashboardHome">
+  <div class="container">
+    <div class="common-loader" *ngIf="isLoading">
+      <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dashboardContainer">
+        <div class="dashboardContainerWrapper">
+          <div class="dashMainWrapper">
+            <div class="dashboardMain dashboardMainFull">
+              <h1 class="dashboardMainHedin">Contest Entry Files</h1>
+              <p class="dashboardMainPara">Below are your contest entry files you have uploaded. New files join a queue
+                and will be processed shortly. The table will update automatically when a file has been processed.</p>
+              <div class="tFormat">
+                <div class="table-responsive">
+                  <table cellpadding="0" cellspacing="0" border="0">
+                    <tr class="dHedin">
+                      <th width="59%">File name</th>
+                      <th width="23%" class="txtLftTd">Uploaded on</th>
+                      <th width="18%"></th>
+                    </tr>
+                    <tr *ngFor="let upload of uploads" (click)="onTableRowClicked(upload)">
+
+                      <td class="icnContanerTd">
+                        <p class="icnWrapperS">
+                          <img *ngIf="upload.website == 'draftkings'" src="../../../../assets/images/draftking.jpg"
+                               class="img-responsive">
+                          <img *ngIf="upload.website == 'fanduel'" src="../../../../assets/images/fanduel.png"
+                               class="img-responsive">
+                        </p>
+                        <p>{{upload.original_name}}</p>
+                      </td>
+                      <td class="txtLftTd">{{upload.created_at | date:'dd-MM-yyyy h:m a'}}</td>
+                      <td class="tred">{{upload.imported}}</td>
+                    </tr>
+                  </table>
+
+                </div>
+              </div>
+
+              <!--<div class="pagination">
+                <ul>
+                  <li><a href="javascript:void(0)"><span aria-hidden="true">&laquo;</span></a></li>
+                  <li class="active"><a href="javascript:void(0)">1</a></li>
+                  <li><a href="javascript:void(0)">2</a></li>
+                  <li><a href="javascript:void(0)">3</a></li>
+                  <li><a href="javascript:void(0)">...</a></li>
+                  <li><a href="javascript:void(0)">29</a></li>
+                  <li><a href="javascript:void(0)">30</a></li>
+                  <li><a href="javascript:void(0)"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+              </div>-->
+
+              <div class="dashboardUpload">
+                <h1 class="dashboardMainHedin">Upload Files</h1>
+                <p class="dashboardMainPara">Alternatively, you can drag and drop an entry history file below.</p>
+                <div class="dUpldBxWrapper">
+                  <div class="dUpldBxLft" style="position: relative;">
+                    <div class="block-drop-zone" *ngIf="isRestricted">
+                      <div class="drop-zone-msg">
+                        <a style="color: #fff;font-weight: bold;" routerLink="/subscribe">Subscribe now</a>
+                      </div>
+                    </div>
+                    <dropzone [config]="configUpload" class="file-drop-zone" [message]="'Drop file here'"
+                              (error)="onUploadError($event)"
+                              (success)="onUploadSuccess($event)" (sending)="onSending($event)"></dropzone>
+                  </div>
+                  <div class="dUpldBxRght">
+                    <a data-toggle="modal" data-target="#myModal1"><span class="icnWrapperS"><img
+                      src="../../../../assets/images/dUpld_icn1.png" alt=""
+                      class="img-responsive"/></span><span
+                      class="gTxt">How do I get my results data from FanDuel?</span></a>
+                    <a data-toggle="modal" data-target="#myModal2"><span class="icnWrapperS"><img
+                      src="../../../../assets/images/dUpld_icn2.png" alt=""
+                      class="img-responsive"/></span><span
+                      class="gTxt">How do I get my results data from DraftKings?</span></a>
+                    <!--<a href="javascript:void(0)"><span class="icnWrapperS"><img src="images/dUpld_icn3.png" alt=""-->
+                    <!--class="img-responsive"/></span><span-->
+                    <!--class="gTxt">How do I get my results data from Yahoo?</span></a>-->
+                    <!--<a href="javascript:void(0)"><span class="icnWrapperS"><img src="images/dUpld_icn4.png" alt=""-->
+                    <!--class="img-responsive"/></span><span-->
+                    <!--class="gTxt">How do I get my results data from FantasyDraft?</span></a>-->
+                    <!--<a href="javascript:void(0)"><span class="icnWrapperS"><img src="images/dUpld_icn5.png" alt=""-->
+                    <!--class="img-responsive"/></span><span-->
+                    <!--class="gTxt">How do I get my results data from DraftDay?</span></a>-->
+                  </div>
+                </div>
+
+                <!--<div class="dUpldBtnWrapper">
+                  <div class="dUpldBtnBx">
+                    <p>Or select files from your computer:</p>
+                    <p class="dUpldBtn">
+                      <a href="javascript:void(0)"><span>Browse</span><span class="dUpldBtnOp"><input type="file"
+                                                                                                      name="file"/></span></a>
+                    </p>
+                  </div>
+                  <p>Not working? Try the static file uploader.</p>
+                </div>-->
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- DashBoard Home Ends -->
+<template #deleteTemplateRef let-deleteDialog="dialogRef">
+  <div class="deleteModal">
+    <div class="modal-header">
+      <button type="button" class="close" (click)="deleteDialog.close(true)"><span aria-hidden="true">&times;</span>
+      </button>
+      <h1 class="modal-title" style="font-size: 26px" id="myModalLabel">Are you sure?</h1>
+    </div>
+    <div class="modal-body">
+      <p>Deleting an entity history file will remove all associated results imported from this file.</p>
+      <p>Are you sure you want to delete <strong>{{ selectedHistory.original_name }}</strong>?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="confirmDeleteClicked(deleteDialog);"><span
+        class="glyphicon glyphicon-trash" area-hidden="true"></span> Confirm Delete
+      </button>
+      <button type="button" class="btn btn-default" (click)="deleteDialog.close(true)">Close</button>
+    </div>
+  </div>
+</template>
+
+<template #downloadTemplateRef let-downloadDialog="dialogRef">
+  <div class="downloadModal">
+    <div class="modal-header">
+      <button type="button" class="close" (click)="downloadDialog.close(true)"><span aria-hidden="true">&times;</span>
+      </button>
+      <h1 class="modal-title" style="font-size: 26px" id="myModalLabel">{{ selectedHistory.original_name }}</h1>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-xs-4">File Size</div>
+        <div class="col-xs-8">{{ getFileSize(selectedHistory.size) }} KB</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">Uploaded On</div>
+        <div class="col-xs-8">{{ selectedHistory.created_at | date: 'dd MMM yyyy h:m a' }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">Records Created</div>
+        <div class="col-xs-8">{{ selectedHistory.imported | number }}</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="downloadClick();"><span
+        class="glyphicon glyphicon-download-alt" area-hidden="true"></span> Download
+      </button>
+      <button type="button" class="btn btn-danger" (click)="deleteHistoryClicked(downloadDialog);"><span
+        class="glyphicon glyphicon-trash" area-hidden="true"></span> Delete File
+      </button>
+      <button type="button" class="btn btn-default" (click)="downloadDialog.close(true)">Close</button>
+    </div>
+  </div>
+</template>
+<div class="modal fade" id="myModal1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">How to Export Your Data from FanDuel</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <p class="info-title">Here's how to get your data off FanDuel:</p>
+            <ol class="info-list">
+              <li>Go to the My Entry History page on FanDuel.com, logging in if prompted.<br><a
+                href="https://www.fanduel.com/p/MyEntryHistory" target="_blank" class="btn btn-primary">Click here to
+                open
+                this in a new browser tab.</a></li>
+              <li>Click the "Download as CSV" button.</li>
+              <li>If you have more than 1000 contests, you will prompted to download multiple files. Grab all you
+                need.
+              </li>
+              <li>You're done! Now just upload the files to RotoTracker.</li>
+            </ol>
+            <p class="pro-tip">
+              Pro tip: If the file automatically opens up in a program like Excel, instead try right clicking on the
+              link and "Save As" to save a file to the desktop. Then upload this to RotoTracker directly.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="../../../../assets/img/fanduel_upload_info.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal2" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">How to Export Your Data from DraftKings</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <p class="info-title">Here's how to get your data off DraftKings:</p>
+            <ol class="info-list">
+              <li>Go to the My Contests tab on DraftKings.com, logging in if prompted.<br><a
+                href="https://www.draftkings.com/mycontests" target="_blank" class="btn btn-primary">Open this page in a
+                new browser tab.</a></li>
+              <li>Click the "History" button next to "Live" and "Upcoming".</li>
+              <li>Click "Download Entry History" to download all your results.</li>
+              <li>You're done! Now just upload the file to RotoTracker.</li>
+            </ol>
+            <p class="pro-tip">
+              Pro tip: If the file automatically opens up in a program like Excel, instead try right clicking on the
+              link and "Save As" to save a file to the desktop. Then upload this to RotoTracker directly.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="../../../../assets/img/draftkings_upload_info.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

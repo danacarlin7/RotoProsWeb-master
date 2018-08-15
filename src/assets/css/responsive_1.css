@@ -1,0 +1,590 @@
+@media (max-width:1440px)
+{
+	.articleDetails .articleLftPtrn {left: -225px;}
+	.articleDetails .articleLftPtrn > img {left: 38%;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li {margin-left: 15px;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li a {font-size: 14px;}
+	.dashboardHeader .bottomHeader .rightNav #profileDrpdwn{font-size: 15px;}
+	.dashboardHeader .bottomHeader .rightNav img {max-width: 45px;}
+	.dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li a{width: 100px;}
+	.dashboardHeader .bottomHeader .logoWrapper, header .logoWrapper{max-width: 200px;}
+	header .bottomHeader .rightNav > ul > li > a{width: 90px;}
+	header .bottomHeader .bottomHeaderNav .mainMenu {	padding-right: 300px;}
+}
+@media (max-width:1199px)
+{
+	.icnWrapperS {margin-right: 7px;}
+	.articleDetails .articleLftPtrn {left: -165px;}
+	.articleDetails .articleLftPtrn > img {left: 38%;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleBx {width: 355px;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx{width: 2280px;}
+	.articleDetails .articleDetailsWrapper > p{width: 60%;}
+	.boPrt1 .bannerTopTxt h1 {font-size: 85px;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li {margin-left: 10px;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li a {font-size: 12px;}
+
+	.loginDetails .formWrapper{padding: 40px 30px;}
+	.loginDetails .loginDetailsWrapper .loginLftWrapper{left: -181px;}
+	.frgtPasswdDetails{padding: 200px 0px;}
+
+	.signupRghtWrapper .mainTab .tabcontent{padding: 30px 30px 0px;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgePrice{font-size: 25px;padding-bottom: 12px;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeTime{font-size: 17px;}
+	.signupRghtWrapper .mainTab .tab ul li a{font-size: 16px;padding: 21px 0px;}
+
+	.dashboardHeader .bottomHeader .rightNav #profileDrpdwn {font-size: 14px;}
+	.dashboardHeader .bottomHeader .rightNav img {max-width: 35px;}
+	.dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li a {width: 95px;padding: 18px 0px;}
+
+	.dashboardContainer .topFiltrWrapper .topFilter{justify-content: space-between;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group{margin-left: 0px;}
+
+	.dashboardContainer > .dashboardContainerWrapper .dashboardMain .subscriptionNotification{margin-top: 5px;}
+	.dashboardHome .profitCategory .profitCategoryRght table tr td img {
+    max-width: 50px;}
+	.dashboardHome .profitCategory .profitCategoryRght table tr td{font-size: 13px;padding: 15px 10px;}
+	.dashboardHome .profitCategory table tr th{padding: 15px 10px;}
+	.dashboardHome .profitCategory .profitCategoryRght table tr th:first-child {font-size: 17px;}
+
+	.dashboardContainer .fixedDash .topFilter {width: 84% !important;}
+	.dashboardContainer .topFiltrWrapper .dashboardName h1{font-size: 25px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {font-size: 13px;}
+
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control{max-width: 112px; font-size: 13px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group label {font-size: 13px;	margin-right: 4px;}
+
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {	background-size: 14px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child .form-control {padding-left: 32px !important;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child {width: 19% !important;margin-left: 0px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child .form-control {background-size: 14px !important;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control{padding: 9px;}
+	.dashboardContainer .topFiltrWrapper{padding: 25px 30px;}
+
+	.dUpldBtnWrapper {flex-direction: column;}
+	.dUpldBxRght a .gTxt { font-size: 13px;}
+	.dUpldBtnWrapper .dUpldBtnBx {margin-right: 0px;}
+	.dUpldBtnWrapper > p{margin-top: 10px;}
+
+	.dTabs .nav-tabs > li > a{padding: 10px 12px;}
+
+	.dashboardHeader .bottomHeader .logoWrapper, header .logoWrapper{max-width: 170px;}
+	header .bottomHeader .rightNav > ul > li > a {width: 75px;font-size: 14px;}
+	header .bottomHeader .bottomHeaderNav .mainMenu {padding-right: 230px;}
+
+}
+@media (max-width:1100px)
+{
+	.dashboardHeader .bottomHeader .logoWrapper {max-width: 140px;}
+}
+
+@media (max-width:1023px)
+{
+	.icnWrapperD{margin-right: 10px;}
+	header .bottomHeader .bottomHeaderNav .mainMenu{padding: 0px;position: fixed;top: 0px;left: -100%;background: rgba(0,0,0,0.92);width: 100%;z-index: 99999;height: 100%;padding: 20px 0px;transition:all 0.5s ease; -ms-transition:all 0.5s ease; -webkit-transition:all 0.5s ease; -o-transition:all 0.5s ease; -moz-transition:all 0.5s ease;overflow: auto;}
+	header .bottomHeader .bottomHeaderNav .mainMenu .closeBtn{display: block;position: absolute;top: 10px;right: 10px;max-width: 18px;cursor: pointer;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li a{font-size: 14px;}
+	header .bottomHeader .bottomHeaderNav .menuToggle{display: block;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul{flex-flow: column wrap;align-items: flex-start;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li{margin-left: 0px;display: block;width: 100%;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li a{display: block; padding: 5px 25px;border-bottom: 1px solid #333;}
+	.tglMnu{left: 0px !important;}
+	header .bottomHeader .navbar-default{padding: 0px;}
+	header .bottomHeader .rightNav {position: absolute;;right: 70px;}
+	header .bottomHeader .rightNav img {max-width: 18px;}
+	.sidePad {padding: 0px 15px;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li a {font-size: 15px;text-align: center;}
+	header .bottomHeader .rightNav > ul > .searchBtn .srchBar button {padding: 6px 12px;}
+	header .bottomHeader .rightNav > ul > .searchBtn .srchBar .form-group input{padding: 8px 53px 8px 8px;}
+	header .bottomHeader .rightNav > ul > li > a {font-size: 14px;line-height: 19px;width: 90px;}
+
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleBx {width: 520px;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx{width: 3270px;}
+	header .bottomHeader .rightNav > ul > .searchBtn a {padding: 6.5px 12px !important;}
+
+	.dashboardHeader .bottomHeader .logoWrapper {position: relative;left: 0px;transform: translate(0,0);max-width: 160px;}
+	.dashboardHeader .bottomHeader .rightNav img {max-width: 32px;}
+	.dashboardHeader .bottomHeader .bottomHeaderNav {justify-content: space-between;}
+	.dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li a {	width: 100%;padding: 10px 0px;flex-flow: row wrap;}
+	.dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul .active a, .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul .active > a:focus, .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul .active > a:hover {	box-shadow: 0px 0px 10px #9a9090;background: #000;}
+	.dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li > a:focus, .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li > a:hover {box-shadow: 0px 0px 10px #9a9090;background: #000;}
+	.dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu {padding: 38px 0px;}
+	.dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li{border-right: 0px;}
+	.dashboardHeader .bottomHeader {padding: 24px 0px;}
+	header .bottomHeader{padding: 20px 0px;}
+	.dashboardHome .profitCategory .profitCategoryLft {width: 100%;margin-bottom: 30px;}
+	.dashboardHome .profitCategory .profitCategoryLft table{min-width: 100%;}
+	.dashboardHome .profitCategory .profitCategoryRght {width: 100%;}
+	.dashboardHome .profitByCat .profitByCatLft {width: 100%; margin-bottom: 30px;}
+	.dashboardHome .profitByCat .profitByCatRght {width: 100%;}
+	.dashboardHome .profitByCat .profitByCatRght ul{display: flex;flex-flow: row wrap;justify-content: space-around;align-items: flex-start;}
+	.dashboardHome .profitByCat .profitByCatRght ul li{width: 35% !important;margin: 0px !important;}
+
+	.dashboardHome .profitCategory .profitCategoryLft .tblScrlCntntWrap{max-height: 360px;; height: auto !important;}
+
+
+	.dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-heading .panel-title a{font-size: 15px;}
+
+}
+@media (max-width:991px)
+{
+
+	header .bottomHeader .navbar-default .navbar-toggle {border: 0px;margin-right: 2px;margin-top: 11px;}
+	header .bottomHeader .navbar-default .navbar-toggle .icon-bar {width: 28px;height: 3px;border-radius: 1px;background-color: #FFF;}
+	header .bottomHeader .navbar-default .navbar-toggle:hover, header .bottomHeader .navbar-default .navbar-toggle:focus{background: transparent;}
+	header .bottomHeader .navbar-default .navbar-toggle:hover .icon-bar, header .bottomHeader .navbar-default .navbar-toggle:focus .icon-bar{background-color: #f8c534;}
+
+	section {padding: 45px 0px;}
+
+	header .topHeader .topNavbar > ul > li > a {font-size: 12px;padding: 10px 12px;}
+
+
+
+
+	.matchDetails .matchDetailsSlider .owl-item .item ul > li{font-size: 15px;}
+	.matchDetails .tabWrapper .nav-tabs > li > a {font-size: 15px;padding: 11px 20px;}
+
+	.boPrt1 .bannerTopTxt h1 {font-size: 60px;line-height: 65px;letter-spacing: -4.5px;}
+	.boPrt1 .bannerTopTxt p {font-size: 17px;}
+	.boPrt1 .bannerTopTxt a {font-size: 17px;padding: 10px 30px;margin-top: 25px;}
+
+	.newsDetails .newsDetailsLft{padding: 0px;margin-bottom: 25px;}
+	.newsDetails .tabWrapper{padding: 0px;}
+	.newsDetails .newsDetailsLft > p{font-size: 15px;margin: 0px;}
+	.newsDetails .mainHeadingBlack {margin-bottom: 20px;}
+	.newsDetails .tabWrapper .nav-tabs > li > a{font-size: 17px;}
+	.newsDetails .tabWrapper .panel-group .panel-default > .panel-heading .panel-title{font-size: 15px;}
+	.newsDetails .tabWrapper .nav-tabs > li {float: left; margin-right: 50px;}
+
+	.latestNewsDetails .latestNewsWrapper h1 {font-size: 45px;line-height: 50px;}
+	.latestNewsDetails .latestNewsWrapper p {font-size: 15px;}
+	.latestNewsDetails .latestNewsWrapper h1{margin-bottom: 15px;}
+	.latestNewsDetails .latestNewsWrapper{padding-bottom: 50px;}
+
+	.socialDetails .tabWrapper{padding-right: 45px;}
+	.socialDetails .tabWrapper .nav-tabs{right: 45px;}
+	.socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialNameWrapper {font-size: 35px;line-height: 24px;}
+	.socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialMsg {font-size: 15px;}
+	.socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialLink {font-size: 15px;}
+	.socialDetails .tabWrapper .nav-tabs > li > a{width: 65px;}
+
+
+	.articleDetails .articleLftPtrn {left: -128px;}
+	.articleDetails .articleLftPtrn > img{left: 38%;}
+
+
+	.mainHeadingBlack {font-size: 35px;}
+	.newsletterDetails .newsletterPara{font-size: 20px;}
+	.newsletterDetails form {margin-top: 50px !important;}
+	.newsletterDetails form .form-group {margin-right: 10px !important;}
+	.newsletterDetails form input[type="button"], .newsletterDetails form input[type="submit"] {padding: 12px 40px;}
+	.articleDetails .articleDetailsWrapper > p {margin-bottom: 20px; width: 80%;font-size: 15px;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleBx .articlePara {font-size: 15px;}
+
+
+	footer .topFooter .footerHdin {font-size: 18px;margin-bottom: 22px;}
+	footer .topFooter .footerPara {font-size: 14px;}
+	footer .topFooter .footerLinks > li {font-size: 14px;line-height: 30px;}
+	footer .bottomFooter p {font-size: 13px;}
+
+
+	header .bottomHeader .rightNav {top: 12px;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li:last-child a{border-bottom: 0px;}
+
+	.loginDetails .loginDetailsWrapper .loginRghtWrapper {width: 420px;}
+	.loginDetails .loginDetailsWrapper .loginRghtWrapper{padding: 25px;}
+	.loginDetails .formWrapper{padding: 30px 25px;}
+	.loginDetails .formWrapper h3 {font-size: 34px;}
+	.loginDetails .formWrapper p{font-size: 14px;line-height: 24px;}
+	.loginDetails .formWrapper form {margin-top: 5px !important;}
+	.loginDetails .formWrapper form input[type="text"], .loginDetails .formWrapper form input[type="password"], .loginDetails .formWrapper form input[type="email"]{padding: 10px 12px;}
+	.loginDetails .formWrapper form input[type="button"], .loginDetails .formWrapper form input[type="submit"]{padding: 14px 10px; font-size: 17px;margin-top: 5px;}
+	.loginDetails .formWrapper .otherSigninPara {font-size: 16px;margin-top: 20px;}
+	.loginDetails .formWrapper .loginSocialIcns {margin-top: 8px;}
+	.loginDetails .formWrapper .loginSocialIcns img {max-height: 38px;}
+	.loginDetails .formWrapper .regstrNmPara {margin-top: 22px;}
+	.loginDetails .loginDetailsWrapper .loginLftWrapper {left: -238px;max-width: 600px;}
+	.loginDetails .formWrapper form .form-group {margin-bottom: 15px;}
+
+	.frgtPasswdDetails{padding: 175px 0px;}
+	.signupRghtWrapper .mainTab .tabcontent {padding: 20px 25px 0px;}
+	.signupRghtWrapper .mainTab .tab ul li a {font-size: 15px;padding: 18px 0px;}
+
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group { margin: 7px 0px;display: flex;align-items: center;margin-left: 0px;width: 32% !important;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control{width: 100%;max-width: initial;padding: 6px 10px !important; font-size: 14px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper{display: flex; justify-content: space-between;}
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control{width: 79%;}
+	.dashboardContainer .topFiltrWrapper {padding: 25px 20px;}
+
+	.dashboardContainer > .dashboardContainerWrapper .topStats .topStatsBx{width: 48%; margin: 10px 0px;}
+	.dashboardContainer > .dashboardContainerWrapper > div {padding: 15px 0px;}
+	.dashboardContainer .topFiltrWrapper .topFilter{width: 100%;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child {width: 32% !important;margin-left: 0px;}
+
+	.dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-heading .panel-title a{padding: 15px 10px;}
+	.dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body{padding: 15px;}
+
+	.dashboardContainer > .dashboardContainerWrapper .dashMainWrapper .leftFilter {width: 34%;}
+	.dashboardContainer > .dashboardContainerWrapper .dashboardMain {width: 62%;}
+	.tFormat table .dHedin th {padding: 15px 10px !important;font-size: 14px;}
+	.tFormat table tr td {padding: 15px !important;}
+
+	.dashboardContainerWrapper{padding: 0px 20px !important;}
+
+	.dashboardContainer .topFiltrWrapper .dashboardName{width: auto;}
+
+	.dUpldBxLft {width: 100%;height: 130px;}
+	.dUpldBxRght {width: 100%;padding: 20px 0px;}
+
+	.dTabs .nav-tabs > li > a {padding: 8px 5px;font-size: 12px;}
+}
+
+@media(max-width:767px)
+{
+	section {padding: 30px 0px;}
+	.sidePad{padding: 0px 10px;}
+	.mainHeadingBlack {font-size: 23px;line-height: 45px;}
+	.clseBtn{top: 3px; transform: translate(0,0); font-size: 15px;}
+	header .bottomHeader .bottomHeaderNav .menuToggle img{max-width: 30px;}
+
+	header .bottomHeader .navbar-default .navbar-collapse{float: none !important; margin-top: 12px;}
+	.dashboardHeader .bottomHeader .logoWrapper , header .logoWrapper{max-width: 145px;}
+	header .bottomHeader .rightNav > ul > li > a{font-size: 13px;color: #FFF;line-height: 19px;width: 80px;}
+	header .bottomHeader .rightNav > ul > .searchBtn a {padding: 6.5px 10px !important;}
+	header .bottomHeader .rightNav{width: 216px;}
+
+
+
+	.articleDetails .articleLftPtrn{display: none;}
+
+	header .topHeader .topNavbar > ul > li > a {font-size: 11px;padding: 8px 8px;}
+	header .topHeader .topNavbar > ul > .active > a, header .topHeader .topNavbar > ul > .active > a:focus, header .topHeader .topNavbar > ul > .active > a:hover{background: transparent;}
+	header .bottomHeader{padding: 16px 0px !important;}
+	header .bottomHeader .rightNav > ul > .searchBtn .srchBar button{padding: 6px 10px;top: 0px; height: 100%;}
+	header .topHeader .topNavbar > ul > li > a:hover, header .topHeader .topNavbar > ul > li > a:focus{background: transparent;}
+	header .bottomHeader .bottomHeaderNav .mainMenu ul li a {font-size: 13px;}
+	header .bottomHeader .bottomHeaderNav .mainMenu .closeBtn{max-width: 15px;}
+	.bottomHeader .rightNav > ul > .searchBtn .srchBar .form-group input {padding: 8px 48px 8px 8px;}
+	.newsDetails .tabWrapper .panel-group .panel.active .panel-collapse {padding-bottom: 15px;}
+	.boPrt1 {height: 260px;padding: 0px;display: flex;align-items: center;}
+	.boPrt1 .bannerTopTxt{width: 270px;}
+	.boPrt1 .bannerTopTxt h1 {font-size: 36px;line-height: 40px;letter-spacing: -0.5px;flex-flow: row wrap;justify-content: center;}
+	.boPrt1 .bannerTopTxt h1 > span:first-child{margin-right: 6px;}
+	.boPrt1 .bannerTopTxt p {font-size: 14px;line-height: 20px;align-items: center;}
+	.boPrt1 .bannerTopTxt a {font-size: 14px;padding: 4px 26px;margin-top: 5px;margin: 0 auto;}
+
+	.articleDetails .articleDetailsWrapper{padding: 0px;}
+	.articleDetails .articleDetailsWrapper .mainHeadingBlack{text-align: center;}
+
+
+	.newsletterDetails .newsletterPara {font-size: 15px;line-height: 23px;}
+	.newsletterDetails form{margin-top: 30px !important;}
+	.newsletterDetails form .form-group input {font-size: 13px;;padding: 7px 12px;}
+	.newsletterDetails form .form-group {margin-right: 5px !important;}
+	.newsletterDetails form input[type="button"], .newsletterDetails form input[type="submit"] {padding: 7px 18px; font-size: 14px;}
+	.newsletterDetails .newsletterDetailsWrapper .privacyPara {float: none;font-size: 12px;text-align: center;}
+
+	footer .topFooter{padding: 25px 0px;}
+	footer .topFooter .footerHdin {font-size: 16px;margin-bottom: 10px;}
+	footer .topFooter .logoWrapper {margin-bottom: 10px;}
+	footer .topFooter .logoWrapper img {max-width: 110px;}
+	footer .topFooter .footerPara {font-size: 13px;line-height: 21px;}
+	.topFooterWrapper{margin-bottom: 20px;}
+	footer .topFooter .footerLinks > li {font-size: 13px;line-height: 24px;}
+	footer .topFooter .footerSocialLinks > li img{max-width: 28px;}
+	footer .bottomFooter p {font-size: 12px; text-align: center;line-height: 21px;}
+	footer .bottomFooter .bottomFooterRght p{float: none;}
+
+	.matchDetails .tabWrapper .tab-content {margin-top: 25px;}
+	.matchDetails .matchDetailsSlider .owl-item .item ul > li {font-size: 13px;}
+	.latestNewsDetails .latestNewsWrapper {padding: 15px 15px 20px;}
+	.latestNewsDetails .latestNewsWrapper{padding-bottom: 20px;}
+	.socialDetails .tabWrapper .nav-tabs > li > a {width: 42px;height: 26px;}
+	.socialDetails .tabWrapper {padding-right: 0px;}
+	.socialDetails .socialDetailsSlider .owl-item .item .socialImgBx{width: 100%;max-width: 260px;margin: 0 auto;}
+	.socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx {width: 100%;margin-top: 20px;}
+	.socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialNameWrapper { font-size: 25px;line-height: 20px;justify-content: center;margin-bottom: 12px;}
+	.socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialMsg {font-size: 13px;text-align: center;line-height: 22px;}
+	.socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialLink {font-size: 13px;text-align: center;display: block;}
+	.socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .hrsAgo {margin-top: 10px; text-align: center;}
+	.socialDetails {padding: 90px 0px 30px;}
+	.socialDetails .tabWrapper .nav-tabs {top: -60px;left: 53%;right: auto;transform: translate(-50%,0);width: 177px;}
+	.articleDetails .articleDetailsWrapper > p{width: 100%;font-size: 13px;font-family: 'Open Sans';line-height: 21px;margin-bottom: 10px;text-align: center;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx{width: 1890px;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleBx {width: 290px;padding: 20px 15px;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleBx .articleHdin{font-size: 18px;line-height: 24px;text-align: center;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleBx .articlePara {font-size: 13px;line-height: 21px;text-align: center;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleBx .articleOwnr {font-size: 13px;line-height: 22px;text-align: center;}
+	header .topHeader .topNavbar{padding: 5px 0px;overflow: hidden;}
+	header .topHeader .topNavbar > ul{justify-content: center;float: none !important;}
+	header .topHeader .topNavbar > ul > li > a {font-size: 11px;padding: 1px 7px;line-height: 15px;}
+
+	.matchDetails .tabWrapper .nav-tabs > li > a {font-size: 14px;padding: 6px 12px;}
+	.newsDetails{padding: 20px 0px;}
+	.latestNewsDetails .latestNewsDetailsSlider .latestNewsTxt h3{line-height: 22px;}
+	.latestNewsDetails .latestNewsDetailsSlider .latestNewsTxt h3 a{font-size: 13px; font-weight:300;line-height: 22px;}
+	.newsDetails .newsDetailsLft > p {font-size: 13px;margin-bottom: 0px;padding-bottom: 6px;line-height: 20px;}
+	.newsDetails .mainHeadingBlack {margin-bottom: 3px;}
+	.newsDetails .tabWrapper .nav-tabs > li > a {font-size: 14px;}
+	.newsDetails .tabWrapper .panel-group .panel-default > .panel-heading .panel-title {font-size: 13px;}
+	.newsDetails .tabWrapper .panel-group .panel-default > .panel-heading .panel-title > a {padding: 15px 15px 15px 50px;}
+	.newsDetails .tabWrapper .panel-group .panel-default > .panel-heading + .panel-collapse > .panel-body {border: 0px;padding: 0px 15px 0px 50px;}
+	.newsDetails .tabWrapper .panel-group .panel-default > .panel-heading .panel-title > a::after {left: 15px;}
+	.newsDetails .tabWrapper .panel-group .panel-default > .panel-heading .panel-title > a::before {left: 20px;}
+	.newsDetails .tabWrapper .panel.panel-default::before {left: 25px;top: 32px;}
+	.newsDetails .tabWrapper .panel.panel-default::after {left: 25px;}
+	.newsDetails .tabWrapper .panel-group .panel-default > .panel-collapse > .panel-body p {font-size: 12px;}
+	.latestNewsDetails .latestNewsWrapper h1 {font-size: 24px;line-height: 20px;text-align: center;}
+	.latestNewsDetails .latestNewsWrapper p {font-size: 13px;line-height: 20px;text-align: center;}
+	.latestNewsDetails .latestNewsDetailsSlider {padding: 25px 35px;}
+	.latestNewsDetails .latestNewsDetailsSlider .latestNewsTxt {padding: 12px;}
+	footer .bottomFooter{padding: 5px 0px;}
+	.mCSB_horizontal.mCSB_inside > .mCSB_container {margin-bottom: 40px;}
+
+	header .bottomHeader .rightNav {top: 10px;}
+	.socialDetailsSlider .owl-nav{display: none;}
+	footer .topFooter .footerHdin::after{content: none;}
+
+	.loginDetails .loginDetailsWrapper .loginLftWrapper{display: none;}
+	.loginDetails .loginDetailsWrapper{justify-content: center;}
+	.loginDetails .loginDetailsWrapper .loginRghtWrapper {padding: 15px;}
+	.loginDetails .formWrapper {padding: 25px;}
+	.loginDetails .formWrapper h3 {font-size: 25px;}
+	.loginDetails .formWrapper h3 img{max-width: 25px;}
+	.loginDetails .formWrapper p {font-size: 13px;line-height: 20px;padding-bottom: 8px;}
+	.loginDetails .formWrapper form input[type="text"], .loginDetails .formWrapper form input[type="password"], .loginDetails .formWrapper form input[type="email"] {padding: 7px 12px;}
+	.loginDetails .formWrapper form .form-group {margin-bottom: 12px;}
+	.loginDetails .formWrapper form input[type="button"], .loginDetails .formWrapper form input[type="submit"] {padding: 10px 10px;font-size: 15px;margin-top: 2px;}
+	.loginDetails .formWrapper .otherSigninPara {font-size: 14px;margin-top: 15px;}
+	.loginDetails .formWrapper .loginSocialIcns {margin-top: 0px;}
+	.loginDetails .formWrapper .loginSocialIcns img {max-height: 30px;}
+	.loginDetails .formWrapper .regstrNmPara {margin-top: 10px;font-size: 13px;}
+
+	.frgtPasswdDetails{padding: 25px 0px;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeName {font-size: 14px;margin-bottom: 4px;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgePrice {font-size: 20px;padding-bottom: 5px;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeTime {font-size: 15px;}
+	.signupRghtWrapper .mainTab .tab ul li a {padding: 10px 0px;font-size: 14px;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li{padding: 8px 0px;}
+	.loginDetails .formWrapper .loginSocialIcns a {margin-right: 12px;}
+
+	.loginDetails .formWrapper form input[type="text"]:focus, .loginDetails .formWrapper form input[type="password"]:focus, .loginDetails .formWrapper form input[type="email"]:focus, .loginDetails .formWrapper form input[type="text"]:hover, .loginDetails .formWrapper form input[type="password"]:hover, .loginDetails .formWrapper form input[type="email"]:hover {box-shadow: 0px 0px 22px rgba(248,197,52,0.5);}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li.pkgeactive, .signupRghtWrapper .mainTab .tabcontent .signUpPakges li:hover {background: #FFF;box-shadow: 0px 0px 15px rgba(0,0,0,0.28);}
+
+	.dashboardHeader .bottomHeader .rightNav{width: auto;}
+	.dashboardHeader .bottomHeader .rightNav #profileDrpdwn {font-size: 13px;}
+	.dashboardHeader .bottomHeader .rightNav img {max-width: 30px;}
+
+	.dashboardHome .profitCategory .profitCategoryLft table {min-width: 100%;width: 100%;}
+	.dashboardHome .profitCategory .profitCategoryLft .tblScrlCntntWrap{min-width: 100%;width: 100%;max-height: 306px;}
+	.dashboardHome .profitCategory .profitCategoryRght .table-responsive {width: 100%;}
+	.dashboardHome .profitCategory .profitCategoryRght .table-responsive:last-child{margin: 0px;}
+
+	.dHedin h3 {font-size: 15px;line-height: 20px;}
+	.dHedin {padding: 12px 20px;}
+	.sortByMonth .form-group .dropdownSelectClick{padding: 6px 10px;font-size: 13px;}
+	.sortByMonth .form-group label{font-size: 13px;}
+	.dashboardHome .profitCategory table tr th {padding: 10px 19px;font-size: 16px !important;}
+	.dashboardHome .profitCategory table tr td {padding: 10px 19px;    font-size: 13px;line-height: 18px;}
+	.dashboardHome .profitCategory .profitCategoryRght table tr th:last-child {font-size: 14px;line-height: 24px;}
+	.dashboardHome .profitCategory table tr td:nth-child(2) {padding: 10px 0px;}
+	.dashboardHome .profitCategory .profitCategoryRght table tr td {font-size: 13px;line-height: 20px;}
+	.dashboardHome .profitByCat .profitByCatRght ul li {width: 30% !important;	margin: 0px !important;}
+	.dashboardHome .profitByCat .profitByCatRght ul > li > div h4 {	font-size: 22px;}
+	.dashboardHome .profitByCat .profitByCatRght ul > li > div p {font-size: 16px;}
+	.dashboardHome .profitCategory .profitCategoryRght table tr th:first-child {font-size: 15px !important;}
+	.dashboardContainer > .dashboardContainerWrapper > div {padding: 10px 0px;}
+	.dashboardContainer > .dashboardContainerWrapper{padding: 0px 15px !important;}
+	.dashboardHome .profitCategory .profitCategoryLft .table-responsive{margin-bottom: 0px;}
+
+	.dashboardContainer .topFiltrWrapper .dashboardName h1 {font-size: 22px;line-height: 22px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control {padding: 5px 10px !important;font-size: 13px;}
+	.dashboardContainer .topFiltrWrapper {padding: 20px 15px;;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxTop {	padding: 15px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxBottom {padding: 20px 15px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxBottom p{font-size: 22px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxTop h4 {font-size: 18px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxTop p{font-size: 13px;}
+
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group label{font-size: 13px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {width: 77%;font-style: normal;}
+	.dashboardHome {padding: 30px 0px 35px;}
+
+	.dashboardContainer > .dashboardContainerWrapper .dashMainWrapper .leftFilter {width: 100%;}
+	.dashboardContainer > .dashboardContainerWrapper .dashboardMain {width: 100%;margin-top: 10px;}
+	.dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-heading .panel-title a {padding: 10px 10px;font-size: 14px;}
+	.dashboardContainerWrapper .leftFilter .curntFilters .curntFilter {padding: 6px 10px;}
+	.dashboardContainerWrapper .leftFilter .curntFilters {margin-bottom: 20px;}
+	.dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group label {font-size: 13px;}
+	.dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group .filterBtnWrapper .form-control{padding: 6px 10px; font-size: 13px;}
+	.dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group .filterBtnWrapper button{font-size: 13px;}
+
+	.dashboardContainer > .dashboardContainerWrapper .dashboardMain .subscriptionNotification{padding: 6px 15px; margin-bottom: 20px;}
+	.dashboardContainer > .dashboardContainerWrapper .dashboardMain .subscriptionNotification p{font-size: 13px;line-height: 16px;}
+	.tFormat table .dHedin th {padding: 10px !important;font-size: 14px;}
+	.tFormat table tr td {padding: 10px !important;font-size: 13px;}
+
+	.dashboardContainerWrapper .leftFilter .addFilter h2, .dashboardContainerWrapper .leftFilter .filterTopHedin h1 {font-size: 17px; line-height: 24px;}
+
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {background-size: 14px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child .form-control {background-size: 13px !important;padding-left: 28px !important;}
+	.dashboardHeader .bottomHeader .rightNav .dropdown .dropdown-menu li a {line-height: 18px;	font-size: 13px;}
+
+	.listingOpponents {padding: 6px 15px;}
+	.listingOpponents p{font-size: 13px; line-height: 16px;}
+
+	.dUpldBxWrapper{padding-bottom: 0px;
+	}
+	.dashboardMainHedin {font-size: 16px;line-height: 22px;}
+	.dashboardMainPara {font-size: 13px;line-height: 20px;margin-bottom: 0px;}
+	.dashboardUpload {margin-top: 20px;padding: 15px;}
+
+	.dUpldBxRght a .gTxt {font-size: 12px;line-height: 17px;}
+
+	.dUpldBtnWrapper .dUpldBtnBx p {font-size: 13px;}
+	.dUpldBtnWrapper .dUpldBtnBx .dUpldBtn a {width: 85px;padding: 0px 10px;}
+	.dUpldBtnWrapper > p {font-size: 12px;margin-top: 8px;text-align: center;line-height: 18px;}
+	.dTabs .nav-tabs > li > a {padding: 6px 5px;}
+
+	.dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group .filterBtnWrapper .datepicker {background-size: 14px;}
+
+	.pagination {margin: 10px 0px 10px 0px;width: 100%;display: flex;justify-content: center;}
+	.pagination ul li > a{font-size: 12px;padding: 5px 10px;}
+	.dUpldBxLft .dUpldBx p{font-size: 18px;}
+}
+
+@media(max-width:679px)
+{
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {width: 72%;font-size: 12px;}
+}
+
+@media(max-width:479px)
+{
+	section {padding: 25px 0px;}
+	.newsletterDetails form .form-group {width: 70%;}
+	.newsletterDetails form input[type="button"], .newsletterDetails form input[type="submit"] {padding: 7px 16px;}
+	header .bottomHeader .bottomHeaderNav .logoWrapper{max-width: 110px;}
+	.dashboardHeader .bottomHeader .bottomHeaderNav .logoWrapper{max-width: 120px;}
+	header .topHeader .topNavbar > ul > li > a {font-size: 10px;}
+	.matchDetails .tabWrapper .nav-tabs > li > a {font-size: 13px;padding: 5px 8px;}
+	header .bottomHeader .rightNav > ul > li > a {font-size: 11px;color: #FFF;line-height: 13px;width: 52px;}
+	header .bottomHeader .rightNav > ul > .searchBtn a {padding: 4px 8px !important;}
+	header .bottomHeader .rightNav {width: 146px;right: 43px;top: 9px;}
+	header .bottomHeader .rightNav > ul > li {margin-left: 3px;	position: relative;}
+	.dashboardHeader .bottomHeader .rightNav #profileDrpdwn {font-size: 12px;}
+	.dashboardHeader .bottomHeader .rightNav img {max-width: 26px;}
+	.boPrt1 .bannerTopTxt{width: 230px;}
+	.boPrt1 .bannerTopTxt h1 {font-size: 32px;line-height: 36px;letter-spacing: -1px;}
+	.boPrt1 {height: 225px;}
+	.boPrt1 .bannerTopTxt p {font-size: 13px;line-height: 19px;}
+	.boPrt1 .bannerTopTxt a {font-size: 13px;padding: 4px 20px;margin-top: 0px;padding: 2px 18px;}
+
+	header .bottomHeader .rightNav > ul > .searchBtn .srchBar button {top: 0px;padding: 4px 8px;height: 100%;}
+
+	.latestNewsDetails .latestNewsDetailsSlider .latestNewsTxt h3{font-size: 13px; font-weight:300;}
+	.socialDetails .socialDetailsSlider .owl-nav{display: none;}
+	.newsletterDetails .mainHeadingBlack {font-size: 22px;line-height: 25px;}
+	.newsletterDetails .newsletterPara {font-size: 13px;line-height: 20px;}
+	.newsletterDetails form {margin-top: 25px !important;}
+
+	.socialDetails .socialDetailsSlider .owl-item .item .socialImgBx {max-width: 200px;}
+	header .bottomHeader .rightNav > ul > .searchBtn .srchBar .form-group input{padding: 8px 44px 8px 8px;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleBx {width: 330px;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx {width: 2130px;}
+
+	.loginDetails .formWrapper {padding: 18px 12px;}
+	.loginDetails .loginDetailsWrapper .loginRghtWrapper {padding: 10px;width: 100%;}
+	.loginDetails .formWrapper h3 {font-size: 22px;}
+	.loginDetails .formWrapper h3 img {max-width: 20px;}
+	.loginDetails .formWrapper h3 { margin-bottom: 5px;}
+	.loginDetails .formWrapper p {font-size: 12px;line-height: 17px;padding-bottom: 5px;}
+	.loginDetails .formWrapper form .form-group {margin-bottom: 8px;}
+	.loginDetails .formWrapper form input[type="text"], .loginDetails .formWrapper form input[type="password"], .loginDetails .formWrapper form input[type="email"] {padding: 6px 10px;font-size: 13px;line-height: 22px;}
+	.loginDetails .formWrapper form .form-group .frgtPsswd, .loginDetails .formWrapper form .form-group label{font-size: 11px;}
+	.loginDetails .formWrapper form input[type="button"], .loginDetails .formWrapper form input[type="submit"] {padding: 6px 10px;font-size: 14px;margin-top: 0px;}
+	.loginDetails .formWrapper .otherSigninPara {font-size: 13px;margin-top: 8px;}
+	.loginDetails .formWrapper .loginSocialIcns img {max-height: 22px;}
+	.loginDetails .formWrapper .loginSocialIcns a{margin-right: 12px;}
+	.loginDetails .formWrapper .regstrNmPara {margin-top: 5px;font-size: 12px;}
+	.signupRghtWrapper .mainTab .tabcontent {padding: 12px 12px 0px;}
+	.signupRghtWrapper .mainTab .tab ul li a {padding: 6px 0px;font-size: 11px;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeTime {font-size: 13px;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgePrice {font-size: 14px;padding-bottom: 0px;color: #444;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeName {font-size: 12px;margin-bottom: 0px;}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li{padding: 5px 0px;}
+	.loginDetails .formWrapper form .form-group.chkFrmGrp {display: flex; align-items: flex-start; flex-flow: initial;}
+	.loginDetails .formWrapper form input[type="text"]:focus, .loginDetails .formWrapper form input[type="password"]:focus, .loginDetails .formWrapper form input[type="email"]:focus, .loginDetails .formWrapper form input[type="text"]:hover, .loginDetails .formWrapper form input[type="password"]:hover, .loginDetails .formWrapper form input[type="email"]:hover {box-shadow: 0px 0px 10px rgba(248,197,52,0.5);}
+	.signupRghtWrapper .mainTab .tabcontent .signUpPakges li.pkgeactive, .signupRghtWrapper .mainTab .tabcontent .signUpPakges li:hover {background: #FFF;box-shadow: 0px 0px 8px rgba(0,0,0,0.28);}
+
+	.dHedin h3 {font-size: 13px;}
+	.dHedin {padding: 8px 10px;}
+	.sortByMonth .form-group .dropdownSelectClick{padding: 0px 5px;font-size: 12px;width: 80px;}
+	.sortByMonth .form-group label {font-size: 12px;}
+	.sortByMonth {padding: 10px 0px;margin-bottom: 20px;}
+	.dashboardHome .profitCategory table tr th {padding: 7px 10px;font-size: 13px !important;line-height: 20px !important;}
+	.dashboardHome .profitCategory table tr td {padding: 8px 10px;	font-size: 12px;line-height: 15px;}
+	.dashboardHome .profitCategory .profitCategoryRght table tr td {font-size: 12px;line-height: 14px;padding: 8px 10px;}
+	.dashboardHome .profitCategory .profitCategoryRght table tr th:first-child {font-size: 14px !important;}
+	.dashboardHome .profitCategory .profitCategoryRght table tr td img {max-width: 40px;margin: 0 auto;}
+	.dashboardHome .profitByCat .profitByCatRght ul li {padding: 10px !important; width: 40% !important;}
+	.dashboardHome .profitByCat .profitByCatRght ul > li > div h4 {font-size: 16px;}
+	.dashboardHome .profitByCat .profitByCatRght ul > li > div p {font-size: 14px;}
+	.dashboardContainer > div {padding: 8px 0px;}
+
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group {margin: 2px 0px;width: 100% !important;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child {width: 100% !important;}
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper{width: 48% !important;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group label {font-size: 12px;}
+	.dashboardContainer .topFiltrWrapper .dashboardName h1 {font-size: 19px;line-height: 19px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper {display: flex;	flex-flow: column wrap;	align-items: flex-start;}
+	.dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {width: 100%; font-size: 11px !important;padding: 4px 10px !important;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .topStatsBx {width: 100%;margin: 5px 0px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxTop p {font-size: 12px;line-height: 12px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxTop h4 {	font-size: 15px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxTop {	padding: 10px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxBottom {padding: 12px 10px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxTop .bxImgWrapper img{max-width: 35px;}
+	.dashboardContainer > .dashboardContainerWrapper .topStats .bxBottom p {font-size: 15px;}
+	.dashboardHome .profitCategory .profitCategoryLft {margin-bottom: 20px;}
+
+	.dashboardContainerWrapper .leftFilter .filterTopHedin h1 { font-size: 16px;}
+	.dashboardContainerWrapper .leftFilter .filterTopHedin .clrAll{font-size: 13px;}
+	.dashboardContainerWrapper .leftFilter .addFilter h2 {font-size: 16px; line-height: 24px;}
+	.dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group {margin-bottom: 10px;}
+	.dashboardContainerWrapper .leftFilter .curntFilters .curntFilter p{font-size: 13px;}
+	.dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control {	font-size: 12px;padding: 4px 10px !important;}
+	.dashboardContainer .topFiltrWrapper .dashboardName {margin-bottom: 8px;}
+
+	.ui-datepicker{left: 40% !important;}
+	header .bottomHeader .bottomHeaderNav .menuToggle img {max-width: 25px;}
+
+	.dUpldBtnWrapper .dUpldBtnBx {margin-right: 0px;flex-direction: column;align-items: center;width: 100%;}
+	.dUpldBtnWrapper .dUpldBtnBx .dUpldBtn {margin-left: 0px;}
+
+
+	.dUpldBtnWrapper .dUpldBtnBx .dUpldBtn a {margin-top: 3px;}
+
+	.dTabs .nav-tabs {display: flex;flex-flow: row wrap;justify-content: center;}
+	.dTabs .nav-tabs > li {margin-bottom: 3px;}
+
+}
+@media(max-width:359px)
+{
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx{width: 1890px;}
+	.articleDetails .articleDetailsWrapper .articleWrapper .articleBx {width: 290px;padding: 20px 15px;}
+
+
+}
+
+@media screen and (min-width: 1200px)
+{
+	.container {width: 1200px;}
+
+}
+@media screen and (min-width: 1200px)
+{
+	.fixedDash{max-width: 1170px !important;}
+}
+@media screen and (min-width: 992px)
+{
+	.fixedDash{position: fixed;top:0; left:0;width: 100%;z-index: 99999;max-width: 940px;right: 0;margin: 0 auto;padding: 15px 30px !important;}
+}

@@ -1,0 +1,367 @@
+<div class="modal fade" id="advance-feature-filters" #settingPopup tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span>
+        </button>
+        <h2 class="modal-title" id="myModalLabel">Settings</h2>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills nav-black" role="tablist">
+          <li role="presentation" class="active"><a href="#basic" aria-controls="home" role="tab" data-toggle="tab">Basic</a>
+          </li>
+          <li role="presentation"><a href="#Filters" aria-controls="profile" role="tab" data-toggle="tab">Filters</a>
+          </li>
+          <li role="presentation"><a href="#Stacking" aria-controls="messages" role="tab"
+                                     data-toggle="tab">Stacking</a></li>
+        </ul>
+        <!-- /Nav tabs -->
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <div class="row row30" *ngIf="isLogIn">
+          <div class="col-lg-12 text-center yellow-container">
+            <a class="btn btn-link btn-link-back" (click)="onBtnSaveAdvFilterValueClicked()"
+               [class.inactive]="!isSettingsUpdated"><img
+              src="../../../../../assets/img/save_general_n.png"/> Save
+              Settings</a>
+            <a class="btn btn-link btn-link-back" (click)="onBtnRestoreDefaultClicked()"><img
+              src="../../../../../assets/img/restore_n.png"/>Clear Settings and Restore
+              Default</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <!-- Basic -->
+              <div role="tabpanel" class="tab-pane active" id="basic">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="filter-range-container">
+                      <h4 class="rangeslider-value">Variability: <span
+                        id="VariabilitySliderVal">{{variabilityValue}}%</span></h4>
+                      <input id="Variability" type="text"/>
+                      <span class="slider-range slider-min">0</span><span class="slider-range slider-max">100%</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="filter-range-container">
+                      <h4 class="rangeslider-value">Number Of Lineups To Produce: <span id="nlpSliderVal">{{noOfLineupValue}}</span>
+                      </h4>
+                      <input id="nlp" type="text"/>
+                      <span class="slider-range slider-min">1</span><span class="slider-range slider-max">200</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="filter-range-container">
+                      <h4 class="rangeslider-value">Number Of Unique Players: <span id="nupSliderVal">{{noOfUniquePlayersValue}}</span>
+                      </h4>
+                      <input id="nup" type="text"/>
+                      <span class="slider-range slider-min">1</span><span class="slider-range slider-max">5</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="filter-range-container">
+                      <h4 class="rangeslider-value">Max Exposure: <span id="meSliderVal">{{maxExposureValue}}%</span>
+                      </h4>
+                      <input id="me" type="text"/>
+                      <span class="slider-range slider-min">10%</span><span class="slider-range slider-max">100%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!--<div class="col-md-6">-->
+                    <!--<div class="filter-range-container">-->
+                      <!--<h4 class="rangeslider-value">Min/Max Salary:-->
+                        <!--<span id="mmsSliderVal">{{salarySettingValue[0]}}-{{salarySettingValue[1]}}</span></h4>-->
+                      <!--<input id="mms" type="text"/>-->
+                      <!--<span-->
+                        <!--class="slider-range slider-min">{{selectedOperator == 'FanDuel' ? lineupOptimizerServiceConst.MLB_MIN_SALARY_FOR_FANDUAL : lineupOptimizerServiceConst.MLB_MIN_SALARY_FOR_DRAFT_KING}}</span><span-->
+                      <!--class="slider-range slider-max">{{selectedOperator == 'FanDuel' ? lineupOptimizerServiceConst.MLB_MAX_SALARY_FOR_FANDUAL : lineupOptimizerServiceConst.MLB_MAX_SALARY_FOR_DRAFT_KING}}</span>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <div class="col-md-6">
+                    <div class="filter-range-container text-center">
+                      <div class="checkbox-overlay">
+                        <div class="checkbox">
+                          <input id="checkbox1" type="checkbox" [(ngModel)]="noBattingVsPitchers">
+                          <label for="checkbox1">
+                            No Batters vs Pitchers
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /Basic -->
+
+              <!-- Filters -->
+              <div role="tabpanel" class="tab-pane" id="Filters">
+                <div class="row">
+                  <!-- Left -->
+                  <div class="col-md-5">
+                    <h4 class="filters-h">Player Pool Filters</h4>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Projection Filter:
+                            <span *ngIf="projectionFilterValue" id="ProjectionFilterSliderVal">
+                            ({{projectionFilterValue[0]}} - {{projectionFilterValue[1]}})</span></h4>
+                          <input id="ProjectionFilter" type="text"/>
+                          <span class="slider-range slider-min">{{advFilterSettings?.projectionMin}}</span>
+                          <span class="slider-range slider-max">{{advFilterSettings?.projectionMax}}</span>
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Salary Filter: <span id="SalaryFilterSliderVal"
+                                                                             *ngIf="salaryFilterValue">
+                            ({{salaryFilterValue[0]}} - {{salaryFilterValue[1]}})
+                          </span>
+                          </h4>
+                          <input id="SalaryFilter"/>
+                          <span class="slider-range slider-min">{{advFilterSettings?.salaryMin}}</span><span
+                          class="slider-range slider-max">{{advFilterSettings?.salaryMax}}</span>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Value Filter: <span *ngIf="valueFilterValue"
+                                                                            id="ValueFilterSliderVal">
+                            ({{valueFilterValue[0]}} - {{valueFilterValue[1]}})
+                          </span></h4>
+                          <input id="ValueFilter"/>
+                          <span class="slider-range slider-min">{{advFilterSettings?.valueMin}}</span>
+                          <span class="slider-range slider-max">{{advFilterSettings?.valueMax}}</span>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Batting Order: <span *ngIf="battingOrderFilterValue"
+                                                                             id="BattingOrderSliderVal">
+                            ({{battingOrderFilterValue[0]}} - {{battingOrderFilterValue[1]}})
+                          </span>
+                          </h4>
+                          <input id="BattingOrder" type="text"/>
+                          <span class="slider-range slider-min">0</span><span class="slider-range slider-max">9</span>
+                        </div>
+                      </div>
+                      <!--<div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Position:
+                          </h4>
+                          <p-multiSelect [options]="positions"
+                                         [filter]="false"
+                                         [showToggleAll]="false"
+                                         class="player-position-opt"
+                                         [(ngModel)]="positionFilterValue"
+                                         (onChange)="onPlayerPositionFilterChanged($event)"></p-multiSelect>
+                        </div>
+                      </div>-->
+                    </div>
+                  </div>
+                  <!-- /Left -->
+
+                  <!-- Right -->
+                  <div class="col-md-7">
+                    <div class="row">
+                      <div class="col-md-6 col-xs-8">
+                        <h4 class="filters-h">Players Per Team </h4>
+                      </div>
+                      <div class="col-md-4 col-xs-2">
+                        <input class="form-control input-sm margin-bottom-10" (input)="onGlobalMaxValueChanged($event)"
+                               [value]="getMaxGameValue()" type="text"
+                               placeholder="Max">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 table-responsive team-table-container">
+                        <table class="table td-center team-table">
+                          <thead>
+                          <tr>
+                            <th>Min</th>
+                            <th></th>
+                            <th>Max</th>
+                            <th></th>
+                            <th>Min</th>
+                            <th></th>
+                            <th>Max</th>
+                          </tr>
+                          </thead>
+                          <tbody *ngIf="advFilterSettings">
+                          <tr *ngFor="let game of advFilterSettings.games">
+                            <td><input style="width: 56px" class="form-control"
+                                       (input)="validateHomeTeamMinValue($event,game)"
+                                       [(ngModel)]="game.homeTeamMinValue">
+                            </td>
+                            <td class="td-team"><img style="width: 70px;height: 40px" [attr.src]="game.homeTeamLogo"
+                                                     (click)="onGameClick(game)"/></td>
+                            <td><input style="width: 56px" class="form-control"
+                                       [(ngModel)]="game.homeTeamMaxValue">
+                            </td>
+                            <td>@</td>
+                            <td><input style="width: 56px" class="form-control"
+                                       (input)="validateAwayTeamMinValue($event,game)"
+                                       [(ngModel)]="game.awayTeamMinValue">
+                            </td>
+                            <td class="td-team"><img style="width: 70px;height: 40px" [attr.src]="game.awayTeamLogo"/>
+                            </td>
+                            <td><input style="width: 56px" class="form-control"
+                                       [(ngModel)]="game.awayTeamMaxValue">
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Filters -->
+
+              <!-- Stacking -->
+              <div role="tabpanel" class="tab-pane" id="Stacking">
+                <div class="panel-container panel-table table-responsive">
+                  <table class="table filter-table">
+                    <thead>
+                    <tr>
+                      <th>Select Stack</th>
+                      <th>Team</th>
+                      <th># of Players
+                        <span *ngIf="selectedOperator == 'DraftKings'" style="font-size: 12px"> ({{stackingTeam1.players+stackingTeam2.players+stackingTeam3.players}} player(s) stacked out of 10)</span>
+                        <span *ngIf="selectedOperator == 'FanDuel'" style="font-size: 12px"> ({{stackingTeam1.players+stackingTeam2.players+stackingTeam3.players}} player(s) stacked out of 9)</span>
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>Select Stack</td>
+                      <td>
+                        <select class="form-control" [(ngModel)]="stackingTeam1.name" (change)="prepareStacks()">
+                          <option [value]="'-'" selected>Select team</option>
+                          <option *ngFor="let team of stack1" [value]="team.team">{{team.team}}</option>
+                        </select>
+                      </td>
+                      <td>
+                        <nav aria-label="Page navigation">
+                          <ul class="pagination" *ngIf="stackingTeam1.name != '-'">
+                            <li [class.active]="stackingTeam1.players == 1"
+                                (click)="stackingTeam1.players = 1;validateStakingPlayerCount(stackingTeam1)"><a>1</a>
+                            </li>
+                            <li [class.active]="stackingTeam1.players == 2"
+                                (click)="stackingTeam1.players = 2;validateStakingPlayerCount(stackingTeam1)"><a>2</a>
+                            </li>
+                            <li [class.active]="stackingTeam1.players == 3"
+                                (click)="stackingTeam1.players = 3;validateStakingPlayerCount(stackingTeam1)"><a>3</a>
+                            </li>
+                            <li [class.active]="stackingTeam1.players == 4"
+                                (click)="stackingTeam1.players = 4;validateStakingPlayerCount(stackingTeam1)"><a>4</a>
+                            </li>
+                            <li *ngIf="selectedOperator == 'DraftKings'" [class.active]="stackingTeam1.players == 5"
+                                (click)="stackingTeam1.players = 5;validateStakingPlayerCount(stackingTeam1)"><a>5</a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Select Stack</td>
+                      <td>
+                        <select class="form-control" [(ngModel)]="stackingTeam2.name" (change)="prepareStacks()">
+                          <option [value]="'-'" selected>Select team</option>
+                          <option *ngFor="let team of stack2" [value]="team.team">{{team.team}}</option>
+                        </select>
+                      </td>
+                      <td>
+                        <nav aria-label="Page navigation">
+                          <ul class="pagination" *ngIf="stackingTeam2.name != '-'">
+                            <li [class.active]="stackingTeam2.players == 1"
+                                (click)="stackingTeam2.players = 1;validateStakingPlayerCount(stackingTeam2)"><a>1</a>
+                            </li>
+                            <li [class.active]="stackingTeam2.players == 2"
+                                (click)="stackingTeam2.players = 2;validateStakingPlayerCount(stackingTeam2)"><a>2</a>
+                            </li>
+                            <li [class.active]="stackingTeam2.players == 3"
+                                (click)="stackingTeam2.players = 3;validateStakingPlayerCount(stackingTeam2)"><a>3</a>
+                            </li>
+                            <li [class.active]="stackingTeam2.players == 4"
+                                (click)="stackingTeam2.players = 4;validateStakingPlayerCount(stackingTeam2)"><a>4</a>
+                            </li>
+                            <li *ngIf="selectedOperator == 'DraftKings'" [class.active]="stackingTeam2.players == 5"
+                                (click)="stackingTeam2.players = 5;validateStakingPlayerCount(stackingTeam2)"><a>5</a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Select Stack</td>
+                      <td>
+                        <select class="form-control" [(ngModel)]="stackingTeam3.name" (change)="prepareStacks()">
+                          <option [value]="'-'">Select team</option>
+                          <option *ngFor="let team of stack3" [value]="team.team">{{team.team}}</option>
+                        </select>
+                      </td>
+                      <td>
+                        <nav aria-label="Page navigation">
+                          <ul class="pagination" *ngIf="stackingTeam3.name != '-'">
+                            <li [class.active]="stackingTeam3.players == 1"
+                                (click)="stackingTeam3.players = 1;validateStakingPlayerCount(stackingTeam3)"><a>1</a>
+                            </li>
+                            <li [class.active]="stackingTeam3.players == 2"
+                                (click)="stackingTeam3.players = 2;validateStakingPlayerCount(stackingTeam3)"><a>2</a>
+                            </li>
+                            <li [class.active]="stackingTeam3.players == 3"
+                                (click)="stackingTeam3.players = 3;validateStakingPlayerCount(stackingTeam3)"><a>3</a>
+                            </li>
+                            <li [class.active]="stackingTeam3.players == 4"
+                                (click)="stackingTeam3.players = 4;validateStakingPlayerCount(stackingTeam3)"><a>4</a>
+                            </li>
+                            <li *ngIf="selectedOperator == 'DraftKings'" [class.active]="stackingTeam3.players == 5"
+                                (click)="stackingTeam3.players = 5;validateStakingPlayerCount(stackingTeam3)"><a>5</a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- Stacking -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Modal Body -->
+      <div class="subscription-alert-drop-back" *ngIf="showSubscriptionAlert">
+        <div class="subscription-alert">
+          <div class="alert-title">
+            Subscription Required
+          </div>
+          <div class="alert-content">
+            It looks like you do not currently have a subscription.
+            <a (click)="onSubscribeLinkClick()" style="color: #0070ff" data-dismiss="modal">Subscribe</a> today for full access!
+           <!-- It looks like you do not have access to a plan yet. Please
+            <a (click)="onSubscribeLinkClick()" style="color: #0070ff" data-dismiss="modal">subscribe now</a> for full access to
+            RotoPros.-->
+          </div>
+          <div class="alert-footer">
+            <button type="button" class="btn btn-default" (click)="onSubscriptionAlertCloseClick()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

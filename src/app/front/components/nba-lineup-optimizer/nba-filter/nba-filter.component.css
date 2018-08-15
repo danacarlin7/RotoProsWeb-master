@@ -1,0 +1,17 @@
+img {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+section.my-section {
+  padding: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 1px;
+}
+
+a .disabled {
+  opacity: 0.4;
+}

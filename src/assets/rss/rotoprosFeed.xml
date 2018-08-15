@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+
+<channel>
+
+	<title>Rotopros - Fantasy Sports Podcast</title>
+	<link>http://localhost:4200/</link>
+	<description>A podcast from Rotopros</description>
+	<!-- <image>
+		<title>Rotopros - Fantasy Sports Podcast</title>
+	</image> -->
+
+	<item>
+		<title>First RSS Feed</title>
+		<link>http://localhost:4200/xml</link>
+		<description>This is the test RSS feed created for rotopros</description>
+	</item>
+
+</channel>
+
+</rss>

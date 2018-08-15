@@ -1,0 +1,21 @@
+<div class="tFormat">
+  <div class="table-responsive">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tr class="dHedin">
+        <th width="26%"></th>
+        <th width="18.5%">Lifetime</th>
+        <th width="18.5%">This Year</th>
+        <th width="18.5%">This Month</th>
+        <th width="18.5%">This Week</th>
+      </tr>
+      <tr *ngFor="let data of overviewData">
+        <td>{{data.title}}</td>
+        <td [ngStyle]="getDataStyle(data,'Lifetime')">{{getDisplayValue(data,'Lifetime')}}</td>
+        <td [ngStyle]="getDataStyle(data,'This Year')">{{getDisplayValue(data,'This Year')}}</td>
+        <td [ngStyle]="getDataStyle(data,'This Month')">{{getDisplayValue(data,'This Month')}}</td>
+        <td [ngStyle]="getDataStyle(data,'This Week')">{{getDisplayValue(data,'This Week')}}</td>
+      </tr>
+    </table>
+
+  </div>
+</div>

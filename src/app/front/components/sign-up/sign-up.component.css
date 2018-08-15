@@ -1,0 +1,147 @@
+.chk-username-loader {
+  display: inline;
+  float: right;
+  margin-top: -52px;
+}
+
+.signup-video {
+  margin: 35px 0 20px 0;
+}
+
+.fade {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 250ms linear, opacity 500ms linear;
+}
+
+.fade > span {
+  padding: 5px;
+  display: inline-block;
+}
+
+.fade.in {
+  opacity: 1;
+  height: 27px;
+  transition: height 250ms linear, opacity 500ms linear;
+}
+
+.rp-plan-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.rp-plan {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  transition: 300ms;
+  color:#f8c534;
+}
+
+.rp-plan:hover{
+  box-shadow: 2px 1px 10px 0 rgba(0, 0, 0, 0.2);
+  transition: 225ms;
+}
+
+.plan-name {
+  font-size: 24px;
+  margin: 10px;
+  min-height: 54px;
+  text-align: center;
+}
+
+.plan-price {
+  font-size: 30px;
+  margin: 10px 1px;
+}
+
+@media (max-width: 1199px) {
+  .rp-plan {padding: 0}
+  .plan-price {font-size: 24px;}
+}
+
+.plan-time {
+  font-size: 18px;
+  margin: 10px 1px;
+  text-transform: uppercase;
+}
+
+.plan-trial-period{
+  font-size: 14px;
+  margin: 0 10px 15px 10px;
+}
+
+.discount-text {
+  color: #36bc77;
+}
+
+.plans-cover-img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.page-heading{
+  text-align: center;
+  padding-bottom: 20px;
+  color:#000;
+}
+
+.btn-subscribe{
+  background: #f8c534;
+  color: #000 !important;
+  border: 1px solid #ffffff !important;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.btn-subscribe:hover,.btn-subscribe:active,.btn-subscribe:focus{
+  background: transparent;
+  border: 1px solid #f8c534 !important;
+  color: #f8c534 !important;
+}
+
+.plan-price-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 10px 0px 10px;
+}
+
+.sub-title-txt{
+
+}
+
+.sub-title-txt a{
+  text-decoration: underline !important;
+}
+
+.sub-title-txt a:hover{
+ color: #000000 !important;
+}
+
+.loginDetails{
+  background-image: url("../../../../assets/images/stadium_small_yellow.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-blend-mode: screen;
+  position: relative;
+}
+
+.loginDetails-overlay{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(248, 197, 52, 0);
+}

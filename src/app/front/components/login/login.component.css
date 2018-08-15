@@ -1,0 +1,7 @@
+.loginDetails{
+  background-image: url("../../../../assets/images/stadium_small_yellow.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-blend-mode: screen;
+  position: relative;
+}

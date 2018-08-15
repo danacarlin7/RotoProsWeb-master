@@ -1,0 +1,173 @@
+<div class="header-margin"></div>
+<header>
+  <div class="topHeader">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sidePad">
+          <nav class="topNavbar">
+            <ul class="pull-right">
+              <!--<li class="lineup-dropdown lineup-menu-full-view" routerLinkActive="active"
+                  [routerLinkActiveOptions]="{exact: false}">
+                <a>Lineup Optimizer<span class="caret"></span></a>
+                <div class="dropdown-content">
+                  <a routerLink="/lineup-optimizer">MLB Optimizer</a>
+                  <a routerLink="/lineup-optimizer/nfl">NFL Optimizer</a>
+                </div>
+              </li>-->
+              <!--<li class="dropdown lineup-menu-mobile-view" routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">-->
+              <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1-->
+              <!--<span class="caret"></span></a>-->
+              <!--<ul class="dropdown-menu">-->
+              <!--<li> <a routerLink="/lineup-optimizer1">MLB Optimizer</a></li>-->
+              <!--<li><a routerLink="/lineup-optimizer/nfl">NFL Optimizer</a></li>-->
+              <!--</ul>-->
+              <!--</li>-->
+              <!--<li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/nfl-excel-tool">NFL Excel Tool<span class="sr-only">(current)</span></a>
+              </li>-->
+
+
+              <!-- <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/mlb-excel-tool">Excel Tool<span class="sr-only">(current)</span></a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/extensions">Extensions</a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/contact-analyzer">Contest Analyzer</a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/injuries">Injury Feeds</a>
+              </li> -->
+
+
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/basics">DFS Basics</a>
+              </li>
+              <!-- <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                 <a routerLink="/subscribe">Plans</a>
+               </li>-->
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/faq">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bottomHeader">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sidePad bottomHeaderNav">
+
+
+          <div class="logoWrapper">
+            <a routerLink="/"><img src="../../../../assets/images/logo.png" alt="LOGO" class="img-responsive"/></a>
+          </div>
+
+          <div class="menuToggle">
+            <img src="../../../../assets/images/menu-toggle.png" alt=""/>
+          </div>
+          <div class="mainMenu">
+            <div class="closeBtn">
+              <span><img src="../../../../assets/images/close_icn.png" alt="" class="img-responsive"/></span>
+            </div>
+            <ul>
+              <li (window:resize)="onResize($event)">
+                <a *ngIf="headerIsStacked && loggedUser" style="width: auto"
+                   routerLink="{{(role == 'user' || role == 'provider')? '/user' : '/admin'}}">
+                  Dashboard
+                </a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a routerLink="" (click)="closeMobileMenu()">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <!-- <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a target="_blank" (click)="closeMobileMenu()" href="http://forum.rotopros.com/">Forums</a>
+              </li> -->
+              <!--<li><a>Products</a></li>-->
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/articles" (click)="closeMobileMenu()">Articles</a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/videos" (click)="closeMobileMenu()">RotoPros Live</a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/lineups" (click)="closeMobileMenu()">Daily MLB Lineups</a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a target="_blank" href="https://dfsgods.slack.com" (click)="closeMobileMenu()">Rotopros Chat</a>
+              </li>
+              <!-- <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/news" (click)="closeMobileMenu()">Player News</a>
+              </li> -->
+
+              <!-- <li *ngIf="loggedUser && loggedUser.is_subscribe" class="lineup-dropdown lineup-menu-full-view" routerLinkActive="active"
+                  [routerLinkActiveOptions]="{exact: true}">
+                <a>Lineup Optimizer<span class="caret"></span></a>
+                <div class="dropdown-content" routerLinkActive="active"
+                     [routerLinkActiveOptions]="{exact: true}">
+                  <a routerLink="/lineup-optimizer" (click)="closeMobileMenu()">MLB Optimizer</a>
+                  <a routerLink="/lineup-optimizer/nfl" (click)="closeMobileMenu()">NFL Optimizer</a>
+                </div>
+              </li> -->
+              <!--<a routerLink="/lineup-optimizer/nba" (click)="closeMobileMenu()">NBA Optimizer</a>-->
+
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a (click)="closeMobileMenu();onPlansClick()" style="cursor: pointer">Plans</a>
+              </li>
+
+              <li id="rss">
+                <a routerLink="/podcast">Foul Balls</a>
+                <!-- <a href="http://feeds.soundcloud.com/users/soundcloud:users:308749747/sounds.rss">
+                  <i class="fa fa-rss-square" id="rss-link"></i>
+                </a> -->
+              </li>
+
+            </ul>
+          </div>
+          <div class="rightNav">
+            <ul style="flex-wrap: nowrap">
+              <li class="loginBtn" *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
+              <li class="signUpBtn" *ngIf="!isLoggedIn"><a routerLink="/signup">Sign Up</a></li>
+              <li class="signUpBtn" *ngIf="isLoggedIn">
+                <a appMobileHidden style="width: auto"
+                   routerLink="{{(role == 'user' || role == 'provider')? '/user' : '/admin'}}">
+                  Dashboard
+                </a>
+              </li>
+              <!--<li class="loginBtn" *ngIf="isLoggedIn"><a (click)="btnLogoutClicked()">Logout</a></li>-->
+              <li class="home-profile" *ngIf="isLoggedIn">
+                <div class="dropdown">
+                  <a href="javascript:void(0)" class="btn btn-default dropdown-toggle" type="button" id="profileDrpdwn"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="icnWrapperS">
+                  <!--<img src="../../../../assets/images/dashboard_profile_img.png" alt=""-->
+                  <!--class="img-responsive"/>-->
+                   <img
+                     #profilePic
+                     [attr.src]="profileImagePath ? 'https://api.dfsportgod.com/images/'+ profileImagePath : '../../../../assets/images/blank-avatar.jpg'"
+                     alt=""
+                     class="img-responsive"/>
+                </span>
+
+                    <span class="profileName">{{loggedUser?.first_name}} {{loggedUser?.last_name}}</span>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="profileDrpdwn">
+                    <!--<li><a href="#">My Profile</a></li>-->
+                    <li><a routerLink="/user/settings">Settings</a></li>
+                    <li><a (click)="logoutUser()">Log Out</a></li>
+                  </ul>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

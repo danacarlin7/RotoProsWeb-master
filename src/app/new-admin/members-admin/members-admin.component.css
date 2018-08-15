@@ -1,0 +1,15 @@
+th {
+  cursor: pointer;
+}
+
+.subscribe-button {
+  margin-top: 10px;
+}
+
+tfoot input {
+  width: 70%;
+}
+
+div.ui-datatable-scrollable-body {
+  overflow-y: scroll;
+}

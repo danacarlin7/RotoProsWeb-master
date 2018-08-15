@@ -1,0 +1,23 @@
+<router-outlet></router-outlet>
+<div id="myModal" class="modal fade" role="dialog" #subscriptionAlert>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Subscription Required</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 19px">It looks like you do not currently have a subscription.
+          <a routerLink="/subscribe" style="color: #0070ff" data-dismiss="modal">Subscribe</a> today for full access!
+        </p>
+        <p *ngIf="!isLoggedIn" style="font-size: 19px">Already have Subscription ?
+          <a routerLink="/login" style="color: #0070ff" data-dismiss="modal">Login</a> here!
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

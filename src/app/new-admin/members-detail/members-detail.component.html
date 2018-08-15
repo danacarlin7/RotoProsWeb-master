@@ -1,0 +1,85 @@
+<div class="card container">
+  <div class="card-header">
+    <h4 class="card-title">{{member.name}}</h4>
+    <h6>{{member.email}}</h6>
+  </div>
+  <div class="card-content">
+    <div class="row">
+      <div class="left-vertical-tabs">
+        <ul class="nav nav-stacked" role="tablist">
+          <li class="active"><a href="#details" role="tab" data-toggle="tab">Member Details</a></li>
+          <li><a href="#stripe" role="tab" data-toggle="tab">Stripe</a></li>
+        </ul>
+      </div>
+      <div class="right-text-tabs">
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="details">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let key of memberKeys">
+                  <td class="member-detail-key">{{ key }}</td>
+                  <td *ngIf="key !== 'subscriptions'">{{ member[key] }}</td>
+                  <td *ngIf="key === 'subscriptions'">
+                    <table *ngFor="let subscription of member[key]" class="table">
+                      <tbody>
+                        <tr>
+                          <td>subscription_id</td>
+                          <td>{{ subscription.subscription_id }}</td>
+                        </tr>
+                        <tr>
+                          <td>plan name</td>
+                          <td>{{ subscription.plan_name}}</td>
+                        </tr>
+                        <tr>
+                          <td>status</td>
+                          <td>{{ subscription.status }}</td>
+                        </tr>
+                        <tr>
+                          <td>current period start</td>
+                          <td>{{ subscription.current_period_start }}</td>
+                        </tr>
+                        <tr>
+                          <td>current period end</td>
+                          <td>{{ subscription.current_period_end }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane" id="stripe">
+            <table class="table striped-table">
+              <thead>
+                <tr>
+                  <th>Payment Date</th>
+                  <th>For</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Live?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let charge of stripeCharges">
+                  <th>{{ charge.created }}</th>
+                  <th>{{ charge.statement_descriptor }}</th>
+                  <th>{{ charge.amount }}</th>
+                  <th>{{ charge.status }}</th>
+                  <th>{{ charge.livemode }}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2976 @@
+@media (max-width:1600px) {
+  .articleDetails .articleLftPtrn {
+    left: -225px;
+  }
+  .articleDetails .articleLftPtrn>img {
+    left: 38%;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li {
+    margin-left: 15px;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li a {
+    font-size: 14px;
+  }
+  .dashboardHeader .bottomHeader .rightNav #profileDrpdwn {
+    font-size: 15px;
+  }
+  .dashboardHeader .bottomHeader .rightNav img {
+    max-width: 45px;
+  }
+  .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li a {
+    width: 100px;
+  }
+  .dashboardHeader .bottomHeader .logoWrapper, header .logoWrapper {
+    max-width: 200px;
+  }
+  header .bottomHeader .rightNav>ul>li>a {
+    width: 90px;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu {
+    padding-right: 270px;
+  }
+}
+
+@media (max-width:1390px) {
+  .icnWrapperS {
+    margin-right: 7px;
+  }
+  .articleDetails .articleLftPtrn {
+    left: -165px;
+  }
+  .articleDetails .articleLftPtrn>img {
+    left: 38%;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleBx {
+    width: 355px;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx {
+    width: 2280px;
+  }
+  .articleDetails .articleDetailsWrapper>p {
+    width: 60%;
+  }
+  .boPrt1 .bannerTopTxt h1 {
+    font-size: 85px;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li {
+    margin-left: 10px;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li a {
+    font-size: 12px;
+  }
+  .loginDetails .formWrapper {
+    padding: 40px 30px;
+  }
+  .loginDetails .loginDetailsWrapper .loginLftWrapper {
+    left: -181px;
+  }
+  .frgtPasswdDetails {
+    padding: 200px 0px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent {
+    padding: 30px 30px 0px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgePrice {
+    font-size: 25px;
+    padding-bottom: 12px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeTime {
+    font-size: 17px;
+  }
+  .signupRghtWrapper .mainTab .tab ul li a {
+    font-size: 16px;
+    padding: 21px 0px;
+  }
+  .dashboardHeader .bottomHeader .rightNav #profileDrpdwn {
+    font-size: 14px;
+  }
+  .dashboardHeader .bottomHeader .rightNav img {
+    max-width: 35px;
+  }
+  .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li a {
+    width: 95px;
+    padding: 18px 0px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter {
+    justify-content: space-between;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group {
+    margin-left: 0px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .dashboardMain .subscriptionNotification {
+    margin-top: 5px;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght table tr td img {
+    max-width: 50px;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght table tr td {
+    font-size: 13px;
+    padding: 15px 10px;
+  }
+  .dashboardHome .profitCategory table tr th {
+    padding: 15px 10px;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght table tr th:first-child {
+    font-size: 17px;
+  }
+  s .dashboardContainer .fixedDash .topFilter {
+    width: 84% !important;
+  }
+  .dashboardContainer .topFiltrWrapper .dashboardName h1 {
+    font-size: 25px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {
+    font-size: 13px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control {
+    max-width: 112px;
+    font-size: 13px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group label {
+    font-size: 13px;
+    margin-right: 4px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {
+    background-size: 14px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child .form-control {
+    padding-left: 32px !important;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child {
+    width: 19% !important;
+    margin-left: 0px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child .form-control {
+    background-size: 14px !important;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control {
+    padding: 9px;
+  }
+  .dashboardContainer .topFiltrWrapper {
+    padding: 25px 30px;
+  }
+  .dUpldBtnWrapper {
+    flex-direction: column;
+  }
+  .dUpldBxRght a .gTxt {
+    font-size: 13px;
+  }
+  .dUpldBtnWrapper .dUpldBtnBx {
+    margin-right: 0px;
+  }
+  .dUpldBtnWrapper>p {
+    margin-top: 10px;
+  }
+  .dTabs .nav-tabs>li>a {
+    padding: 10px 12px;
+  }
+  .dashboardHeader .bottomHeader .logoWrapper, header .logoWrapper {
+    max-width: 170px;
+  }
+  header .bottomHeader .rightNav>ul>li>a {
+    width: 75px;
+    font-size: 14px;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu {
+    padding-right: 260px;
+  }
+  .mlbDescItm .mlbDescItmTp {
+    min-height: 225px;
+  }
+  .glossaryVideoSection>div iframe {
+    width: 100%;
+    height: 254px;
+  }
+}
+
+@media (max-width:1150px) {
+  .icnWrapperD {
+    margin-right: 10px;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu {
+    padding: 0px;
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    background: rgba(0, 0, 0, 0.92);
+    width: 100%;
+    z-index: 99999;
+    height: 100%;
+    padding: 20px 0px;
+    transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    overflow: auto;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu .closeBtn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-width: 18px;
+    cursor: pointer;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li a {
+    font-size: 14px;
+  }
+  header .bottomHeader .bottomHeaderNav .menuToggle {
+    display: block;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul {
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li {
+    margin-left: 0px;
+    display: block;
+    width: 100%;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li a {
+    display: block;
+    padding: 5px 25px;
+    border-bottom: 1px solid #333;
+  }
+  .tglMnu {
+    left: 0px !important;
+  }
+  header .bottomHeader .navbar-default {
+    padding: 0px;
+  }
+  header .bottomHeader .rightNav {
+    position: absolute;
+    ;
+    right: 70px;
+  }
+  header .bottomHeader .rightNav img {
+    max-width: 18px;
+  }
+  .sidePad {
+    padding: 0px 15px;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li a {
+    font-size: 15px;
+    text-align: center;
+  }
+  header .bottomHeader .rightNav>ul>.searchBtn .srchBar button {
+    padding: 6px 12px;
+  }
+  header .bottomHeader .rightNav>ul>.searchBtn .srchBar .form-group input {
+    padding: 8px 53px 8px 8px;
+  }
+  header .bottomHeader .rightNav>ul>li>a {
+    font-size: 14px;
+    line-height: 19px;
+    width: 90px;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleBx {
+    width: 520px;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx {
+    width: 3270px;
+  }
+  header .bottomHeader .rightNav>ul>.searchBtn a {
+    padding: 6.5px 12px !important;
+  }
+  .dashboardHeader .bottomHeader .logoWrapper {
+    position: relative;
+    left: 0px;
+    transform: translate(0, 0);
+    max-width: 160px;
+  }
+  .dashboardHeader .bottomHeader .rightNav img {
+    max-width: 32px;
+  }
+  .dashboardHeader .bottomHeader .bottomHeaderNav {
+    justify-content: space-between;
+  }
+  .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li a {
+    width: 100%;
+    padding: 10px 0px;
+    flex-flow: row wrap;
+  }
+  .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul .active a, .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul .active>a:focus, .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul .active>a:hover {
+    box-shadow: 0px 0px 10px #9a9090;
+    background: #000;
+  }
+  .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li>a:focus, .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li>a:hover {
+    box-shadow: 0px 0px 10px #9a9090;
+    background: #000;
+  }
+  .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu {
+    padding: 38px 0px;
+  }
+  .dashboardHeader .bottomHeader .bottomHeaderNav .mainMenu ul li {
+    border-right: 0px;
+  }
+  .dashboardHeader .bottomHeader {
+    padding: 24px 0px;
+  }
+  header .bottomHeader {
+    padding: 10px 0px;
+  }
+  .dashboardHome .profitCategory .profitCategoryLft {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .dashboardHome .profitCategory .profitCategoryLft table {
+    min-width: 100%;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght {
+    width: 100%;
+  }
+  .dashboardHome .profitByCat .profitByCatLft {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .dashboardHome .profitByCat .profitByCatRght {
+    width: 100%;
+  }
+  .dashboardHome .profitByCat .profitByCatRght ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .dashboardHome .profitByCat .profitByCatRght ul li {
+    width: 35% !important;
+    margin: 0px !important;
+  }
+  .dashboardHome .profitCategory .profitCategoryLft .tblScrlCntntWrap {
+    max-height: 360px;
+    ;
+    height: auto !important;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-heading .panel-title a {
+    font-size: 15px;
+  }
+  .sectionHedin .dTabs {
+    right: 15px;
+  }
+  @media (max-width:1110px) {
+    .dashboardHeader .bottomHeader .logoWrapper {
+      max-width: 140px;
+    }
+    .lineupSection .lineupItmWrap .lineupItm .lineupTeamName .lineupMatchDate p {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (max-width:991px) {
+  header .bottomHeader .navbar-default .navbar-toggle {
+    border: 0px;
+    margin-right: 2px;
+    margin-top: 11px;
+  }
+  header .bottomHeader .navbar-default .navbar-toggle .icon-bar {
+    width: 28px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: #FFF;
+  }
+  header .bottomHeader .navbar-default .navbar-toggle:hover, header .bottomHeader .navbar-default .navbar-toggle:focus {
+    background: transparent;
+  }
+  header .bottomHeader .navbar-default .navbar-toggle:hover .icon-bar, header .bottomHeader .navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #f8c534;
+  }
+  section {
+    padding: 45px 0px;
+  }
+  header .topHeader .topNavbar>ul>li>a {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+  .matchDetails .matchDetailsSlider .owl-item .item ul>li {
+    font-size: 15px;
+  }
+  .matchDetails .tabWrapper .nav-tabs>li>a {
+    font-size: 15px;
+    padding: 11px 20px;
+  }
+  .boPrt1 .bannerTopTxt h1 {
+    font-size: 60px;
+    line-height: 65px;
+    letter-spacing: -4.5px;
+  }
+  .boPrt1 .bannerTopTxt p {
+    font-size: 17px;
+  }
+  .boPrt1 .bannerTopTxt a {
+    font-size: 17px;
+    padding: 10px 30px;
+    margin-top: 25px;
+  }
+  .newsDetails .newsDetailsLft {
+    padding: 0px;
+    margin-bottom: 25px;
+  }
+  .newsDetails .tabWrapper {
+    padding: 0px;
+  }
+  .newsDetails .newsDetailsLft>p {
+    font-size: 15px;
+    margin: 0px;
+  }
+  .newsDetails .mainHeadingBlack {
+    margin-bottom: 20px;
+  }
+  .newsDetails .tabWrapper .nav-tabs>li>a {
+    font-size: 17px;
+  }
+  .newsDetails .tabWrapper .panel-group .panel-default>.panel-heading .panel-title {
+    font-size: 15px;
+  }
+  .newsDetails .tabWrapper .nav-tabs>li {
+    float: left;
+    margin-right: 50px;
+  }
+  .latestNewsDetails .latestNewsWrapper h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .latestNewsDetails .latestNewsWrapper p {
+    font-size: 15px;
+  }
+  .latestNewsDetails .latestNewsWrapper h1 {
+    margin-bottom: 15px;
+  }
+  .latestNewsDetails .latestNewsWrapper {
+    padding-bottom: 50px;
+  }
+  .socialDetails .tabWrapper {
+    padding-right: 45px;
+  }
+  .socialDetails .tabWrapper .nav-tabs {
+    right: 45px;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialNameWrapper {
+    font-size: 35px;
+    line-height: 24px;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialMsg {
+    font-size: 15px;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialLink {
+    font-size: 15px;
+  }
+  .socialDetails .tabWrapper .nav-tabs>li>a {
+    width: 65px;
+  }
+  .articleDetails .articleLftPtrn {
+    left: -128px;
+  }
+  .articleDetails .articleLftPtrn>img {
+    left: 38%;
+  }
+  .mainHeadingBlack {
+    font-size: 35px;
+  }
+  .newsletterDetails .newsletterPara {
+    font-size: 20px;
+  }
+  .newsletterDetails form {
+    margin-top: 50px !important;
+  }
+  .newsletterDetails form .form-group {
+    margin-right: 10px !important;
+  }
+  .newsletterDetails form input[type="button"], .newsletterDetails form input[type="submit"] {
+    padding: 12px 40px;
+  }
+  .articleDetails .articleDetailsWrapper>p {
+    margin-bottom: 20px;
+    width: 80%;
+    font-size: 15px;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleBx .articlePara {
+    font-size: 15px;
+  }
+  footer .topFooter .footerHdin {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+  footer .topFooter .footerPara {
+    font-size: 14px;
+  }
+  footer .topFooter .footerLinks>li {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  footer .bottomFooter p {
+    font-size: 13px;
+  }
+  header .bottomHeader .rightNav {
+    top: 12px;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li:last-child a {
+    border-bottom: 0px;
+  }
+  .loginDetails .loginDetailsWrapper .loginRghtWrapper {
+    width: 420px;
+  }
+  .loginDetails .loginDetailsWrapper .loginRghtWrapper {
+    padding: 25px;
+  }
+  .loginDetails .formWrapper {
+    padding: 30px 25px;
+  }
+  .loginDetails .formWrapper h3 {
+    font-size: 34px;
+  }
+  .loginDetails .formWrapper p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .loginDetails .formWrapper form {
+    margin-top: 5px !important;
+  }
+  .loginDetails .formWrapper form input[type="text"], .loginDetails .formWrapper form input[type="password"], .loginDetails .formWrapper form input[type="email"] {
+    padding: 10px 12px;
+  }
+  .loginDetails .formWrapper form input[type="button"], .loginDetails .formWrapper form input[type="submit"] {
+    padding: 14px 10px;
+    font-size: 17px;
+    margin-top: 5px;
+  }
+  .loginDetails .formWrapper .otherSigninPara {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns {
+    margin-top: 8px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns a {
+    padding: 10px 10px;
+    height: 46px;
+    font-size: 15px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns img {
+    min-width: 10px;
+    max-width: 20px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns .lgGml img {
+    max-width: 44px;
+  }
+  .loginDetails .formWrapper .regstrNmPara {
+    margin-top: 22px;
+  }
+  .loginDetails .loginDetailsWrapper .loginLftWrapper {
+    left: -238px;
+    max-width: 600px;
+  }
+  .loginDetails .formWrapper form .form-group {
+    margin-bottom: 15px;
+  }
+  .frgtPasswdDetails {
+    padding: 175px 0px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent {
+    padding: 20px 25px 0px;
+  }
+  .signupRghtWrapper .mainTab .tab ul li a {
+    font-size: 15px;
+    padding: 18px 0px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group {
+    margin: 7px 0px;
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    width: 32% !important;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control {
+    width: 100%;
+    max-width: initial;
+    padding: 6px 10px !important;
+    font-size: 14px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {
+    width: 79%;
+  }
+  .dashboardContainer .topFiltrWrapper {
+    padding: 25px 20px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .topStatsBx {
+    width: 48%;
+    margin: 10px 0px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper>div {
+    padding: 15px 0px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter {
+    width: 100%;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child {
+    width: 32% !important;
+    margin-left: 0px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-heading .panel-title a {
+    padding: 15px 10px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body {
+    padding: 15px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .dashMainWrapper .leftFilter {
+    width: 34%;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .dashboardMain {
+    width: 62%;
+  }
+  .tFormat table .dHedin th {
+    padding: 15px 10px !important;
+    font-size: 14px;
+  }
+  .tFormat table tr td {
+    padding: 15px !important;
+  }
+  .dashboardContainerWrapper {
+    padding: 0px 20px !important;
+  }
+  .dashboardContainer .topFiltrWrapper .dashboardName {
+    width: auto;
+  }
+  .dUpldBxLft {
+    width: 100%;
+    height: 130px;
+  }
+  .dUpldBxRght {
+    width: 100%;
+    padding: 20px 0px;
+  }
+  .dTabs .nav-tabs>li>a {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+  .lineupHedin h1 {
+    font-size: 20px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupTeamName .lineUpTeamNameWrap {
+    height: 90px;
+    width: 90px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupTeamName .teamName {
+    font-size: 14px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupTeamName .lineupMatchTime p {
+    font-size: 20px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupPlayerName .lineupPlayerWrap li {
+    font-size: 14px;
+    line-height: 34px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupPlayerName .lineupPlayerWrap li span {
+    margin-right: 15px;
+  }
+  .newsItmBtmRght {
+    padding: 0px 10px;
+  }
+  .newsItmBtm .newsItmBtmLft>div {
+    padding: 0px 10px;
+  }
+  .newsItmBtmLft div .txtWrapper {
+    font-size: 14px;
+  }
+  .newsItmBtmLft3>div:first-child {
+    margin-right: 15px;
+  }
+  .newsItmBtmRght .txtWrapper {
+    font-size: 14px;
+  }
+  .newsItmBtm .newsItmBtmLft>div {
+    height: 50px;
+  }
+  .newsItmBtmRght {
+    height: 50px;
+  }
+  .newsItm .newsItmTp .newsItmNameWrap {
+    padding: 20px 0px;
+  }
+  .newsItmName .newsImg img {
+    max-width: 60px;
+  }
+  .newsItmName .newsName a {
+    font-size: 16px;
+  }
+  .newsItm .newsItmTp .newsWrap {
+    margin-top: 25px;
+  }
+  .newsItm .newsItmTp .newsWrap h2 a {
+    margin-bottom: 10px;
+  }
+  .newsItm .newsItmTp {
+    padding: 10px;
+    padding-top: 0px;
+  }
+  .mlbBannerHedin h1 .mlbBannerBig {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .mlbBannerHedin h1 {
+    font-size: 30px;
+  }
+  .mlbBannerSection {
+    padding: 90px 0px 110px;
+  }
+  .mlbTopLftHedin {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  .mlbTopLftPara {
+    font-size: 19px;
+    line-height: 22px;
+    margin-top: 15px;
+  }
+  .dwnldBtn {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 8px 20px;
+  }
+  .mlbInfoTp .mlbInfoTpPara {
+    font-size: 16px;
+  }
+  .mlbInfoTp .mlbInfoTpHedin {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .mlbInfoTp {
+    padding: 22px 0px;
+  }
+  .mlbInfoMidHedin {
+    font-size: 24px;
+  }
+  .mlbInfoLst li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .mlbInfoBot p {
+    font-size: 14px;
+    line-height: 27px;
+  }
+  .mlbDescItm .mlbDescHedin {
+    font-size: 19px;
+    line-height: 25px;
+    margin-bottom: 5px;
+  }
+  .mlbDescItm .mlbDescPara {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .mlbInfoMid .mlbInfoMidLft {
+    padding: 20px 15px;
+  }
+  .mlbInfoMid .mlbInfoMidRght {
+    padding: 20px 15px;
+  }
+  .mlbDescItm .mlbDescItmTp {
+    min-height: 207px;
+  }
+  .mlbDescLst {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .mlbTopSectionWrap {
+    padding: 15px 20px;
+  }
+  .mlbTopLftHedin {
+    font-size: 22px;
+    line-height: 25px;
+    width: 40%;
+  }
+  .mlbTopLftPara {
+    font-size: 19px;
+    line-height: 24px;
+    width: 60%;
+  }
+  .mlbInfoSection {
+    padding: 45px 0px;
+  }
+  .mlbInfoLst li span {
+    left: -11px;
+    padding: 0px 7px 0px 7px;
+    line-height: 21px;
+  }
+  .mlbDescItm .mlbDescItmTp {
+    top: 45%;
+    z-index: 9;
+    left: 15px;
+    right: 15px;
+  }
+  .mlbDescSectionWrap .mlbDescItm {
+    margin-bottom: 140px;
+  }
+  .mlbDescSectionWrap .mlbDescItm2 {
+    margin-bottom: 230px;
+  }
+  .mlbDescSectionWrap .mlbDescItm:last-child {
+    margin-bottom: 100px;
+  }
+  .faqSection .panel-title>a {
+    padding: 12px 40px 12px 20px;
+    font-size: 14px;
+  }
+  .faqSection .panel-default .panel-body p {
+    font-size: 15px;
+  }
+  .faqSection .panel-group .panel+.panel {
+    margin-top: 15px;
+  }
+  .glossarySection {
+    padding: 25px 0px;
+  }
+  .glossarySection .mainHeadingBlack {
+    font-size: 20px;
+  }
+  .glossarySection p {
+    font-size: 16px;
+  }
+  .glossarySection p.smlP {
+    font-size: 15px;
+  }
+  .glossaryPWrap p {
+    font-size: 15px;
+    line-height: 27px;
+  }
+  .glossaryVideoSection>div iframe {
+    width: 100%;
+    height: 194px;
+  }
+  .mPlaceImgWrap {
+    width: 26%;
+  }
+  .mPlaceInfoWrap {
+    width: 72%;
+  }
+  .mPlaceInfoWrap .mPlaceHedin {
+    font-size: 21px;
+  }
+  .mPlaceInfoWrap .mPlacePara {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .mPlaceWrtr {
+    font-size: 15px;
+  }
+  .mPlaceTp {
+    padding: 20px 15px;
+  }
+  .mPlaceBtnWrap {
+    padding: 10px 15px;
+  }
+  .mPlaceDWrap .authorBx {
+    width: 31%;
+  }
+  .mPlaceDSection .mPlaceWrap {
+    width: 68%;
+  }
+  .mPlaceDWrap .authorBx img {
+    max-width: 100px;
+  }
+  .mPlaceDWrap .authorBx .authorName {
+    font-size: 17px;
+  }
+  .mPlaceDWrap .authorBx p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .authorBx .btnWrapper h4 {
+    font-size: 16px;
+  }
+  .mPlaceDPkgeWrap .mPlaceImgWrap {
+    width: 30%;
+  }
+  .mPlaceDPkgeWrap .mPlaceInfoWrap {
+    width: 68%;
+  }
+  .mPlaceDSection .mPlaceInfoWrap .mPlaceHedin {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  .mPlaceDPkgeWrap h4 {
+    margin-bottom: 15px;
+  }
+  .pkgeCntnt h5 {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .pkgePara {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 5px;
+  }
+  .mPlaceDSection .mPlaceImgWrap {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .mPlaceDSection .mPlaceImgWrap img {
+    max-width: 210px;
+    margin: 0 auto;
+  }
+  .mPlaceDSection .mPlaceInfoWrap {
+    width: 100%;
+  }
+  .articleSection .mPlaceWrap {
+    width: 100%;
+  }
+  .articleSection .mPlaceImgWrap img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .lneUpSecLft>.lneUpIcn {
+    width: 35px;
+    height: 35px;
+    padding: 4px 0px;
+  }
+  .lneUpSecLft {
+    padding: 25px 0px 25px 30px;
+    width: 30%;
+  }
+  .lneUpSecLft>.lneUpNameBx p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .lneUpSecRght {
+    width: 68%;
+  }
+  .lneUpSecLft>.lneUpNameBx a {
+    font-size: 14px;
+  }
+  .lneUpSection .tFormat table {
+    min-width: 100%;
+    width: 680px;
+  }
+  .linUpSection .tFormat table tr.proTotal td {
+    font-size: 14px;
+  }
+  .linUpSection .tFormat table tr.lastTRw td {
+    font-size: 14px;
+  }
+  .linUpSection .form-group .form-control {
+    max-width: 130px;
+    min-width: 130px;
+    font-size: 14px;
+  }
+  .bowerBannerSection {
+    padding: 130px 0px 150px;
+  }
+  .bowerBannerHedin h1 .bowerBannerBig {
+    font-size: 58px;
+    line-height: 65px;
+  }
+  .bowerBannerHedin h1 {
+    font-size: 30px;
+  }
+  .bowerPara {
+    font-size: 15px;
+  }
+  .bowerHedin {
+    font-size: 24px;
+  }
+  .bowerSection3 ul li {
+    font-size: 15px;
+  }
+  .infoSec1Rght {
+    width: 60%;
+  }
+  .infoSec1Lft {
+    width: 38%;
+  }
+  .infoHedin {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+  .infoSecHedin {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+  }
+  .infoPara {
+    font-size: 19px;
+    line-height: 30px;
+  }
+  .infoSec2Hedin {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .infoSec4Lft>.bowerDwnBtn {
+    font-size: 15px;
+    padding: 10px 10px;
+    margin-top: 5px;
+  }
+  .ylwTpBx {
+    padding: 20px 15px;
+  }
+  .ylwTpBx h3 {
+    font-size: 17px;
+  }
+  .ylwTpBx p img {
+    max-width: 15px;
+  }
+  .ylwTpBxBtmBxInfo {
+    padding: 20px 15px;
+  }
+  .indexNPrt2MidSlider {
+    padding: 0px 15px;
+  }
+  .wlwTpBx {
+    padding: 20px 0px;
+  }
+  .nSocialTbBxInfo {
+    padding: 0px 10px 20px;
+  }
+  .nSocialTbBxInfoTp>a {
+    font-size: 16px;
+  }
+  .nSocialTbBxInfoTp>a img {
+    max-width: 15px;
+  }
+  .nltstNwsInfoTme .icnWrapperS {
+    margin-right: 0px;
+  }
+  .nltstNwsInfoDte i, .nltstNwsInfoTme i {
+    font-size: 12px;
+  }
+  .ylwTpBxBtmBx2Wrap {
+    padding: 15px 0px;
+  }
+  .ylwTpBxBtmBx2 {
+    padding: 15px;
+  }
+  .nltstNwsInfoDte {
+    width: 100%;
+  }
+  .nltstNwsInfoTme {
+    width: 100%;
+  }
+  .nltstNwsInfoTpWrp {
+    padding: 0px 10px 20px;
+  }
+  .nltstNwsInfoBtm h4 {
+    font-size: 16px;
+  }
+  .nSlider .owl-nav, .midSlider .owl-nav {
+    font-size: 14px;
+    padding: 0px 10px 20px;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt h1 p {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt h1 p .white {
+    font-size: 70px;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt>p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .indexNPrt1 .carousel-caption {
+    top: 35%;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt>a {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .tpCntrl {
+    bottom: 20px;
+  }
+}
+
+@media(max-width:767px) {
+  section {
+    padding: 30px 0px;
+  }
+  .sidePad {
+    padding: 0px 10px;
+  }
+  .mainHeadingBlack {
+    font-size: 23px;
+    line-height: 45px;
+  }
+  .clseBtn {
+    top: 3px;
+    transform: translate(0, 0);
+    font-size: 15px;
+  }
+  header .bottomHeader .bottomHeaderNav .menuToggle img {
+    max-width: 30px;
+  }
+  header .bottomHeader .navbar-default .navbar-collapse {
+    float: none !important;
+    margin-top: 12px;
+  }
+  .dashboardHeader .bottomHeader .logoWrapper, header .logoWrapper {
+    max-width: 145px;
+  }
+  header .bottomHeader .rightNav>ul>li>a {
+    font-size: 13px;
+    color: #FFF;
+    line-height: 19px;
+    width: 80px;
+  }
+  header .bottomHeader .rightNav>ul>.searchBtn a {
+    padding: 6.5px 10px !important;
+  }
+  header .bottomHeader .rightNav {
+    width: 216px;
+  }
+  .articleDetails .articleLftPtrn {
+    display: none;
+  }
+  header .topHeader .topNavbar>ul>li>a {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+  header .topHeader .topNavbar>ul>.active>a, header .topHeader .topNavbar>ul>.active>a:focus, header .topHeader .topNavbar>ul>.active>a:hover {
+    background: transparent;
+  }
+  header .bottomHeader {
+    padding: 10px 0px !important;
+  }
+  header .bottomHeader .rightNav>ul>.searchBtn .srchBar button {
+    padding: 6px 10px;
+    top: 0px;
+    height: 100%;
+  }
+  header .topHeader .topNavbar>ul>li>a:hover, header .topHeader .topNavbar>ul>li>a:focus {
+    background: transparent;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu ul li a {
+    font-size: 13px;
+  }
+  header .bottomHeader .bottomHeaderNav .mainMenu .closeBtn {
+    max-width: 15px;
+  }
+  .bottomHeader .rightNav>ul>.searchBtn .srchBar .form-group input {
+    padding: 8px 48px 8px 8px;
+  }
+  .newsDetails .tabWrapper .panel-group .panel.active .panel-collapse {
+    padding-bottom: 15px;
+  }
+  .boPrt1 {
+    height: 260px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+  }
+  .boPrt1 .bannerTopTxt {
+    width: 270px;
+  }
+  .boPrt1 .bannerTopTxt h1 {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .boPrt1 .bannerTopTxt h1>span:first-child {
+    margin-right: 6px;
+  }
+  .boPrt1 .bannerTopTxt p {
+    font-size: 14px;
+    line-height: 20px;
+    align-items: center;
+  }
+  .boPrt1 .bannerTopTxt a {
+    font-size: 14px;
+    padding: 4px 26px;
+    margin-top: 5px;
+    margin: 0 auto;
+  }
+  .articleDetails .articleDetailsWrapper {
+    padding: 0px;
+  }
+  .articleDetails .articleDetailsWrapper .mainHeadingBlack {
+    text-align: center;
+  }
+  .newsletterDetails .newsletterPara {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .newsletterDetails form {
+    margin-top: 30px !important;
+  }
+  .newsletterDetails form .form-group input {
+    font-size: 13px;
+    ;
+    padding: 7px 12px;
+  }
+  .newsletterDetails form .form-group {
+    margin-right: 5px !important;
+  }
+  .newsletterDetails form input[type="button"], .newsletterDetails form input[type="submit"] {
+    padding: 7px 18px;
+    font-size: 14px;
+  }
+  .newsletterDetails .newsletterDetailsWrapper .privacyPara {
+    float: none;
+    font-size: 12px;
+    text-align: center;
+  }
+  footer .topFooter {
+    padding: 25px 0px;
+  }
+  footer .topFooter .footerHdin {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  footer .topFooter .logoWrapper {
+    margin-bottom: 10px;
+  }
+  footer .topFooter .logoWrapper img {
+    max-width: 110px;
+  }
+  footer .topFooter .footerPara {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .topFooterWrapper {
+    margin-bottom: 20px;
+  }
+  footer .topFooter .footerLinks>li {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  footer .topFooter .footerSocialLinks>li img {
+    max-width: 28px;
+  }
+  footer .bottomFooter p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 21px;
+  }
+  footer .bottomFooter .bottomFooterRght p {
+    float: none;
+  }
+  .matchDetails .tabWrapper .tab-content {
+    margin-top: 25px;
+  }
+  .matchDetails .matchDetailsSlider .owl-item .item ul>li {
+    font-size: 13px;
+  }
+  .latestNewsDetails .latestNewsWrapper {
+    padding: 15px 15px 20px;
+  }
+  .latestNewsDetails .latestNewsWrapper {
+    padding-bottom: 20px;
+  }
+  .socialDetails .tabWrapper .nav-tabs>li>a {
+    width: 42px;
+    height: 26px;
+  }
+  .socialDetails .tabWrapper {
+    padding-right: 0px;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialImgBx {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialNameWrapper {
+    font-size: 25px;
+    line-height: 20px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialMsg {
+    font-size: 13px;
+    text-align: center;
+    line-height: 22px;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .socialLink {
+    font-size: 13px;
+    text-align: center;
+    display: block;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialTxtBx .hrsAgo {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .socialDetails {
+    padding: 90px 0px 30px;
+  }
+  .socialDetails .tabWrapper .nav-tabs {
+    top: -60px;
+    left: 53%;
+    right: auto;
+    transform: translate(-50%, 0);
+    width: 177px;
+  }
+  .articleDetails .articleDetailsWrapper>p {
+    width: 100%;
+    font-size: 13px;
+    font-family: 'Open Sans';
+    line-height: 21px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx {
+    width: 1890px;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleBx {
+    width: 290px;
+    padding: 20px 15px;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleBx .articleHdin {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleBx .articlePara {
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleBx .articleOwnr {
+    font-size: 13px;
+    line-height: 22px;
+    text-align: center;
+  }
+  header .topHeader .topNavbar {
+    padding: 5px 0px;
+    overflow: hidden;
+  }
+  header .topHeader .topNavbar>ul {
+    justify-content: center;
+    float: none !important;
+  }
+  header .topHeader .topNavbar>ul>li>a {
+    font-size: 11px;
+    padding: 1px 7px;
+    line-height: 15px;
+  }
+  .matchDetails .tabWrapper .nav-tabs>li>a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .newsDetails {
+    padding: 20px 0px;
+  }
+  .latestNewsDetails .latestNewsDetailsSlider .latestNewsTxt h3 {
+    line-height: 22px;
+  }
+  .latestNewsDetails .latestNewsDetailsSlider .latestNewsTxt h3 a {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+  .newsDetails .newsDetailsLft>p {
+    font-size: 13px;
+    margin-bottom: 0px;
+    padding-bottom: 6px;
+    line-height: 20px;
+  }
+  .newsDetails .mainHeadingBlack {
+    margin-bottom: 3px;
+  }
+  .newsDetails .tabWrapper .nav-tabs>li>a {
+    font-size: 14px;
+  }
+  .newsDetails .tabWrapper .panel-group .panel-default>.panel-heading .panel-title {
+    font-size: 13px;
+  }
+  .newsDetails .tabWrapper .panel-group .panel-default>.panel-heading .panel-title>a {
+    padding: 15px 15px 15px 50px;
+  }
+  .newsDetails .tabWrapper .panel-group .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border: 0px;
+    padding: 0px 15px 0px 50px;
+  }
+  .newsDetails .tabWrapper .panel-group .panel-default>.panel-heading .panel-title>a::after {
+    left: 15px;
+  }
+  .newsDetails .tabWrapper .panel-group .panel-default>.panel-heading .panel-title>a::before {
+    left: 20px;
+  }
+  .newsDetails .tabWrapper .panel.panel-default::before {
+    left: 25px;
+    top: 32px;
+  }
+  .newsDetails .tabWrapper .panel.panel-default::after {
+    left: 25px;
+  }
+  .newsDetails .tabWrapper .panel-group .panel-default>.panel-collapse>.panel-body p {
+    font-size: 12px;
+  }
+  .latestNewsDetails .latestNewsWrapper h1 {
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .latestNewsDetails .latestNewsWrapper p {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .latestNewsDetails .latestNewsDetailsSlider {
+    padding: 25px 35px;
+  }
+  .latestNewsDetails .latestNewsDetailsSlider .latestNewsTxt {
+    padding: 12px;
+  }
+  footer .bottomFooter {
+    padding: 5px 0px;
+  }
+  .mCSB_horizontal.mCSB_inside>.mCSB_container {
+    margin-bottom: 40px;
+  }
+  header .bottomHeader .rightNav {
+    top: 10px;
+  }
+  .socialDetailsSlider .owl-nav {
+    display: none;
+  }
+  footer .topFooter .footerHdin::after {
+    content: none;
+  }
+  .loginDetails .loginDetailsWrapper .loginLftWrapper {
+    display: none;
+  }
+  .loginDetails .loginDetailsWrapper {
+    justify-content: center;
+  }
+  .loginDetails .loginDetailsWrapper .loginRghtWrapper {
+    padding: 15px;
+  }
+  .loginDetails .formWrapper {
+    padding: 25px;
+  }
+  .loginDetails .formWrapper h3 {
+    font-size: 25px;
+  }
+  .loginDetails .formWrapper h3 img {
+    max-width: 25px;
+  }
+  .loginDetails .formWrapper p {
+    font-size: 13px;
+    line-height: 20px;
+    padding-bottom: 8px;
+  }
+  .loginDetails .formWrapper form input[type="text"], .loginDetails .formWrapper form input[type="password"], .loginDetails .formWrapper form input[type="email"] {
+    padding: 7px 12px;
+  }
+  .loginDetails .formWrapper form .form-group {
+    margin-bottom: 12px;
+  }
+  .loginDetails .formWrapper form input[type="button"], .loginDetails .formWrapper form input[type="submit"] {
+    padding: 10px 10px;
+    font-size: 15px;
+    margin-top: 2px;
+  }
+  .loginDetails .formWrapper .otherSigninPara {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns {
+    margin-top: 0px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns img {
+    max-height: 30px;
+  }
+  .loginDetails .formWrapper .regstrNmPara {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .frgtPasswdDetails {
+    padding: 25px 0px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeName {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgePrice {
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeTime {
+    font-size: 15px;
+  }
+  .signupRghtWrapper .mainTab .tab ul li a {
+    padding: 10px 0px;
+    font-size: 14px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li {
+    padding: 8px 0px;
+  }
+  .loginDetails .formWrapper form input[type="text"]:focus, .loginDetails .formWrapper form input[type="password"]:focus, .loginDetails .formWrapper form input[type="email"]:focus, .loginDetails .formWrapper form input[type="text"]:hover, .loginDetails .formWrapper form input[type="password"]:hover, .loginDetails .formWrapper form input[type="email"]:hover {
+    box-shadow: 0px 0px 22px rgba(248, 197, 52, 0.5);
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li.pkgeactive, .signupRghtWrapper .mainTab .tabcontent .signUpPakges li:hover {
+    background: #FFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.28);
+  }
+  .dashboardHeader .bottomHeader .rightNav {
+    width: auto;
+  }
+  .dashboardHeader .bottomHeader .rightNav #profileDrpdwn {
+    font-size: 13px;
+  }
+  .dashboardHeader .bottomHeader .rightNav img {
+    max-width: 30px;
+  }
+  .dashboardHome .profitCategory .profitCategoryLft table {
+    min-width: 100%;
+    width: 100%;
+  }
+  .dashboardHome .profitCategory .profitCategoryLft .tblScrlCntntWrap {
+    min-width: 100%;
+    width: 100%;
+    max-height: 306px;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght .table-responsive {
+    width: 100%;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght .table-responsive:last-child {
+    margin: 0px;
+  }
+  .dHedin h3 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .dHedin {
+    padding: 12px 20px;
+  }
+  .sortByMonth .form-group .dropdownSelectClick {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  .sortByMonth .form-group label {
+    font-size: 13px;
+  }
+  .dashboardHome .profitCategory table tr th {
+    padding: 10px 19px;
+    font-size: 16px !important;
+  }
+  .dashboardHome .profitCategory table tr td {
+    padding: 10px 19px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght table tr th:last-child {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .dashboardHome .profitCategory table tr td:nth-child(2) {
+    padding: 10px 0px;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght table tr td {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .dashboardHome .profitByCat .profitByCatRght ul li {
+    width: 30% !important;
+    margin: 0px !important;
+  }
+  .dashboardHome .profitByCat .profitByCatRght ul>li>div h4 {
+    font-size: 22px;
+  }
+  .dashboardHome .profitByCat .profitByCatRght ul>li>div p {
+    font-size: 16px;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght table tr th:first-child {
+    font-size: 15px !important;
+  }
+  .dashboardContainer>.dashboardContainerWrapper>div {
+    padding: 10px 0px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper {
+    padding: 0px 15px !important;
+  }
+  .dashboardHome .profitCategory .profitCategoryLft .table-responsive {
+    margin-bottom: 0px;
+  }
+  .dashboardContainer .topFiltrWrapper .dashboardName h1 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control {
+    padding: 5px 10px !important;
+    font-size: 13px;
+  }
+  .dashboardContainer .topFiltrWrapper {
+    padding: 20px 15px;
+    ;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxTop {
+    padding: 15px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxBottom {
+    padding: 20px 15px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxBottom p {
+    font-size: 22px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxTop h4 {
+    font-size: 18px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxTop p {
+    font-size: 13px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group label {
+    font-size: 13px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {
+    width: 77%;
+    font-style: normal;
+  }
+  .dashboardHome {
+    padding: 30px 0px 35px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .dashMainWrapper .leftFilter {
+    width: 100%;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .dashboardMain {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-heading .panel-title a {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+  .dashboardContainerWrapper .leftFilter .curntFilters .curntFilter {
+    padding: 6px 10px;
+  }
+  .dashboardContainerWrapper .leftFilter .curntFilters {
+    margin-bottom: 20px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group label {
+    font-size: 13px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group .filterBtnWrapper .form-control {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group .filterBtnWrapper button {
+    font-size: 13px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .dashboardMain .subscriptionNotification {
+    padding: 6px 15px;
+    margin-bottom: 20px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .dashboardMain .subscriptionNotification p {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .tFormat table .dHedin th {
+    padding: 10px !important;
+    font-size: 14px;
+  }
+  .tFormat table tr td {
+    padding: 10px !important;
+    font-size: 13px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter h2, .dashboardContainerWrapper .leftFilter .filterTopHedin h1 {
+    font-size: 17px;
+    line-height: 24px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {
+    background-size: 14px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child .form-control {
+    background-size: 13px !important;
+    padding-left: 28px !important;
+  }
+  .dashboardHeader .bottomHeader .rightNav .dropdown .dropdown-menu li a {
+    line-height: 18px;
+    font-size: 13px;
+  }
+  .listingOpponents {
+    padding: 6px 15px;
+  }
+  .listingOpponents p {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .dUpldBxWrapper {
+    padding-bottom: 0px;
+  }
+  .dashboardMainHedin {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .dashboardMainPara {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 0px;
+  }
+  .dashboardUpload {
+    margin-top: 20px;
+    padding: 15px;
+  }
+  .dUpldBxRght a .gTxt {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .dUpldBtnWrapper .dUpldBtnBx p {
+    font-size: 13px;
+  }
+  .dUpldBtnWrapper .dUpldBtnBx .dUpldBtn a {
+    width: 85px;
+    padding: 0px 10px;
+  }
+  .dUpldBtnWrapper>p {
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: center;
+    line-height: 18px;
+  }
+  .dTabs .nav-tabs>li>a {
+    padding: 6px 5px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group .filterBtnWrapper .datepicker {
+    background-size: 14px;
+  }
+  .pagination {
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .pagination ul li>a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .dUpldBxLft .dUpldBx p {
+    font-size: 18px;
+  }
+  .lineupHedin {
+    text-align: center;
+  }
+  .sectionHedin .dTabs .nav-tabs {
+    margin: 10px auto 0px;
+  }
+  .sectionHedin .dTabs {
+    right: 0px;
+    position: relative;
+    top: auto;
+    transform: translate(0, 0);
+  }
+  .lineupSection .lineupItmWrap .lineupItm {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .lineupSection {
+    padding: 20px 0px;
+  }
+  .sectionHedin {
+    padding: 8px 0px;
+  }
+  .lineupHedin h1 {
+    font-size: 16px;
+  }
+  header .bottomHeader .rightNav>ul>.myAcntBtn>a {
+    padding: 7px 28px 6px 10px;
+  }
+  .newsSection {
+    padding: 15px 0px;
+  }
+  .newsSection .dTabs .nav-tabs {
+    margin: 0 auto;
+    width: auto;
+  }
+  .newsItm .newsItmBtm {
+    flex-flow: column wrap;
+  }
+  .newsItmBtm .newsItmBtmLft {
+    width: 100%;
+  }
+  .newsItmBtm .newsItmBtmLft>div {
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+    border-right: 0px;
+    border-bottom: 1px solid #FFF;
+  }
+  .newsItmBtmRght {
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+  }
+  .newsItmName .newsImg img {
+    max-width: 40px;
+  }
+  .newsItmName .newsName a {
+    font-size: 13px;
+  }
+  .newsItmNameWrap .newsItmDate p {
+    font-size: 12px;
+  }
+  .newsItm .newsItmTp .newsItmNameWrap {
+    padding: 10px 0px;
+  }
+  .newsItm .newsItmTp .newsWrap h2 a {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  .newsItm .newsItmTp .newsWrap {
+    margin-top: 10px;
+  }
+  .newsItm .newsItmTp .newsWrap p {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .newsItm .newsItmTp .newsWrap i {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .newsItmBtmLft div .txtWrapper {
+    font-size: 13px;
+  }
+  .newsItmBtmRght .txtWrapper {
+    font-size: 13px;
+  }
+  .newsSection .pagination {
+    margin-top: 20px;
+  }
+  .myAcntBtn .dropdown-menu li a {
+    font-size: 13px;
+  }
+  .myAcntBtn .dropdown-menu {
+    top: 41px;
+  }
+  .mlbTopSectionWrap {
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: static;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .mlbBannerHedin h1 {
+    font-size: 23px;
+  }
+  .mlbBannerHedin h1 .mlbBannerBig {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  .mlbBannerSection {
+    padding: 50px 0px 50px;
+  }
+  .mlbTopLftHedin {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 0px;
+  }
+  .mlbTopLftPara {
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 8px;
+    text-align: center;
+    width: 100%;
+  }
+  .dwnldBtn {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 20px;
+    margin-top: 0px;
+    margin: 0 auto;
+    float: none;
+    display: block;
+  }
+  .mlbTopLft {
+    margin-bottom: 0px;
+    display: block;
+  }
+  .mlbTopLft img {
+    display: block;
+    margin: 0 auto;
+    max-width: 170px;
+  }
+  .mlbTopLftTxt {
+    display: block;
+  }
+  .mlbInfoSection {
+    padding: 20px 0px;
+  }
+  .mlbInfoTp .mlbInfoTpHedin {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .mlbInfoTp .mlbInfoTpPara {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .mlbInfoTp {
+    padding: 15px 0px;
+  }
+  .mlbInfoMid .mlbInfoMidLft {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .mlbInfoMid .mlbInfoMidRght {
+    padding: 15px;
+    width: 100%;
+  }
+  .mlbInfoMidHedin {
+    font-size: 20px;
+  }
+  .mlbInfoLst {
+    margin-left: 19px;
+  }
+  .mlbInfoLst li {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .mlbInfoBot {
+    margin-top: 20px;
+  }
+  .mlbInfoBot p {
+    font-size: 13px;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+  .mlbDescSectionWrap {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+  }
+  .mlbDescSectionWrap .mlbDescItm {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .mlbDescItm .mlbDescHedin {
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 7px;
+  }
+  .mlbDescItmTp {
+    padding: 20px 15px 15px;
+  }
+  .mlbDescItm .mlbDescPara {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .mlbDescItm .mlbDescItmTp {
+    min-height: auto;
+    position: static;
+  }
+  .mlbDescSectionWrap .mlbDescItm:last-child {
+    margin-bottom: 0px;
+  }
+  .mlbDescLst {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .faqSection .panel-title>a {
+    padding: 12px 15px;
+    font-size: 12px;
+  }
+  .faqSection .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    padding: 12px 15px;
+  }
+  .faqSection .panel-default .panel-body p {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  .faqSection .panel-default .panel-body .faqSignUpBtn {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .faqSection .panel-title>a {
+    padding: 10px 30px 10px 15px;
+    font-size: 11px;
+    line-height: 20px;
+  }
+  .faqSection .panel-group .panel+.panel {
+    margin-top: 10px;
+  }
+  .faqSection {
+    padding: 20px 0px !important;
+  }
+  .glossarySection .mainHeadingBlack {
+    font-size: 15px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .glossarySection p {
+    font-size: 14px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .glossarySection p.smlP {
+    font-size: 13px;
+    line-height: 12px;
+    text-align: center;
+  }
+  .glossaryPWrap p {
+    font-size: 12px;
+    line-height: 22px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+  .glossaryVideoSection>div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .glossaryVideoSection>div h4 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  .glossaryVideoSection>div iframe {
+    width: 100%;
+  }
+  .mPlaceImgWrap {
+    width: 100%;
+  }
+  .mPlaceBtnWrap {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .mPlaceImgWrap img {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .mPlaceInfoWrap {
+    width: 100%;
+  }
+  .mPlaceInfoWrap .mPlaceHedin {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .mPlaceInfoWrap .mPlacePara {
+    font-size: 13px;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 23px;
+    padding-bottom: 5px;
+  }
+  .mPlaceWrtr {
+    font-size: 13px;
+    text-align: center;
+  }
+  .mPlaceTp {
+    padding: 15px 15px;
+  }
+  .mPlaceBtnWrap .mPlacePrice {
+    font-size: 14px;
+  }
+  .mPlaceBtnWrap a {
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+  .mPlaceBtnWrap {
+    padding: 6px 15px;
+  }
+  .mPlaceWrap .mPlaceItm {
+    margin-bottom: 15px;
+  }
+  .mPlaceDWrap .authorBx {
+    width: 100%;
+  }
+  .mPlaceDSection .mPlaceWrap {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .mPlaceInfoWrap {
+    margin-top: 15px;
+  }
+  .mPlaceDPkgeWrap h4 {
+    margin-top: 0px;
+    font-size: 18px;
+  }
+  .pkgeCntnt h5 {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .mPlaceDSection .mPlaceWrtr {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+  }
+  .pkgePara {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .mPlaceDSection .mPlaceInfoWrap .mPlacePara {
+    font-size: 13px;
+  }
+  .authorBx .btnWrapper>div a {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .loginDetails .formWrapper .loginSocialIcns a {
+    padding: 4px 10px;
+    height: 28px;
+    font-size: 11px;
+    border-radius: 2px;
+    line-height: 20px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns img {
+    min-width: 9px;
+    max-width: 13px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns .lgFb img {
+    min-width: 7px;
+    width: 7px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns .lgGml img {
+    max-width: 32px;
+  }
+  .articleSection .mPlaceImgWrap img {
+    max-width: 280px;
+  }
+  .linUpSection .dTabs .nav-tabs {
+    margin: 0 auto;
+  }
+  .linUpSection .linUpFrm {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    margin-top: 12px;
+  }
+  .linUpSection .form-group .form-control {
+    max-width: 120px;
+    min-width: 120px;
+    font-size: 13px !important;
+    text-align: left;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .linUpHedin {
+    text-align: left;
+  }
+  .lneUpSecLft>.lneUpImgBx {
+    width: 20%;
+  }
+  .lneUpSecLft>.lneUpNameBx {
+    padding: 0px 10px;
+    width: 80%;
+  }
+  .lneUpSecLft {
+    padding: 10px 0px 10px 40px;
+    width: 100%;
+  }
+  .lneUpSecRght {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .lneUpSection .tFormat table {
+    width: 550px;
+  }
+  .lneUpSection {
+    margin-bottom: 25px;
+  }
+  .lneUpSecRght .lneUpHedin {
+    font-size: 16px;
+  }
+  .linUpSection .tFormat table tr.proTotal td {
+    font-size: 13px;
+  }
+  .linUpSection .tFormat table tr.lastTRw td {
+    font-size: 13px;
+  }
+  .lneUpSecLft>.lneUpNameBx p {
+    font-size: 13px;
+  }
+  .lneUpSecLft>.lneUpNameBx a {
+    font-size: 13px;
+  }
+  .sectionHedinBtn a {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  .lneUpSection .dropdownSelect .dropdownSelectMenu>li>a {
+    text-align: left;
+  }
+  .bowerBannerHedin h1 .bowerBannerBig {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .bowerBannerHedin h1 {
+    font-size: 20px;
+  }
+  .bowerBannerSection {
+    padding: 40px 0px 40px;
+  }
+  .bowerSection1 {
+    padding: 30px 0px;
+  }
+  .bowerHedin {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  .bowerSecHedin {
+    font-size: 13px;
+    margin-bottom: 0px;
+  }
+  .bowerDwnBtn {
+    padding: 4px 25px;
+    font-size: 14px;
+  }
+  .bowerSection2Tp {
+    padding: 30px 0px;
+  }
+  .bowerPara {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .bowerSection2Rght {
+    width: 100%;
+  }
+  .bowerSection2Lft {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .bowerSection3 {
+    padding: 30px 0px;
+  }
+  .bowerSection3 ul li {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .infoSec1Lft {
+    width: 100%;
+    float: right;
+  }
+  .infoHedin {
+    font-size: 28px;
+    margin-bottom: 0px;
+  }
+  .infoSecHedin {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 10px;
+  }
+  .infoPara {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .infoSec1Rght {
+    width: 100%;
+    float: left;
+  }
+  .infoSec2Lft {
+    width: 100%;
+  }
+  .infoSec2Rght {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .infoSec2Hedin {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .infoSec3Lft {
+    width: 100%;
+  }
+  .infoSec3Rght {
+    float: right;
+    width: 100%;
+  }
+  .infoSec4Lft {
+    float: left;
+    width: 100%;
+  }
+  .infoSec4Lft>.bowerDwnBtn {
+    font-size: 12px;
+    padding: 3px 10px;
+    margin-top: 5px;
+  }
+  .infoSec4Rght {
+    float: right;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .indexNPrt2Lft {
+    width: 100%;
+  }
+  .indexNPrt2Mid {
+    width: 100%;
+  }
+  .indexNPrt2Rght {
+    width: 100%;
+  }
+  .ylwTpBx {
+    padding: 15px 15px;
+    margin-bottom: 10px;
+  }
+  .ylwTpBxBtmBx {
+    margin-bottom: 10px;
+  }
+  .ylwTpBxBtmBx2 p {
+    font-size: 13px;
+  }
+  .nltstNwsInfoTme, .nltstNwsInfoDte {
+    width: auto;
+  }
+  .wlwTpBx {
+    padding: 15px 0px;
+  }
+  .midSlider .nltstNwsInfoTpWrp p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .indexNPrt2Rght .nav>li>a {
+    height: 45px;
+  }
+  .indexNPrt2Rght .nav>li>a>img {
+    max-width: 18px;
+  }
+  .nSocialTbBxInfo p {
+    font-size: 13px;
+  }
+  .tpCntrl {
+    bottom: 10px;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt>a {
+    font-size: 14px;
+    line-height: 10px;
+    margin-top: -10px;
+    padding: 8px 20px;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt h1 p {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .indexNPrt1 .carousel-caption {
+    top: 50%;
+    width: 90%;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt>p {
+    display: none;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt h1 p .white {
+    font-size: 35px;
+  }
+  .tpCntrl .carousel-control {
+    font-size: 14px;
+  }
+  .sport-name2 {
+    min-height: 50px !important;
+  }
+}
+
+@media(max-width:679px) {
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {
+    width: 72%;
+    font-size: 12px;
+  }
+}
+
+@media(max-width:479px) {
+  section {
+    padding: 25px 0px;
+  }
+  .newsletterDetails form .form-group {
+    width: 70%;
+  }
+  .newsletterDetails form input[type="button"], .newsletterDetails form input[type="submit"] {
+    padding: 7px 16px;
+  }
+  header .bottomHeader .bottomHeaderNav .logoWrapper {
+    max-width: 110px;
+  }
+  .dashboardHeader .bottomHeader .bottomHeaderNav .logoWrapper {
+    max-width: 120px;
+  }
+  header .topHeader .topNavbar>ul>li>a {
+    font-size: 10px;
+  }
+  .matchDetails .tabWrapper .nav-tabs>li>a {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+  header .bottomHeader .rightNav>ul>li>a {
+    font-size: 11px;
+    color: #FFF;
+    line-height: 13px;
+    width: 53px;
+  }
+  header .bottomHeader .rightNav>ul>.searchBtn a {
+    padding: 4px 8px !important;
+  }
+  header .bottomHeader .rightNav {
+    width: 146px;
+    right: 43px;
+    top: 9px;
+  }
+  header .bottomHeader .rightNav>ul>li {
+    margin-left: 2px;
+    position: relative;
+  }
+  .mlbBannerHedin {
+    justify-content: flex-start;
+  }
+  .dashboardHeader .bottomHeader .rightNav #profileDrpdwn {
+    font-size: 12px;
+  }
+  .dashboardHeader .bottomHeader .rightNav img {
+    max-width: 26px;
+  }
+  .boPrt1 .bannerTopTxt {
+    width: 230px;
+  }
+  .boPrt1 .bannerTopTxt h1 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -1px;
+  }
+  .boPrt1 {
+    height: 225px;
+  }
+  .boPrt1 .bannerTopTxt p {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .boPrt1 .bannerTopTxt a {
+    font-size: 13px;
+    padding: 4px 20px;
+    margin-top: 0px;
+    padding: 2px 18px;
+  }
+  header .bottomHeader .rightNav>ul>.searchBtn .srchBar button {
+    top: 0px;
+    padding: 4px 8px;
+    height: 100%;
+  }
+  .latestNewsDetails .latestNewsDetailsSlider .latestNewsTxt h3 {
+    font-size: 13px;
+    font-weight: 300;
+  }
+  .socialDetails .socialDetailsSlider .owl-nav {
+    display: none;
+  }
+  .newsletterDetails .mainHeadingBlack {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .newsletterDetails .newsletterPara {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .newsletterDetails form {
+    margin-top: 25px !important;
+  }
+  .socialDetails .socialDetailsSlider .owl-item .item .socialImgBx {
+    max-width: 200px;
+  }
+  header .bottomHeader .rightNav>ul>.searchBtn .srchBar .form-group input {
+    padding: 8px 44px 8px 8px;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleBx {
+    width: 330px;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx {
+    width: 2130px;
+  }
+  .loginDetails .formWrapper {
+    padding: 18px 12px;
+  }
+  .loginDetails .loginDetailsWrapper .loginRghtWrapper {
+    padding: 10px;
+    width: 100%;
+  }
+  .loginDetails .formWrapper h3 {
+    font-size: 22px;
+  }
+  .loginDetails .formWrapper h3 img {
+    max-width: 20px;
+  }
+  .loginDetails .formWrapper h3 {
+    margin-bottom: 5px;
+  }
+  .loginDetails .formWrapper p {
+    font-size: 12px;
+    line-height: 17px;
+    padding-bottom: 5px;
+  }
+  .loginDetails .formWrapper form .form-group {
+    margin-bottom: 8px;
+  }
+  .loginDetails .formWrapper form input[type="text"], .loginDetails .formWrapper form input[type="password"], .loginDetails .formWrapper form input[type="email"] {
+    padding: 6px 10px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .loginDetails .formWrapper form .form-group .frgtPsswd, .loginDetails .formWrapper form .form-group label {
+    font-size: 11px;
+  }
+  .loginDetails .formWrapper form input[type="button"], .loginDetails .formWrapper form input[type="submit"] {
+    padding: 6px 10px;
+    font-size: 14px;
+    margin-top: 0px;
+  }
+  .loginDetails .formWrapper .otherSigninPara {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  .loginDetails .formWrapper .loginSocialIcns img {
+    max-height: 22px;
+  }
+  .loginDetails .formWrapper .regstrNmPara {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent {
+    padding: 12px 12px 0px;
+  }
+  .signupRghtWrapper .mainTab .tab ul li a {
+    padding: 6px 0px;
+    font-size: 11px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeTime {
+    font-size: 13px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgePrice {
+    font-size: 14px;
+    padding-bottom: 0px;
+    color: #444;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li .pkgeName {
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li {
+    padding: 5px 0px;
+  }
+  .loginDetails .formWrapper form .form-group.chkFrmGrp {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: initial;
+  }
+  .loginDetails .formWrapper form input[type="text"]:focus, .loginDetails .formWrapper form input[type="password"]:focus, .loginDetails .formWrapper form input[type="email"]:focus, .loginDetails .formWrapper form input[type="text"]:hover, .loginDetails .formWrapper form input[type="password"]:hover, .loginDetails .formWrapper form input[type="email"]:hover {
+    box-shadow: 0px 0px 10px rgba(248, 197, 52, 0.5);
+  }
+  .signupRghtWrapper .mainTab .tabcontent .signUpPakges li.pkgeactive, .signupRghtWrapper .mainTab .tabcontent .signUpPakges li:hover {
+    background: #FFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.28);
+  }
+  .dHedin h3 {
+    font-size: 13px;
+  }
+  .dHedin {
+    padding: 8px 10px;
+  }
+  .sortByMonth .form-group .dropdownSelectClick {
+    padding: 0px 5px;
+    font-size: 12px;
+    width: 80px;
+  }
+  .sortByMonth .form-group label {
+    font-size: 12px;
+  }
+  .sortByMonth {
+    padding: 10px 0px;
+    margin-bottom: 20px;
+  }
+  .dashboardHome .profitCategory table tr th {
+    padding: 7px 10px;
+    font-size: 13px !important;
+    line-height: 20px !important;
+  }
+  .dashboardHome .profitCategory table tr td {
+    padding: 8px 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght table tr td {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 8px 10px;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght table tr th:first-child {
+    font-size: 14px !important;
+  }
+  .dashboardHome .profitCategory .profitCategoryRght table tr td img {
+    max-width: 40px;
+    margin: 0 auto;
+  }
+  .dashboardHome .profitByCat .profitByCatRght ul li {
+    padding: 10px !important;
+    width: 40% !important;
+  }
+  .dashboardHome .profitByCat .profitByCatRght ul>li>div h4 {
+    font-size: 16px;
+  }
+  .dashboardHome .profitByCat .profitByCatRght ul>li>div p {
+    font-size: 14px;
+  }
+  .dashboardContainer>div {
+    padding: 8px 0px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group {
+    margin: 2px 0px;
+    width: 100% !important;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group:first-child {
+    width: 100% !important;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper {
+    width: 48% !important;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group label {
+    font-size: 12px;
+  }
+  .dashboardContainer .topFiltrWrapper .dashboardName h1 {
+    font-size: 19px;
+    line-height: 19px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .dteWrapper .form-control {
+    width: 100%;
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .topStatsBx {
+    width: 100%;
+    margin: 5px 0px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxTop p {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxTop h4 {
+    font-size: 15px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxTop {
+    padding: 10px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxBottom {
+    padding: 12px 10px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxTop .bxImgWrapper img {
+    max-width: 35px;
+  }
+  .dashboardContainer>.dashboardContainerWrapper .topStats .bxBottom p {
+    font-size: 15px;
+  }
+  .dashboardHome .profitCategory .profitCategoryLft {
+    margin-bottom: 20px;
+  }
+  .dashboardContainerWrapper .leftFilter .filterTopHedin h1 {
+    font-size: 16px;
+  }
+  .dashboardContainerWrapper .leftFilter .filterTopHedin .clrAll {
+    font-size: 13px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .dashboardContainerWrapper .leftFilter .addFilter .panel-group .panel-default .panel-collapse .panel-body .form-group {
+    margin-bottom: 10px;
+  }
+  .dashboardContainerWrapper .leftFilter .curntFilters .curntFilter p {
+    font-size: 13px;
+  }
+  .dashboardContainer .topFiltrWrapper .topFilter .form-group .form-control {
+    font-size: 12px;
+    padding: 4px 10px !important;
+  }
+  .dashboardContainer .topFiltrWrapper .dashboardName {
+    margin-bottom: 8px;
+  }
+  .ui-datepicker {
+    left: 40% !important;
+  }
+  header .bottomHeader .bottomHeaderNav .menuToggle img {
+    max-width: 25px;
+  }
+  .dUpldBtnWrapper .dUpldBtnBx {
+    margin-right: 0px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .dUpldBtnWrapper .dUpldBtnBx .dUpldBtn {
+    margin-left: 0px;
+  }
+  .dUpldBtnWrapper .dUpldBtnBx .dUpldBtn a {
+    margin-top: 3px;
+  }
+  .dTabs .nav-tabs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .dTabs .nav-tabs>li {
+    margin-bottom: 3px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupTeamName .lineUpTeamNameWrap {
+    width: 70px;
+    height: 70px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupTeamName .lineUpTeamNameWrap img {
+    width: auto;
+    max-width: 45px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupTeamName .lineupMatchTime p {
+    font-size: 15px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupTeamName .teamName {
+    font-size: 12px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupPlayerName .lineupPlayerWrap li span {
+    margin-right: 5px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupPlayerName {
+    padding: 10px 10px 10px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupTeamName {
+    padding: 10px 10px 0px;
+  }
+  .lineupSection .lineupItmWrap .lineupItm .lineupPlayerName .lineupPlayerWrap li {
+    font-size: 13px;
+    line-height: 28px;
+  }
+  .sectionHedin .dTabs .nav-tabs {
+    margin: 5px auto 0px;
+  }
+  .myAcntBtn .dropdown-menu {
+    top: 36px;
+  }
+  .sectionHedin .dTabs .nav-tabs>li>a {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+  .mlbBannerSection {
+    padding: 30px 0px 30px;
+  }
+  .mlbBannerHedin h1 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .mlbBannerHedin h1 .mlbBannerBig {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .mlbTopLftHedin {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .mlbTopLftPara {
+    font-size: 13px;
+    line-height: 15px;
+    padding-bottom: 12px;
+  }
+  .dwnldBtn {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 3px 15px;
+  }
+  .mlbInfoTp .mlbInfoTpHedin {
+    font-size: 16px;
+  }
+  .mlbInfoTp .mlbInfoTpPara {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .mlbInfoTp {
+    padding: 10px 0px;
+  }
+  .mlbInfoMidHedin {
+    font-size: 18px;
+  }
+  .mlbInfoLst li {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .mlbInfoBot p {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .mlbDescItm .mlbDescHedin {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 5px;
+  }
+  .mlbDescItm .mlbDescPara {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .mlbDescLst {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  .glossaryVideoSection>div iframe {
+    width: 100%;
+    height: 163px;
+  }
+  .glossarySection .mainHeadingBlack {
+    font-size: 14px;
+  }
+  .glossarySection p {
+    font-size: 13px;
+  }
+  .glossarySection p.smlP {
+    font-size: 13px;
+  }
+  .glossarySection {
+    padding: 20px 0px;
+  }
+  .mPlaceImgWrap img {
+    max-width: 190px;
+  }
+  .mPlaceImgWrap {
+    margin-bottom: 10px;
+  }
+  .mPlaceInfoWrap .mPlaceHedin {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .mPlaceInfoWrap .mPlacePara {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  .mPlaceBtnWrap {
+    padding: 6px 10px;
+  }
+  .mPlaceBtnWrap a {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  .mPlaceBtnWrap .mPlacePrice {
+    font-size: 12px;
+  }
+  .mPlaceDWrap .authorBx img {
+    max-width: 90px;
+  }
+  .mPlaceDWrap .authorBx .authorName {
+    font-size: 15px;
+  }
+  .mPlaceDWrap .authorBx p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .authorBx .btnWrapper h4 {
+    font-size: 14px;
+  }
+  .mPlaceInfoWrap {
+    margin-top: 10px;
+  }
+  .mPlaceDSection .mPlaceInfoWrap .mPlaceHedin {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .mPlaceDSection .mPlaceInfoWrap .mPlacePara {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  .mPlaceDPkgeWrap h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .mPlaceDSection .mPlaceWrtr {
+    font-size: 13px;
+  }
+  .pkgePara {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .pkgeCntnt h5 {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .articleSection .mPlaceImgWrap img {
+    max-width: 190px;
+  }
+  .articleSection .mPlaceWrtr {
+    display: block;
+    text-align: center;
+    margin: 0px;
+  }
+  .linUpSection .form-group .form-control {
+    max-width: 100px;
+    min-width: 100px;
+    font-size: 11px !important;
+    padding: 4px 5px;
+  }
+  .linUpSection .linUpFrm>.form-group {
+    margin-left: 2px;
+  }
+  .linUpSection .linUpFrm>.form-group>.form-group .form-control {
+    min-width: 40px;
+    max-width: 40px;
+    border-radius: 0px;
+  }
+  .lneUpSecRght .lneUpHedin {
+    font-size: 15px;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt h1 p {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .indexNPrt1 .carousel-caption {
+    top: 18%;
+    width: 90%;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt>p {
+    display: none;
+  }
+  .indexNPrt1 .carousel-caption .bannerTopTxt h1 p .white {
+    font-size: 25px;
+  }
+  .tpCntrl .carousel-control {
+    font-size: 13px;
+  }
+}
+
+@media(max-width:359px) {
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleWrapperBx {
+    width: 1890px;
+  }
+  .articleDetails .articleDetailsWrapper .articleWrapper .articleBx {
+    width: 290px;
+    padding: 20px 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+
+}
+
+@media screen and (min-width: 1300px) {
+ .sport-article .sport-name2 {
+    top: 100px !important;
+
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .fixedDash {
+    max-width: 1170px !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .fixedDash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    max-width: 940px;
+    right: 0;
+    margin: 0 auto;
+    padding: 15px 30px !important;
+  }
+}

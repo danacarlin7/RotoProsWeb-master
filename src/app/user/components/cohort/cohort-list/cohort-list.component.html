@@ -1,0 +1,38 @@
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="Site">
+
+    <div class="tFormat">
+      <div class="table-responsive">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tr class="dHedin">
+            <th width="16%"></th>
+            <th width="8%">Contests</th>
+            <th width="8%">Entries</th>
+            <th width="8%">ITM</th>
+            <th width="12%">ROI</th>
+            <th width="16%">Av Score</th>
+            <th width="20%">Av Win Score ?</th>
+            <th width="12%">Profit</th>
+          </tr>
+          <tr *ngFor="let record of records">
+            <td>{{record[getTitleField()]}}</td>
+            <td>{{record.contests}}</td>
+            <td>{{record.entries}}</td>
+            <td>{{record['itm']}}%</td>
+            <td class="tred">{{(record['roi'] != '-') ? record['roi']+'%' : '-'}}</td>
+            <td>{{record.average_score}}</td>
+            <td>{{record.average_win_score}}</td>
+            <td class="tred" *ngIf="record['net'] >= 0" [ngStyle]="{color: '#4caf50'}">${{record['net'] | number}}</td>
+            <td class="tred" *ngIf="record['net'] <  0" [ngStyle]="{color: 'red'}">$({{record['net'] * -1 | number}})
+            </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

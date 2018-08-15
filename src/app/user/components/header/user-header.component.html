@@ -1,0 +1,159 @@
+<!-- Header Starts -->
+<header class="dashboardHeader">
+  <div class="topHeader">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sidePad">
+          <nav class="topNavbar">
+            <ul class="pull-right">
+              <!--<li routerLinkActive="active" *ngIf="role == 'provider'" [routerLinkActiveOptions]="{exact: false}">-->
+              <!--<a routerLink="/provider-lineups">My Lineups</a>-->
+              <!--</li>-->
+              <!--<li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">-->
+              <!--<a routerLink="/provider-public-lineups">Lineups</a>-->
+              <!--</li>-->
+              <!--<li class="lineup-dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">-->
+              <!--<a>Lineup Optimizer<span class="caret"></span></a>-->
+              <!--<div class="dropdown-content">-->
+              <!--<a routerLink="/lineup-optimizer">MLB Optimizer</a>-->
+              <!--<a routerLink="/lineup-optimizer/nfl">NFL Optimizer</a>-->
+              <!--</div>-->
+              <!--</li>-->
+              <!-- <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/excel-tool">Excel Tool<span class="sr-only">(current)</span></a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/extensions">Extensions</a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/contact-analyzer">Contest Analyzer</a>
+              </li>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/injuries">Injury Feeds</a>
+              </li> -->
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/basics">DFS Basics</a>
+              </li>
+              <!-- <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/subscribe">Plans</a>
+              </li> -->
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+                <a routerLink="/faq">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bottomHeader">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sidePad bottomHeaderNav">
+
+
+          <div class="logoWrapper">
+            <a routerLink="/"><img src="../../../../assets/images/logo.png" alt="LOGO"
+                                   class="img-responsive"/></a>
+          </div>
+
+          <div class="menuToggle">
+            <img src="../../../../assets/images/menu-toggle.png" alt=""/>
+          </div>
+          <div class="mainMenu">
+            <div class="closeBtn">
+              <span><img src="../../../../assets/images/close_icn.png" alt="" class="img-responsive"/></span>
+            </div>
+            <ul>
+              <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="'/user'" (click)="closeMobileMenu()">
+                  <div class="icnWrapperD">
+                    <img src="../../../../assets/images/dashboard_icn1.png" alt="" class="img-responsive"/>
+                  </div>
+                  <span class="menuName">Dashboard</span>
+                </a>
+              </li>
+              <li routerLinkActive="active">
+                <a routerLink="/user/overview" (click)="closeMobileMenu()">
+                  <div class="icnWrapperD">
+                    <img src="../../../../assets/images/dashboard_icn2.png" alt=""
+                         class="img-responsive"/>
+                  </div>
+                  <span class="menuName">Overview</span>
+                </a>
+              </li>
+              <li routerLinkActive="active">
+                <a routerLink="/user/cohort" (click)="closeMobileMenu()">
+                  <div class="icnWrapperD">
+                    <img src="../../../../assets/images/dashboard_icn3.png" alt=""
+                         class="img-responsive"/>
+                  </div>
+                  <span class="menuName">Cohort</span>
+                </a>
+              </li>
+              <li routerLinkActive="active">
+                <a routerLink="/user/contests" (click)="closeMobileMenu()">
+                  <div class="icnWrapperD">
+                    <img src="../../../../assets/images/dashboard_icn4.png" alt=""
+                         class="img-responsive"/>
+                  </div>
+                  <span class="menuName">Contests</span>
+                </a>
+              </li>
+              <li routerLinkActive="active">
+                <a routerLink="/user/opponent" (click)="closeMobileMenu()">
+                  <span class="icnWrapperD">
+                    <img src="../../../../assets/images/dashboard_icn5.png" alt=""
+                         class="img-responsive"/></span>
+                  <span class="menuName">Opponents</span>
+                </a>
+              </li>
+              <li routerLinkActive="active">
+                <a routerLink="/user/graphs" (click)="closeMobileMenu()">
+                  <span class="icnWrapperD"><img src="../../../../assets/images/dashboard_icn6.png"
+                                                 alt="" class="img-responsive"/>
+                  </span>
+                  <span class="menuName">Graphs</span>
+                </a>
+              </li>
+              <li routerLinkActive="active">
+                <a routerLink="/user/uploads" (click)="closeMobileMenu()">
+                  <span class="icnWrapperD">
+                    <img src="../../../../assets/images/dashboard_icn7.png" alt="" class="img-responsive"/></span>
+                  <span class="menuName">Uploads</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="rightNav">
+            <div class="dropdown">
+              <a href="javascript:void(0)" class="btn btn-default dropdown-toggle" type="button" id="profileDrpdwn"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="icnWrapperS">
+                  <!--<img src="../../../../assets/images/dashboard_profile_img.png" alt=""-->
+                  <!--class="img-responsive"/>-->
+                   <img
+                     #profilePic
+                     [attr.src]="profileImagePath ? 'https://api.dfsportgod.com/images/'+ profileImagePath : '../../../../assets/images/blank-avatar.jpg'"
+                     alt=""
+                     class="img-responsive"/>
+                </span>
+
+                <span class="profileName">{{loggedUser?.first_name}} {{loggedUser?.last_name}}</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="profileDrpdwn">
+                <!--<li><a href="#">My Profile</a></li>-->
+                <li><a routerLink="/user/settings">Settings</a></li>
+                <li><a (click)="logoutUser()">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+<!-- Header Ends -->

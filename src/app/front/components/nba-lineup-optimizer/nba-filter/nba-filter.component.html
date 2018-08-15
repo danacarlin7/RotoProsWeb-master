@@ -1,0 +1,315 @@
+<div class="modal fade" id="advance-feature-filters" tabindex="-1" #settingPopup role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span>
+        </button>
+        <h2 class="modal-title" id="myModalLabel">Settings</h2>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills nav-black" role="tablist">
+          <li role="presentation" class="active"><a href="#basic" aria-controls="home" role="tab" data-toggle="tab">Basic</a>
+          </li>
+          <li role="presentation"><a href="#Filters" aria-controls="profile" role="tab" data-toggle="tab">Filters</a>
+          </li>
+          <!--<li role="presentation"><a href="#Stacking" aria-controls="messages" role="tab"
+                                     data-toggle="tab">Stacking</a></li>-->
+        </ul>
+        <!-- /Nav tabs -->
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <div class="row row30" *ngIf="false"> <!--*ngIf="isLogIn"-->
+          <div class="col-lg-12 text-center yellow-container">
+            <a class="btn btn-link btn-link-back" (click)="onBtnSaveAdvFilterValueClicked()"
+               [class.disabled]="!isSettingsUpdated"><img
+              src="../../../../../assets/img/save_general_n.png"/> Save
+              Settings</a>
+            <a class="btn btn-link btn-link-back" (click)="onBtnRestoreDefaultClicked()"><img
+              src="../../../../../assets/img/restore_n.png"/>Clear Settings and Restore
+              Default</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <!-- Basic -->
+              <div role="tabpanel" class="tab-pane active" id="basic">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="filter-range-container">
+                      <h4 class="rangeslider-value">Variability: <span
+                        id="VariabilitySliderVal">{{variabilityValue}}%</span></h4>
+                      <input id="Variability" type="text"/>
+                      <span class="slider-range slider-min">0</span><span class="slider-range slider-max">100%</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="filter-range-container">
+                      <h4 class="rangeslider-value">Number Of Lineups To Produce: <span id="nlpSliderVal">{{noOfLineupValue}}</span>
+                      </h4>
+                      <input id="nlp" type="text"/>
+                      <span class="slider-range slider-min">1</span><span class="slider-range slider-max">200</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="filter-range-container">
+                      <h4 class="rangeslider-value">Number Of Unique Players: <span id="nupSliderVal">{{noOfUniquePlayersValue}}</span>
+                      </h4>
+                      <input id="nup" type="text"/>
+                      <span class="slider-range slider-min">1</span><span class="slider-range slider-max">5</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="filter-range-container">
+                      <h4 class="rangeslider-value">Max Exposure: <span id="meSliderVal">{{maxExposureValue}}%</span>
+                      </h4>
+                      <input id="me" type="text"/>
+                      <span class="slider-range slider-min">10%</span><span class="slider-range slider-max">100%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="filter-range-container">
+                      <h4 class="rangeslider-value">Min/Max Salary:
+                        <span id="mmsSliderVal">{{salarySettingValue[0]}}-{{salarySettingValue[1]}}</span></h4>
+                      <input id="mms" type="text"/>
+                      <span
+                        class="slider-range slider-min">{{selectedOperator == 'FanDuel' ? lineupOptimizerServiceConst.NFL_MIN_SALARY_FOR_FANDUAL : lineupOptimizerServiceConst.NFL_MIN_SALARY_FOR_DRAFT_KING}}</span><span
+                      class="slider-range slider-max">{{selectedOperator == 'FanDuel' ? lineupOptimizerServiceConst.NFL_MAX_SALARY_FOR_FANDUAL : lineupOptimizerServiceConst.NFL_MAX_SALARY_FOR_DRAFT_KING}}</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <!--<div class="filter-range-container text-center">
+                      <div class="checkbox-overlay">
+                        <div class="checkbox">
+                          <input id="checkbox1" type="checkbox" [(ngModel)]="noDefVsOpp">
+                          <label for="checkbox1">
+                            No Def vs Opp
+                          </label>
+                        </div>
+                      </div>
+                    </div>-->
+                  </div>
+                </div>
+
+              </div>
+              <!-- /Basic -->
+
+              <!-- Filters -->
+              <div role="tabpanel" class="tab-pane" id="Filters">
+                <div class="row">
+                  <!-- Left -->
+                  <div class="col-md-5">
+                    <h4 class="filters-h">Player Pool Filters</h4>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Projection Filter:
+                            <span *ngIf="projectionFilterValue" id="ProjectionFilterSliderVal">
+                            ({{projectionFilterValue[0]}} - {{projectionFilterValue[1]}})</span></h4>
+                          <input id="ProjectionFilter" type="text"/>
+                          <span class="slider-range slider-min">{{advFilterSettings?.projectionMin}}</span>
+                          <span class="slider-range slider-max">{{advFilterSettings?.projectionMax}}</span>
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Salary Filter: <span id="SalaryFilterSliderVal"
+                                                                             *ngIf="salaryFilterValue">
+                            ({{salaryFilterValue[0]}} - {{salaryFilterValue[1]}})
+                          </span>
+                          </h4>
+                          <input id="SalaryFilter"/>
+                          <span class="slider-range slider-min">{{advFilterSettings?.salaryMin}}</span><span
+                          class="slider-range slider-max">{{advFilterSettings?.salaryMax}}</span>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Value Filter: <span *ngIf="valueFilterValue"
+                                                                            id="ValueFilterSliderVal">
+                            ({{valueFilterValue[0]}} - {{valueFilterValue[1]}})
+                          </span></h4>
+                          <input id="ValueFilter"/>
+                          <span class="slider-range slider-min">{{advFilterSettings?.valueMin}}</span>
+                          <span class="slider-range slider-max">{{advFilterSettings?.valueMax}}</span>
+                        </div>
+                      </div>
+                      <!--<div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Batting Order: <span *ngIf="battingOrderFilterValue"
+                                                                             id="BattingOrderSliderVal">
+                            ({{battingOrderFilterValue[0]}} - {{battingOrderFilterValue[1]}})
+                          </span>
+                          </h4>
+                          <input id="BattingOrder" type="text"/>
+                          <span class="slider-range slider-min">0</span><span class="slider-range slider-max">9</span>
+                        </div>
+                      </div>-->
+                      <!--<div class="col-md-12">
+                        <div class="filter-range-container">
+                          <h4 class="rangeslider-value">Position:
+                          </h4>
+                          <p-multiSelect [options]="positions"
+                                         class="player-position-opt"
+                                         [filter]="false"
+                                         [showToggleAll]="false"
+                                         [(ngModel)]="positionFilterValue"
+                                         (onChange)="onPlayerPositionFilterChanged($event)"></p-multiSelect>
+                        </div>
+                      </div>-->
+
+                    </div>
+                  </div>
+                  <!-- /Left -->
+
+                  <!-- Right -->
+                  <div class="col-md-7">
+                    <div class="row">
+                      <div class="col-md-6 col-xs-8">
+                        <h4 class="filters-h">Players Per Team </h4>
+                      </div>
+                      <div class="col-md-4 col-xs-2">
+                        <input class="form-control input-sm margin-bottom-10" (input)="onGlobalMaxValueChanged($event)"
+                               [value]="getMaxGameValue()" type="text"
+                               placeholder="Max">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 table-responsive team-table-container" style="max-height: 425px;">
+                        <table class="table td-center team-table">
+                          <thead>
+                          <tr>
+                            <th>Min</th>
+                            <th></th>
+                            <th>Max</th>
+                            <th></th>
+                            <th>Min</th>
+                            <th></th>
+                            <th>Max</th>
+                          </tr>
+                          </thead>
+                          <tbody *ngIf="advFilterSettings">
+                          <tr *ngFor="let game of advFilterSettings.games">
+                            <td><input style="width: 56px" class="form-control"
+                                       (input)="validateHomeTeamMinValue($event,game)"
+                                       [(ngModel)]="game.homeTeamMinValue">
+                            </td>
+                            <td class="td-team"><img style="width: 70px;height: 40px" [attr.src]="game.homeTeamLogo"
+                                                     (click)="onGameClick(game)"/></td>
+                            <td><input style="width: 56px" class="form-control"
+                                       [(ngModel)]="game.homeTeamMaxValue">
+                            </td>
+                            <td>@</td>
+                            <td><input style="width: 56px" class="form-control"
+                                       (input)="validateAwayTeamMinValue($event,game)"
+                                       [(ngModel)]="game.awayTeamMinValue">
+                            </td>
+                            <td class="td-team"><img style="width: 70px;height: 40px" [attr.src]="game.awayTeamLogo"/>
+                            </td>
+                            <td><input style="width: 56px" class="form-control"
+                                       [(ngModel)]="game.awayTeamMaxValue">
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Filters -->
+
+              <!-- Stacking -->
+              <!--<div role="tabpanel" class="tab-pane" id="Stacking">
+                <div class="panel-container panel-table table-responsive">
+                  <table class="table filter-table">
+                    <thead>
+                    <tr>
+                      <th>Stack Type</th>
+                      <th>Team</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>
+                        <p-checkbox name="groupname"
+                                    value="QB_WR"
+                                    label="QB -> WR"
+                                    (onChange)="onStackingTypeSelect('QB_WR')"
+                                    [(ngModel)]="selectedStakeTypes"></p-checkbox>
+                      </td>
+                      <td>
+                        <p-multiSelect [options]="stack1"
+                                       [(ngModel)]="stackingTeam_QB_WR"
+                                       class="player-position-opt"
+                                       (onChange)="onPlayerPositionFilterChanged($event)"></p-multiSelect>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p-checkbox name="groupname"
+                                    value="QB_WR_TE"
+                                    label="QB -> WR/TE"
+                                    (onChange)="onStackingTypeSelect('QB_WR_TE')"
+                                    [(ngModel)]="selectedStakeTypes"></p-checkbox>
+                      </td>
+                      <td>
+                        <p-multiSelect [options]="stack3"
+                                       [(ngModel)]="stackingTeam_QB_WR_TE"
+                                       class="player-position-opt"
+                                       (onChange)="onPlayerPositionFilterChanged($event)"></p-multiSelect>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p-checkbox name="groupname"
+                                    value="QB_TE"
+                                    label="QB -> TE"
+                                    (onChange)="onStackingTypeSelect('QB_TE')"
+                                    [(ngModel)]="selectedStakeTypes"></p-checkbox>
+                      </td>
+                      <td>
+                        <p-multiSelect [options]="stack3"
+                                       [(ngModel)]="stackingTeam_QB_TE"
+                                       class="player-position-opt"
+                                       (onChange)="onPlayerPositionFilterChanged($event)"></p-multiSelect>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p-checkbox name="groupname"
+                                    value="RB_D"
+                                    label="RB -> D"
+                                    [(ngModel)]="selectedStakeTypes"></p-checkbox>
+                      </td>
+                      <td>
+                        <p-multiSelect [options]="stack4"
+                                       [(ngModel)]="stackingTeam_RB_D"
+                                       class="player-position-opt"
+                                       (onChange)="onPlayerPositionFilterChanged($event)"></p-multiSelect>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>-->
+              <!-- Stacking -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Modal Body -->
+    </div>
+  </div>
+</div>

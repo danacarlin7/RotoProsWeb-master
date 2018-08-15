@@ -1,0 +1,136 @@
+<div style="background-color: #f8c534">
+  <div style="position: relative">
+    <img class="img-responsive plans-cover-img" src="../../../../assets/images/TropheeMoney.jpg">
+    <div class="cover-img-text">Get The Access. Win Cash.</div>
+  </div>
+  <h1 class="page-heading">All Access Packages</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-lg-3 col-lg-offset-2 col-sm-5 "
+           [class.col-md-offset-1]="i % 2 == 0"
+           [class.col-md-offset-2]="i % 2 != 0"
+           [class.col-sm-offset-1]="i % 2 == 0"
+           *ngFor="let plan of plans;let i = index">
+        <div class="rp-plan">
+          <div class="plan-name">{{plan.name}}</div>
+          <div class="plan-price-container">
+            <div class="plan-price">
+                      <span *ngIf="params.id">
+                        <span class="discount-text" *ngIf="params.discount_type === 'flat'">{{(plan.amount / 100) - params.discount_rate | currency:'USD':true}}</span>
+                      <span class="discount-text" *ngIf="params.discount_type === 'percentage'">{{(plan.amount / 100) * (1 - (params.discount_rate / 100)) | currency:'USD':true}}</span>
+                      </span>
+              <span *ngIf="!params.id">
+                        <span>{{(plan.amount / 100) | currency:'USD':true}}/</span>
+                      </span>
+            </div>
+            <div class="plan-time">{{plan.interval_count+' '+plan.interval}}</div>
+          </div>
+          <!--<div class="plan-trial-period">{{'('+plan.trial_period_days+'-days free trial)'}}</div>-->
+          <!-- <button class="btn-subscribe btn-lg btn-primary" (click)="onBtnSubscribeClick(plan)">Subscribe
+          </button> -->
+          <button class="btn-subscribe btn-lg btn-primary" (click)="couponClicked(plan)">Subscribe
+          </button>
+          <!-- <button class="btn-subscribe btn-lg btn-primary" (click)="open(content, plan)">Subscribe
+          </button> -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="plan-features-heading">Why You Should Become A Member</h1>
+      </div>
+      <div class="col-sm-12">
+        <div class="feature-item-container">
+          <div class="feature-item">
+            <div class="item-img">
+              <img src="../../../../assets/images/DraftKings.jpg">
+            </div>
+            <div class="item-text">
+              Daily Skeleton Lineups
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="item-img">
+              <img src="../../../../assets/images/slack.png">
+            </div>
+            <div class="item-text">
+              24/7 Members Only Stack Chat
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="item-img">
+              <img src="../../../../assets/images/Plans.png">
+            </div>
+            <div class="item-text">
+              Premium Articles
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="item-img">
+              <img src="../../../../assets/images/Whistle.jpg">
+            </div>
+            <div class="item-text">
+              Coaching From Our Pros
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="item-img">
+              <img src="../../../../assets/images/YouTube.png">
+            </div>
+            <div class="item-text">
+              Pre and Post Lock Live Stream Analysis
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="plan-features-heading">Premium Features</h1>
+      </div>
+      <div class="col-sm-12">
+        <ul class="feature-list">
+          <li>Daily Skeleton lineups(2 empty spots)</li>
+          <li>24/7 Slack chat room with around clock interaction with RotoPros coaches and community members</li>
+          <li>Unique DFS content for following sports: NFL, NBA, MLB, NHL, Soccer, MMA, PGA</li>
+          <li>Personalized coaching from top DraftKings and FanDule players</li>
+          <li>Podcasts and live shows that give insight to DFS success</li>
+          <li>Relevant news updates and Breaking news</li>
+          <li>MLB player projections</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<template #couponTemplateRef let-couponDialog="dialogRef">
+  <div class="downloadModal">
+    <div class="modal-header">
+      <button type="button" class="close" (click)="couponDialog.close(true)"><span aria-hidden="true">&times;</span>
+      </button>
+      <h1 class="modal-title" style="font-size: 26px" id="myModalLabel">Enter Your Coupon</h1>
+    </div>
+    <div class="modal-body" style="margin: -10px 0px 40px;
+    padding: 10px;">
+      <div class="alert alert-danger fade in" *ngIf="errorMsg" style="    padding: 10px;
+    text-align: center;
+    margin: 15px 20px;">
+        {{errorMsg }}
+      </div>
+      <div class="form-group form-group col-xs-4 col-xs-offset-4">
+        <label class="srOnly">Coupon Code</label>
+        <input type="text"
+               class="col-xs-12"
+               name="cId"
+               placeholder="Code"
+               #couponCode style="height: 36px;">
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="onBtnSubscribeClick(couponDialog, couponCode.value);"><span
+        area-hidden="true"></span> Apply
+      </button>
+      <button type="button" class="btn btn-default" (click)="onBtnSubscribeClick(couponDialog, false);">Skip</button>
+    </div>
+  </div>
+</template>

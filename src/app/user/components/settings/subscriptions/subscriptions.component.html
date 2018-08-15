@@ -1,0 +1,70 @@
+<div class="settings-content" *ngIf="userData">
+  <div *ngIf="userData.is_subscribe" class="row">
+    <div class="plan-price-card col-sm-12" *ngFor="let plan of userData.subscriptions;">
+      <div class="row">
+        <div class="col-sm-2 field-name">Plan Name</div>
+        <div class="col-sm-12 col-md-10 field-value">{{plan.plan_name}}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 field-name">Amount</div>
+<!--'red': !plan.current_paid_status  -->
+        <div class="col-sm-12 col-md-10 field-value" [ngClass]="{'green': plan.current_paid_status }"  *ngIf="!plan.current_discount">${{plan.plan_amount/100}}</div>
+        <div class="col-sm-12 col-md-10 field-value" [ngClass]="{'green': plan.current_paid_status }"  *ngIf="plan.current_discount">${{plan.current_total/100}}</div>
+      </div>
+      <div class="row" *ngIf="plan.current_discount">
+        <div class="col-sm-2 field-name">Discount</div>
+        <div class="col-sm-12 col-md-4 field-value">${{plan.current_discount/100}}</div>
+      </div>
+      <div class="row" *ngIf="plan.current_discount">
+        <div class="col-sm-2 field-name">Plan Amount</div>
+        <div class="col-sm-12 col-md-4 field-value">${{plan.current_subtotal/100}}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 field-name">Subscription</div>
+        <div class="col-sm-12 col-md-5 field-value">Start date : {{plan.current_period_start | date : 'medium'}}</div>
+        <div class="col-sm-12 col-md-5 field-value">End Date : {{plan.current_period_end | date : 'medium'}}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 card-action"><a class="btn-unsubscribe plan-apply-btn btn btn-small btn-default" (click)="onBtnUnsubscribeClick(plan)">Unsubscribe</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div *ngIf="!userData.is_subscribe">
+    <h2 class="text-center">No Plan subscribed.</h2>
+  </div>
+</div>
+
+<template #unsubscribeTemplateRef let-unsubscribeDialog="dialogRef">
+  <div class="unsubscribeModal">
+    <div class="modal-header">
+      <h1 class="modal-title text-center" id="myModalLabel">End Subscription</h1>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="unsubscribeOption">
+            <input type="radio" name="unsubscribeOption" value="immediate" [(ngModel)]="unsubscribeOption"/>
+            <div class="info">
+              <p><strong>Immediately</strong></p>
+              <p class="text-muted">End the subscription immediately.</p>
+            </div>
+          </div>
+          <div class="unsubscribeOption">
+            <input type="radio" name="unsubscribeOption" value="at_period_end" [(ngModel)]="unsubscribeOption"/>
+            <div class="info">
+              <p><strong>At period end ({{ selectedPlan.current_period_end | date : 'medium' }})</strong></p>
+              <p class="text-muted">End the subscription at the end of the current billing period.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" (click)="unsubscribeDialog.close(true)">Close</button>
+      <button type="button" class="btn btn-primary" (click)="endSubscription(unsubscribeDialog)">End Subscription
+      </button>
+    </div>
+  </div>
+</template>

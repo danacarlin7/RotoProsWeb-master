@@ -1,0 +1,25 @@
+<div class="tFormat">
+  <div class="table-responsive">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tr class="dHedin">
+        <th width="20%">Name</th>
+        <th width="11%">Played</th>
+        <th width="12%">Won #</th>
+        <th width="12%">Win %</th>
+        <th width="14.5%">Av buyin</th>
+        <th width="13.5%">Net</th>
+        <th width="17%">Last Game</th>
+      </tr>
+      <tr *ngFor="let data of records">
+        <td>{{data._id}}</td>
+        <td>{{data.entries}}</td>
+        <td>{{data.total_win_count}}</td>
+        <td>{{data.win_percentage.toFixed(2)}}</td>
+        <td>{{data.fee?.toFixed(2)}}</td>
+        <td [ngStyle]="{color: (data.net > 0)? '#4caf50' : '#ff0000'}">{{data.net}}</td>
+        <td>{{data.date | date:'dd MMM yy'}}</td>
+      </tr>
+    </table>
+
+  </div>
+</div>

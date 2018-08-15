@@ -1,0 +1,68 @@
+<!-- Login Page Starts -->
+<section class="loginDetails">
+          <div class="row">
+          <div class="col-sm-5 loginLftWrapper" style="align-content: center; align-items: center; margin:25px;">
+            <img src="../../../../assets/images/packages.png" alt="" class="img-responsive"/>
+
+          </div>
+<div class="col-sm-1"></div>
+
+          <div class="col-sm-5 loginRghtWrapper" style="margin: 5px;size: 50%;background: rgba(255,255,255,0.4);
+    padding: 30px;">
+            <div class="formWrapper">
+              <h3><span class="licnWrapper"><img src="../../../../assets/images/login_title_icn.png" alt=""
+                                                 class="img-responsive"/></span><span>Login</span></h3>
+              <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
+              <div class="alert alert-success fade in" *ngIf="msg">
+                {{msg}}
+              </div>
+              <div class="alert alert-warning fade in" *ngIf="isError">
+                {{errorMsg }}
+                <a [routerLink]="'/verify'" *ngIf="showVerifyLink"> Get verification link</a>
+              </div>
+              <form [formGroup]="loginForm">
+                <div class="form-group">
+                  <label class="srOnly">Email</label>
+                  <input type="email"
+                         name="eId"
+                         placeholder="Email"
+                         formControlName="email">
+                </div>
+                <div class="form-group">
+                  <label class="srOnly">Password</label>
+                  <input type="password"
+                         name="cPassword"
+                         placeholder="**********"
+                         formControlName="password">
+                </div>
+                <div class="form-group rmbrFrgtPswd">
+                  <div class="rmembrPswd">
+                    <input type="checkbox" id="rememberMe" formControlName="rememberMe">
+                    <label class="rmbrMe" for="rememberMe">Remember Me</label>
+                  </div>
+
+                  <a routerLink="/forgot-password" class="frgtPsswd">Forgot my Password?</a>
+                </div>
+
+                <input type="submit" value="Login" (click)="onSignInBtnClick()" class="formBtn"
+                       [disabled]="!loginForm.valid">
+              </form>
+              <!--<p class="otherSigninPara">You can also <a href="javascript:void(0)" class="lred">sign up here or</a> sign-->
+              <!--in by:</p>-->
+              <!--&lt;!&ndash;<cuppa-oauth [authConfig]="config"></cuppa-oauth>&ndash;&gt;-->
+              <!--<div class="loginSocialIcns">-->
+              <!--<a href="javascript:void(0)"><img src="../../../../assets/images/facebook.png" alt=""-->
+              <!--class="img-responsive"/></a>-->
+              <!--<a href="javascript:void(0)"><img src="../../../../assets/images/gmail.png" alt=""-->
+              <!--class="img-responsive"/></a>-->
+              <!--<a href="javascript:void(0)"><img src="../../../../assets/images/twitter.png" alt=""-->
+              <!--class="img-responsive"/></a>-->
+              <!--</div>-->
+              <p class="regstrNmPara">Don’t you have an account? <a routerLink="/signup" class="lred">Register
+                Now!</a> It’s really simple and you can start enjoying all the benefits!</p>
+            </div>
+          </div>
+
+          </div>
+</section>
+<!-- Login Page Ends -->

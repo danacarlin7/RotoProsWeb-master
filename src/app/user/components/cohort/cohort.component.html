@@ -1,0 +1,40 @@
+<!-- Cohort Starts -->
+<section class="dashboardHome">
+  <div class="container">
+    <div class="common-loader" *ngIf="isLoading">
+      <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dashboardContainer">
+        <div class="dashboardContainerWrapper">
+          <div class="dashMainWrapper">
+            <div class="leftFilter">
+              <rp-applied-filters *ngIf="filters && filters.length"
+                                  [filters]="filters"
+                                  [filterSettings]="filterSettings"
+                                  (removeFilterEvent)="onRemoveFilterEvent($event)"
+                                  (remoceAllFiltersEvent)="onRemoveAllFiltersEvent($event)"></rp-applied-filters>
+              <rp-filters [filterSettings]="filterSettings"
+                          (addFilterEvent)="onAddFilterEventHandler($event)"></rp-filters>
+            </div>
+            <div class="dashboardMain">
+              <!--<div class="subscriptionNotification">
+                <p>To view unrestricted reports, upgrade your subscription plan today!</p>
+                <div class="clseBtn">&times;</div>
+              </div>-->
+              <div class="dTabs">
+                <rp-tab-view [tabs]="cohortTabs"
+                             [activeTab]="activeTab"
+                             (tabChanged)="onCohortTabChanged($event)"></rp-tab-view>
+                <rp-cohort-list [records]="records"></rp-cohort-list>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Cohort Ends -->

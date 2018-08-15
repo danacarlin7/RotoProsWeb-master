@@ -1,0 +1,39 @@
+<section class="dashboardHome">
+  <div class="container">
+    <div class="common-loader" *ngIf="isLoading">
+      <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dashboardContainer">
+        <div class="dashboardContainerWrapper">
+          <div class="dashMainWrapper">
+            <div class="leftFilter">
+              <div>
+                <ul class="list-group settings-list">
+                  <li class="list-group-item" *ngFor="let tab of tabs;" routerLinkActive="active"
+                      [routerLink]="tab.id">
+                    {{tab.name}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dashboardMain">
+              <div>
+                <div>
+                  <router-outlet></router-outlet>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<div class="container main-content">
+
+
+</div>-->
+
+

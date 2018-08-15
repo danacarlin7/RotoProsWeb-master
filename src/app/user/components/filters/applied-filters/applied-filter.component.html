@@ -1,0 +1,11 @@
+<div class="filterTopHedin">
+  <h1>Current Filters</h1>
+  <span (click)="clearAllFilters()" class="clrAll">Clear all</span>
+</div>
+<div class="curntFilters">
+  <div class="curntFilter1 curntFilter"
+       *ngFor="let filter of filters">
+    <p>{{getKeyName(filter.key)}} : {{ getFilterDisplayValue(filter)}}</p>
+    <div class="clseBtn" (click)="removeFilter(filter)">&times;</div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<section class="sectionHedin">
+  <div class="container ">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="lineupHedin">
+          <h1 style="display: inline"> Articles</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="articleSection mPlaceDSection" *ngIf="article">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="mPlaceDWrap">
+          <div class="mPlaceWrap">
+            <div class="mPlaceItm article-details">
+              <div class="mPlaceTp">
+                <div class="mPlaceInfoWrap">
+                  <button class="btn" (click)="btnBackClick()">Back</button>
+                  <h3>{{article.title.rendered}}</h3>
+                  <div class="article_content" [innerHTML]="article.content.rendered"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

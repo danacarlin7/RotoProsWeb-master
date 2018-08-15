@@ -1,0 +1,221 @@
+        <!-- Container -->
+        <div class="container-fluid container-main">
+
+            <!-- Title -->
+            <section class="title-container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-5 col-sm-5">
+                        <h4 class="content-title">Provider Lineups</h4>
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-sm-7 text-right" *ngIf="userRole == 'provider'">
+                        <form class="form-inline">
+                            <select (change)="showSlatesForOperator($event.target.value);" class="form-control input-sm input-gray-black">
+								<option *ngFor="let operator of operators" value="{{operator}}">{{operator}}</option>
+                            </select>
+                            <select (change)="showSlatesForSport($event.target.value);" class="form-control input-sm input-gray-black">
+								<option *ngFor="let sport of sports" value="{{sport}}">{{sport}}</option>
+                            </select>
+                            <select (change)="setSlate($event.target.value);" class="form-control input-sm input-gray-black">
+								<option *ngFor="let slate of slates" value="{{slate.SlateID}}--{{slate.Slate}}">{{slate.Slate}}</option>
+                            </select>
+                            <button type="submit" class="btn btn-lg btn-gray-yellow btn-noradius" [disabled]="(slates == null || slates.length == 0)" (click)="showPlayersForSlate();">GetPlayers</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!--/ Title -->
+
+            <!-- Filters -->
+            <section class="table-filtes-container section-gray">
+                <div class="row">
+                    <div class="col-md-6" *ngIf="(playersAsked != null) && (playersAsked == true) && (userRole == 'provider')">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <div class="form-group" [ngClass]="{'has-error': (playersAsked != null) && (playersAsked == true) && (userRole == 'provider') && (uploadErrors != null) && (uploadErrors.length != 0)}">
+                                    <label for="upload-lineups">Upload All Lineups :</label>
+                                    <input type="file" name="img[]" class="file" id="fileControl" (change)="getLineupsFromCSV($event.target.files[0]); populateUpload($event.target.value)">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-sm" id="fileTextBox" disabled placeholder="No file selected">
+                                        <span class="input-group-btn">
+                                            <button class="browse btn btn-lg btn-yellow-black btn-noradius margin-left-5" type="button" (click)="clickUpload()">Browse</button>
+											<button type="submit" (click)="uploadCSVLineups();" class="btn btn-lg btn-gray-yellow btn-noradius margin-left-5">Upload</button>
+											<button type="submit" (click)="uploadErrors = [];" class="btn btn-lg btn-gray-yellow btn-noradius margin-left-5">ClearErrors</button>
+											<button type="submit" class="btn btn-lg btn-gray-yellow btn-noradius margin-left-5" (click)="getScores();">GetScores</button>
+                                        </span>
+	                                </div>
+    								<div *ngIf="(playersAsked != null) && (playersAsked == true) && (userRole == 'provider')">
+									    <span id="helpBlock" class="help-block" *ngFor="let errMsg of uploadErrors">{{errMsg}}</span>
+								    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6 text-right" *ngIf="(playersAsked != null) && (playersAsked == true) && (userRole == 'provider')">
+                        <form class="form-inline">
+                            <div class="form-group">
+								<label for="upload-lineups">Set Lineup Name:</label>
+								<input class="form-control input-sm" type="text" name="LineupName" (change)="currLineupName = $event.target.value;" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!--/ Filters -->
+
+            <!-- Main Content -->
+            <div class="row">
+                <!-- Left Table Content -->
+                <div class="col-lg-6">
+
+                    <!-- Postion Butons -->
+                    <div class="row">
+                        <div *ngIf="(playersAsked != null) && (playersAsked == true) && (userRole == 'provider')" class="col-lg-12 col-padding">
+							<span class="input-group-btn col-padding2" *ngFor="let composition of compositions"><button type="submit" class="btn btn-lg btn-gray-yellow btn-noradius margin-left-5" [ngClass]="{'active': (composition == currComposition)}" (click)="showPlayersForComposition(composition)">{{composition}}</button></span>
+                        </div>
+                    </div>
+                    <!-- /Postion Butons -->
+
+                    <!-- Left Table -->
+                    <div class="row" *ngIf="(playersAsked != null) && (playersAsked == true) && (userRole == 'provider')">
+                        <div class="col-lg-12 table-responsive lineups-container">
+                            <table class="table df-table black-head table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+											<a (click)="orderByField('OperatorPlayerName', true);">Name
+												<span *ngIf="(sortType == 'OperatorPlayerName') && (sortReverse == true)"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
+												<span *ngIf="(sortType == 'OperatorPlayerName') && (sortReverse == false)"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+											</a>
+										</th>
+                                        <!-- Sort Asc Example -->
+                                        <th>
+											<a (click)="orderByField('Team', true);">Team
+												<span *ngIf="(sortType == 'Team') && (sortReverse == true)"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
+												<span *ngIf="(sortType == 'Team') && (sortReverse == false)"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+											</a>
+										</th>
+                                        <!-- Sort Desc Example -->
+                                        <th>
+											<a (click)="orderByField('Opposition', true);">Opponent
+												<span *ngIf="(sortType == 'Opposition') && (sortReverse == true)"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
+												<span *ngIf="(sortType == 'Opposition') && (sortReverse == false)"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+											</a>
+										</th>
+                                        <th>
+											<a (click)="orderByField('FantasyPoints' + currentOperator, true);">Points
+												<span *ngIf="(sortType == 'FantasyPoints' + currentOperator) && (sortReverse == true)"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
+												<span *ngIf="(sortType == 'FantasyPoints' + currentOperator) && (sortReverse == false)"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+											</a>
+										</th>
+                                        <th>
+											<a (click)="orderByField('IsHomeTeam', true);">Home
+												<span *ngIf="(sortType == 'IsHomeTeam') && (sortReverse == true)"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
+												<span *ngIf="(sortType == 'IsHomeTeam') && (sortReverse == false)"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+											</a>
+										</th>
+                                        <th>
+											<a (click)="orderByField('OperatorPosition', true);">Position
+												<span *ngIf="(sortType == 'OperatorPosition') && (sortReverse == true)"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
+												<span *ngIf="(sortType == 'OperatorPosition') && (sortReverse == false)"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+											</a>
+										</th>
+                                        <th>
+											<a (click)="orderByField('OperatorSalary', true);">Salary
+												<span *ngIf="(sortType == 'OperatorSalary') && (sortReverse == true)"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
+												<span *ngIf="(sortType == 'OperatorSalary') && (sortReverse == false)"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+											</a>
+										</th>
+                                        <th width="80">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+									<tr *ngFor="let player of filteredPlayers">
+										 <td>{{player.OperatorPlayerName}}</td>
+										 <td>{{player.Team}}</td>
+										 <td>{{player.Opposition}}</td>
+										 <td>{{(playerScores.hasOwnProperty(player.OperatorPlayerName)) ? playerScores[player.OperatorPlayerName]['FantasyPoints' + currentOperator] : ''}}</td>
+										 <td>{{player.IsHomeTeam}}</td>
+										 <td>{{player.OperatorPosition}}</td>
+										 <td class="text-red">{{player.OperatorSalary}}</td>
+										 <td><a class="btn btn-gray-yellow" (click)='addPlayerToLineup(player.OperatorPlayerName, player.SlateGameID);'>Add</a></td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /Left Table -->
+                </div>
+                <!-- /Left Table Content -->
+
+                <!-- Right Table Content -->
+                <div class="col-lg-6">
+
+                    <!-- Search -->
+                    <div class="row" *ngIf="(playersAsked != null) && (playersAsked == true) && (userRole == 'provider')">
+                        <div class="col-lg-12 col-padding text-right">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-lg-offset-2 col-lg-8 col-sm-10 col-xs-12 no-padding-right">
+                                        <input class="form-control input-sm" (change)="filterText = $event.target.value;" type="search" placeholder="Search...">
+                                    </div>
+                                    <div class="col-sm-2 col-xs-12">
+                                        <button type="submit" class="btn btn-lg btn-gray-yellow btn-noradius" (click)='filterByText();'>Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /Search -->
+
+                    <!-- Right Table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-gray panel-df-table" *ngIf="(playersAsked != null) && (playersAsked == true) && (userRole == 'provider')">
+                                <!-- Default panel contents -->
+                                <div class="panel-heading">Salary capped at : {{salaryCap}} 
+                                    <div class="float-right pull-right">
+                                        <a (click)="resetLineup();" class="btn btn-yellow-black">Reset</a>
+                                        <button type="submit" class="btn btn-lg btn-gray-black btn-noradius btn-block" (click)="updateLineup();" [disabled]="(lineupID == null) || (lineupID == '')" class="btn btn-gray-black">Update</button>
+                                        <a (click)="addLineup(); getLineups();" class="btn btn-gray-black">Add</a>
+                                    </div>
+
+                                </div>
+                                <table class="table df-table table-hover">
+                                    <tbody>
+										<tr *ngFor="let player of lineupPlayers">
+                                            <td>{{player['Composition']}}:</td>
+											<td>{{(player['Player'] == null) ? '' : player['Player'].OperatorPlayerName}}</td>
+											<td>{{(player['Player'] == null) ? '' : player['Player'].Team}}</td>
+											<td>{{(player['Player'] == null) ? '' : player['Player'].OperatorPosition}}</td>
+											<td class="text-red">{{(player['Player'] == null) ? '' : player['Player'].OperatorSalary}}</td>
+                                            <td width="100"><button class="btn btn-gray-black" (click)="removePlayerFromLineup((player['Player'] == null) ? '' : player['Player'].OperatorPlayerName, (player['Player'] == null) ? '' : player['Player'].SlateGameID);" [disabled]="player['Player'] == null">Remove</button></td>    
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Right Table -->
+                </div>
+                <!-- /Right Table Content -->
+            </div>
+            <!-- Main Content -->
+			
+            <!-- Load Message -->
+			<div class="row">
+				<div class="col-lg-12" *ngIf="(lineupsOnlyName != null) && (lineupsOnlyName.length > 0)">
+					<div class="lineups-div alert-yellow" role="alert">
+						<div *ngFor="let pLineup of lineupsOnlyName">
+							<div class="lineups-tr">
+								<a *ngIf="userRole == 'provider'" (click)="loadLineup(pLineup['_id']);" class="btn btn-gray-black pull-left">Load</a>
+								<a class="btn btn-black-gray pull-left" (click)="deleteLineup(pLineup['_id']);">Delete</a>
+								<input type="text" name="LineupName" (change)="pLineup['LineupName'] = $event.target.value;" />
+								<a class="btn btn-black-gray pull-left" (click)="setName(pLineup);">SetName</a>
+								<p class="alert-message">{{pLineup['Lineup']}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+            <!-- /Load Message -->
+        </div> <!-- /container -->

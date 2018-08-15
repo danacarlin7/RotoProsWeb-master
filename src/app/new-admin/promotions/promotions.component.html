@@ -1,0 +1,84 @@
+<div class="card">
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="card-header">
+      <h4 class="card-title">
+        Create New Coupon
+      </h4>
+    </div>
+    <div class="card-content">
+      <div class="form-group">
+        <label>Coupon ID</label>
+        <input ngModel type="text" placeholder="Coupon ID" name="id" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <div class="radio">
+          <input [(ngModel)]="couponType" type="radio" name="discountType" [value]="'percentage'" id="percentage">
+          <label for="percentage">Percentage</label>
+        </div>
+        <div class="radio">
+          <input [(ngModel)]="couponType" type="radio" name="discountType" [value]="'flat'" id="flat">
+          <label for="flat">Flat</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Discount Rate</label>
+        <span *ngIf="couponType === 'percentage'">
+          %<input ngModel type="number" placeholder="Enter Percentage Off As Whole Number" name="discountRate" class="form-control" required>
+        </span>
+        <span *ngIf="couponType === 'flat'">
+          $<input ngModel type="number" placeholder="Enter Amount Off In USD" name="discountRate" class="form-control" required>
+        </span>
+      </div>
+      <div class="form-group">
+        <label>Duration</label><br>
+        <small>How long should this coupon be active for any individual user</small>
+        <div class="radio">
+          <input [(ngModel)]="duration" type="radio" name="duration" [value]="'once'" id="once">
+          <label for="once">Once</label>
+        </div>
+        <div class="radio">
+          <input [(ngModel)]="duration" type="radio" name="duration" [value]="'forever'" id="forever">
+          <label for="forever">Forever</label>
+        </div>
+        <div class="radio">
+          <input [(ngModel)]="duration" type="radio" name="duration" [value]="'repeating'" id="repeating">
+          <label for="forever">Repeating</label>
+        </div>
+        <div *ngIf="duration === 'repeating'">
+          <label>Duration In Months</label>
+          <input ngModel type="number" name="durationInMonths" class="form-control" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>End Criteria</label>
+        <div class="radio">
+          <input [(ngModel)]="endCriteria" type="radio" name="endCriteria" [value]="'redeem-by'" id="redeem-by">
+          <label for="redeem-by">Redeem By</label>
+        </div>
+        <div class="radio">
+          <input [(ngModel)]="endCriteria" type="radio" name="endCriteria" [value]="'max-redemptions'" id="max-redemptions">
+          <label for="max-redemptions">Max Redemptions</label>
+        </div>
+        <div *ngIf="endCriteria === 'redeem-by'">
+          <label>Redeem By</label>
+          <input ngModel type="date" name="endDate" class="form-control" required>
+        </div>
+        <div *ngIf="endCriteria === 'max-redemptions'">
+          <label>Max Redemptions</label>
+          <input ngModel type="number" name="maxRedemptions" class="form-control" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" [disabled]="!f.valid" class="btn btn-fill btn-info">
+      </div>
+      <div class="form-group" id="url">
+        <label>Coupon URL</label>
+        <input type="text" class="form-control" readonly [value]="url">
+      </div>
+      <div class="form-group" id="testUrl">
+        <label>Coupon URL (Beta)</label>
+        <input type="text" class="form-control" readonly [value]="testUrl">
+      </div>
+    </div>
+  </form>
+</div>

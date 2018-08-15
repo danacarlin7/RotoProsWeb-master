@@ -1,0 +1,11 @@
+#soundcloud-player {
+  text-align: center;
+}
+
+#soundcloud-player div {
+  display: inline-block;
+  width: 50vw;
+  min-width: 320px;
+  text-align: center;
+  margin-right: 0px;
+}

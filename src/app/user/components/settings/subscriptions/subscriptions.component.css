@@ -1,0 +1,36 @@
+.plan-price-card {
+  background-color: #fcfcfc;
+  border: 1px solid #ededed;
+}
+
+.plan-price-card .row:not(:last-child) {
+  padding: 10px 0 !important;
+  border-bottom: 1px solid #ededed;
+}
+
+.field-name {
+
+}
+
+.field-value {
+  font-weight: bold;
+}
+
+.card-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-unsubscribe{
+  margin: 5px;
+  font-size: 14px;
+  background-color: #eee;
+  }
+
+.btn-unsubscribe:hover{
+  background-color: #ddd;
+}
+
+.btn-unsubscribe:active{
+  background-color: #ccc;
+}

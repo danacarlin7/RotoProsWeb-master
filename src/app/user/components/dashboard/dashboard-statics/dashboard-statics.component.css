@@ -1,0 +1,87 @@
+.loader-container {
+  display: flex;
+  width: 100%;
+  min-height: 125px;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-container {
+  display: flex;
+  width: 100%;
+  min-height: 125px;
+  justify-content: center;
+  align-items: center;
+  color: #ff0000;
+}
+
+.contest-data-container {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 500ms linear;
+}
+
+.data-ready {
+  opacity: 1;
+  transform: scale(1);
+  transition: 500ms linear;
+}
+
+.statics-card {
+
+}
+
+.statics-info-row {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  min-height: 125px;
+}
+
+.static-data-container {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.fee-card {
+  background-color: #a47071;
+}
+
+.entaries-card {
+  background-color: #68b295;
+}
+
+.profit-card {
+  background-color: #94b633;
+}
+
+.profit-card-red {
+  background-color: #d3736d;
+}
+
+.roi-card {
+  background-color: #94b633;
+}
+
+.roi-card-red {
+  background-color: #d3736d;
+}
+
+.statics-data-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.data-count {
+  font-size: 26px;
+}
+
+.data-title {
+  font-size: 15px;
+}
+
+.statics-data-icon {
+  font-size: 30px;
+  margin-top: -3px;
+}

@@ -1,0 +1,280 @@
+<div class="my-body">
+  <div id="my-progress-bar" *ngIf="isLoading">
+    <md-progress-bar mode="query" color="accent"></md-progress-bar>
+  </div>
+  <div class="container-fluid container-main my-common-class">
+
+    <!-- Title -->
+
+    <section class="my-section title-container">
+      <div class="row">
+        <div class="col-md-5">
+          <h4 class="content-title">NFL Lineup Optimizer</h4>
+        </div>
+        <div class="col-md-2" style="position: relative">
+          <span style="padding-right: 20px">
+            <a class="btn btn-gray-black" routerLink="/lineup-optimizer">MLB</a>
+            <a class="btn btn-gray-black " routerLink="/lineup-optimizer/nfl">NFL</a>
+            <a class="btn btn-yellow-black">NBA</a>
+          </span>
+        </div>
+        <div class="col-md-5 text-right">
+          <span style="padding-right: 20px">
+            <a class="btn"
+               (click)="operatorChanged('DraftKings')"
+               [class.btn-gray-black]="selectedOperator != 'DraftKings'"
+               [class.btn-yellow-black]="selectedOperator=='DraftKings'">DraftKings</a>
+            <a class="btn"
+               (click)="operatorChanged('FanDuel')"
+               [class.btn-gray-black]="selectedOperator != 'FanDuel'"
+               [class.btn-yellow-black]="selectedOperator == 'FanDuel'">FanDuel</a>
+          </span>
+          <span class="setting-btn">
+            <span id="active-filter-dot" *ngIf="isSavedFiltersApplied" md-tooltip="Saved filters applied"
+                  [mdTooltipPosition]="'before'"></span>
+            <button class="btn btn-gray-black" [class.active]="isSavedFiltersApplied"
+                    [disabled]="isLoading || isDataError"
+                    (click)="onAdvFilterPopupClick()">Settings</button>
+          </span>
+        </div>
+      </div>
+    </section>
+    <!--/ Title -->
+    <section class="error-container" *ngIf="isError">
+      <span class="error-msg" [md-tooltip]="errorData">{{errorMsg}}</span>
+    </section>
+    <!-- Filters -->
+    <section class="my-section table-filtes-container section-gray">
+      <div class="row">
+        <div class="col-lg-7 col-md-6">
+          <div class="row">
+            <div class="col-lg-2 col-sm-3 no-padding-right">
+              <select class="form-control input-sm" [(ngModel)]="selectedSlate" (change)="onSlateChanged($event)">
+                <!--<option [value]="0">All Slates</option>-->
+                <option *ngFor="let slate of slates" [value]="slate.SlateID">
+                  {{slate.StartTime | date:'h:mm a EEE, MMM d'}}
+                  {{' - '+slate.NumberOfGames+' Games - '}}
+                  {{slate.Slate}}
+                </option>
+              </select>
+            </div>
+            <div class="col-sm-3 no-padding-right">
+              <select class="form-control input-sm" (change)="selectedGameChanged($event)">
+                <option [value]="0">All Games</option>
+                <option *ngFor="let game of games"
+                        [value]="game.gameId">
+                  {{game.awayTeam}}@{{game.homeTeam}}
+                </option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <!-- == If yo do not need red x, remove this classes "filter-icon filter-icon-x" == -->
+              <div class="filter-icon filter-icon-x">
+                <input class="form-control input-sm" (input)="onSearchStrChanged($event)" type="text"
+                       placeholder="Search">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <div class="row">
+            <div class="col-md-5 col-sm-4 no-padding-right">
+              <!-- input class="form-control input-sm" type="text" placeholder="Select Projection"-->
+              <!--<select class="form-control input-sm">
+                <option>Select Projection</option>
+                <option>Projection 1</option>
+                <option>Projection 3</option>
+                <option>Projection 4</option>
+                <option>Projection 5</option>
+              </select>-->
+            </div>
+            <div class="col-sm-3 no-padding-right">
+              <input class="form-control input-sm" type="text" disabled value="{{todayDate | date:'dd MMM, yyyy'}}">
+            </div>
+            <div class="col-md-4 col-sm-5">
+              <button class="btn btn-lg btn-yellow-black btn-noradius btn-block"
+                      [class.generate-lineup_btn_disabled]="isLoading || isDataError"
+                      [disabled]="isLoading || isDataError"
+                      (click)="onBtnGenerateLineupClick()">
+                Generate Lineups
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Filters -->
+
+    <!-- Table -->
+    <section class="my-section table-container table-responsive" style="padding: 0;">
+      <table class="table main-table table-striped td-center lineup-table" [mfData]="players" #records="mfDataTable"
+             [mfRowsOnPage]="10">
+        <thead>
+        <tr>
+          <th>
+            <mfDefaultSorter by="isLocked">Lock</mfDefaultSorter>
+          </th>
+          <th>Exclude</th>
+          <th>
+            <mfDefaultSorter by="FirstName">Player Name</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="Position">Position</mfDefaultSorter>
+            <i class="fa fa-filter"
+               aria-hidden="true"
+               [ngStyle]="{'color':(positionFilterValue && positionFilterValue.length) ? '#000000':'#999999'}"
+               [md-tooltip]="positionFilterValue && positionFilterValue.length ? (positionFilterValue.length + ' selected') : 'filter' "
+               (click)="posFilterOverlay.toggle($event)"></i>
+            <p-overlayPanel #posFilterOverlay>
+              <p-listbox [options]="positions"
+                         [(ngModel)]="positionFilterValue"
+                         (onChange)="onPlayerPositionFilterChanged($event)"
+                         class="table-filter-listBox"
+                         [metaKeySelection]="false"
+                         multiple="multiple"
+                         checkbox="checkbox"
+                         filter="filter">
+              </p-listbox>
+            </p-overlayPanel>
+          </th>
+          <th>
+            <mfDefaultSorter by="Team">
+              Team
+            </mfDefaultSorter>
+            <i class="fa fa-filter"
+               aria-hidden="true"
+               [ngStyle]="{'color':(selectedTeams && selectedTeams.length) ? '#000000':'#999999'}"
+               [md-tooltip]="selectedTeams && selectedTeams.length ? (selectedTeams.length + ' teams selected') : 'filter' "
+               (click)="teamFilterOverlay.toggle($event)"></i>
+            <p-overlayPanel #teamFilterOverlay>
+              <p-listbox [options]="teams"
+                         [(ngModel)]="selectedTeams"
+                         (onChange)="onTeamFilterValueChange($event)"
+                         id="table-filter-listBox"
+                         [metaKeySelection]="false"
+                         multiple="multiple"
+                         checkbox="checkbox"
+                         filter="filter">
+              </p-listbox>
+            </p-overlayPanel>
+          </th>
+          <th>
+            <mfDefaultSorter by="Salary">Salary</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="TeamPoints">Team pts</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="OppPoints">Opp pts</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="TotalPoints">Total pts</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="Line">Line</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="Opponent">Opponent</mfDefaultSorter>
+          </th>
+          <th>
+            Min
+          </th>
+          <th>
+            Pts
+          </th>
+          <th>
+            Reb
+          </th>
+          <th>
+            Ast
+          </th>
+          <th>
+            Stl
+          </th>
+          <th>
+            Blk
+          </th>
+          <th>
+            To
+          </th>
+          <th>Exposure</th>
+          <th>
+            <mfDefaultSorter by="Points">Projection</mfDefaultSorter>
+          </th>
+          <th>
+            <mfDefaultSorter by="Value">Value</mfDefaultSorter>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let player of records.data">
+          <td class="text-center" (click)="togglePlayerLock(player)">
+            <img *ngIf="player.isLocked" src="../../../../assets/img/Key.png" md-tooltip="Locked"/>
+            <img *ngIf="!player.isLocked"
+                 [ngStyle]="{'opacity': (lockedPlayers?.length >= 6)? '0.5' : '1'}"
+                 src="../../../../assets/img/unlock.png" md-tooltip="Unlocked"/>
+          </td>
+          <td><img src="../../../../assets/img/x-red.png"
+                   (click)="btnExcludePlayerClicked(player)"
+                   style="cursor: pointer"/></td>
+          <td>{{player.Name}}</td>
+          <td>{{player.Position}}</td>
+          <td>{{player.Team}}</td>
+          <td>{{player.Salary}}</td>
+          <td>{{player.TeamPoints}}</td>
+          <td>{{player.OppPoints}}</td>
+          <td>{{player.TotalPoints}}</td>
+          <td>{{player.Line}}</td>
+          <td>{{player.Opponent}}</td>
+          <td><input class="form-control input-sm" [(ngModel)]="player.Minutes"
+                     (blur)="onMinutesTxtboxBlurEvent($event,player)"
+                     type="number" max="100" min="0"
+                     placeholder="100%">
+          </td>
+          <td>
+            {{player.NBAPoints}}
+          </td>
+          <td>
+            0
+          </td>
+          <td>
+            {{player.Assists}}
+          </td>
+          <td>
+            {{player.Steals}}
+          </td>
+          <td>
+            {{player.BlockedShots}}
+          </td>
+          <td>
+            {{player.Turnovers}}
+          </td>
+          <td><input class="form-control input-sm" [(ngModel)]="player.exposureValue"
+                     (blur)="onExposureTxtboxBlurEvent($event,player)"
+                     type="number" max="100" min="0"
+                     placeholder="100%">
+          </td>
+          <td>{{player.Points ? player.Points : '-'}}</td>
+          <td>{{player.Value ? player.Value : '-'}}</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+          <td colspan="21">
+            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </section>
+    <!--/ Table -->
+    <rp-nba-filter [advFilterSettings]="advFilterSettings"
+                   [advFilterValue]="advFilterValue"
+                   [selectedOperator]="selectedOperator"
+                   #advFilterPopup
+                   (viewRenderedEvent)="onAdvFilterSettingsViewReady()"
+                   (saveAdvFilterValueEvent)="onSaveAdvFilterValueEvent($event)"
+                   (removeAdvFilterValueEvent)="onRemoveAdvFilterValueEvent()"
+                   (filterCriteriaChanged)="onAdvFilterCriteriaChangedEvent($event)"></rp-nba-filter>
+  </div>
+</div>

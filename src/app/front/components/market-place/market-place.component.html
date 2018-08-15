@@ -1,0 +1,87 @@
+<section class="sectionHedin">
+  <div class="container ">
+    <div class="common-loader" *ngIf="isLoading">
+      <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="lineupHedin">
+          <h1>Daily Marketplace</h1>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="newsSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="dTabs">
+          <!-- Nav tabs -->
+          <!--<ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#NFL" aria-controls="NFL" role="tab" data-toggle="tab">NFL</a></li>
+            <li role="presentation"><a href="#MLB" aria-controls="MLB" role="tab" data-toggle="tab">MLB</a></li>
+            <li role="presentation"><a href="#CFB" aria-controls="CFB" role="tab" data-toggle="tab">CFB</a></li>
+            <li role="presentation"><a href="#PI" aria-controls="PI" role="tab" data-toggle="tab">PI</a></li>
+            <li role="presentation"><a href="#NASCAR" aria-controls="NASCAR" role="tab" data-toggle="tab">NASCAR</a></li>
+            <li role="presentation"><a href="#MLS" aria-controls="MLS" role="tab" data-toggle="tab">MLS</a></li>
+          </ul>-->
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="NFL">
+
+              <div class="dTabs dTabsInner">
+                <!-- Nav tabs -->
+                <!--<ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#All" aria-controls="All" role="tab" data-toggle="tab">All</a></li>
+                  <li role="presentation"><a href="#Urgent" aria-controls="Urgent" role="tab" data-toggle="tab">Urgent</a></li>
+                  <li role="presentation"><a href="#Important" aria-controls="Important" role="tab" data-toggle="tab">Important</a></li>
+                  <li role="presentation"><a href="#Noteworthy" aria-controls="Noteworthy" role="tab" data-toggle="tab">Notewort</a></li>
+                </ul>-->
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="All">
+                    <div class="mPlaceWrap">
+                      <div class="mPlaceItm" *ngFor="let provider of providers | paginate: {
+                                                      itemsPerPage: 10,
+                                                      currentPage: currentPage}">
+                        <div class="mPlaceTp" style="width: 100%">
+                          <div class="mPlaceImgWrap" style="display: flex;justify-content: center">
+                            <img *ngIf="provider.profile_image" [attr.src]="provider.profile_image" alt=""
+                                 class="img-responsive">
+                            <img *ngIf="!provider.profile_image" src="../../../../assets/img/user-img.png"
+                                 style="width: 150px;height: 150px;opacity: 0.3" alt="" class="img-responsive">
+                          </div>
+                          <div class="mPlaceInfoWrap">
+                            <a href="javascript:void(0)" class="mPlaceHedin">{{provider.first_name+'
+                              '+provider.last_name}}</a>
+                            <p class="mPlacePara">
+                              {{provider.analyst_info?.biodata}}
+                            </p>
+                          </div>
+                        </div>
+                         <div class="mPlaceBtnWrap">
+                           <p class="mPlacePrice">$0.99/day</p>
+                           <a (click)="btnCheckoutProviderClicked(provider)">Checkout</a>
+                         </div>
+                      </div>
+                    </div>
+
+                    <div class="pagination">
+                      <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

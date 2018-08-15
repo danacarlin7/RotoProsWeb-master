@@ -1,0 +1,67 @@
+<div class="topStats" *ngIf="contestData">
+  <div class="gtopStatsBx topStatsBx">
+    <div class="bxTop">
+      <div class="bxImgWrapper">
+        <img src="../../../../assets/images/dash_cat1.png" alt="" class="img-responsive"/>
+      </div>
+      <div class="bxTxtWrapper">
+        <h4>Entries</h4>
+        <!--<p>Lorem Ipsum is dummy text</p>-->
+      </div>
+    </div>
+    <div class="bxBottom">
+      <p class="statsNum">{{(contestData?.entries ? contestData.entries : '0') | number}}</p>
+    </div>
+  </div>
+
+  <div class="btopStatsBx topStatsBx">
+    <div class="bxTop">
+      <div class="bxImgWrapper">
+        <img src="../../../../assets/images/dash_cat2.png" alt="" class="img-responsive"/>
+      </div>
+      <div class="bxTxtWrapper">
+        <h4>Fees Paid</h4>
+        <!--<p>Lorem Ipsum is dummy text</p>-->
+      </div>
+    </div>
+    <div class="bxBottom">
+      <p class="statsNum">{{(contestData?.fees ? (contestData.fees | number) : '-' )}}</p>
+    </div>
+  </div>
+
+  <div class="rtopStatsBx topStatsBx">
+    <div class="bxTop">
+      <div class="bxImgWrapper">
+        <img src="../../../../assets/images/dash_cat3.png" alt="" class="img-responsive"/>
+      </div>
+      <div class="bxTxtWrapper">
+        <h4>{{(contestData.net >= 0 || !contestData.net)?'Profit':'Loss'}}</h4>
+        <!--<p>Lorem Ipsum is dummy text</p>-->
+      </div>
+    </div>
+    <div class="bxBottom">
+      <p class="statsNum" *ngIf="contestData.net >= 0 || !contestData.net">{{(contestData?.net? '$' + ( contestData.net
+        | number): '-' )}}</p>
+      <p class="statsNum" *ngIf="contestData.net < 0">{{(contestData?.net? '$' + ( (contestData.net * -1) | number): '-'
+        )}}</p>
+    </div>
+  </div>
+
+  <div class="ytopStatsBx topStatsBx">
+    <div class="bxTop">
+      <div class="bxImgWrapper">
+        <img src="../../../../assets/images/dash_cat4.png" alt="" class="img-responsive"/>
+      </div>
+      <div class="bxTxtWrapper">
+        <h4>ROI</h4>
+        <!--<p>Lorem Ipsum is dummy text</p>-->
+      </div>
+    </div>
+    <div class="bxBottom">
+      <p class="statsNum" *ngIf="contestData.roi >= 0 || !contestData.roi">{{(contestData?.roi? '%' + ( contestData.roi
+        | number): '-' )}}</p>
+      <p class="statsNum" *ngIf="contestData.roi < 0">{{(contestData?.roi? '- %' + ( (contestData.roi * -1) | number):
+        '-' )}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<div>
+  <div class="common-loader" *ngIf="isLoading">
+    <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+  </div>
+
+
+
+
+  <div class="row">
+
+    <div class="col-sm-10" *ngIf="isSuccess === false">
+      <!-- <div class="alert alert-success fade in" *ngIf="isSuccess">
+        {{ responseMessage }}
+      </div> -->
+      <div class="alert alert-warning fade in" >
+        {{ responseMessage }}
+      </div>
+    </div>
+
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary my-btn" (click)="onCardAddBtnClicked()" *ngIf="!isCard">Add</button>
+      <button type="button" class="btn btn-primary my-btn" (click)="onCardRmvBtnClicked()" *ngIf="isCard">Remove</button>
+    </div>
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+
+    <div class="col-xs-12" >
+      <div id="card-element">
+      <!-- A Stripe Element will be inserted here. -->
+      </div>
+    </div>
+    <!-- <button (click)="addCard()">Submit</button> -->
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+
+    <button type="button" *ngIf="isCard" class="btn btn-primary my-btn col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-5" (click)="addCard()">Add Card</button>
+
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="cards-container row">
+
+    <div class="card payment-card col-xs-6"  [ngStyle]="{'background': cardColor[i] ? cardColor[i] : ''}" *ngFor="let card of cards; let i = index" >
+      <!-- <div>
+        <span [md-tooltip]="card.card_id == defaultCard ? 'Default card' : 'Set as default card for future payments'" [class.active]="true"><md-icon>{{card.card_id == defaultCard ? 'star' : 'star_border'}}</md-icon></span>
+        <span  ><md-icon>close</md-icon></span>
+      </div> -->
+      <div class="card-actions">
+        <span (click)="onCardDefaultBtnClicked(card)"
+              [md-tooltip]="card.card_id == defaultCard ? 'Default card' : 'Set as default card for future payments'"
+              [class.active]="true"><md-icon>{{card.card_id == defaultCard ? 'star' : 'star_border'}}</md-icon></span>
+        <span (click)="onCardRemoveBtnClicked(card)"
+              md-tooltip="Remove card" [class.active]="true"><md-icon>clear</md-icon></span>
+      </div>
+
+      <div class="bank-name" title="bank">{{card.brand}}</div>
+      <div class="chip">
+        <div class="side left"></div>
+        <div class="side right"></div>
+        <div class="vertical top"></div>
+        <div class="vertical bottom"></div>
+      </div>
+      <div class="data">
+        <div class="pan" title="XXXX XXXX XXXX XXXX">XXXX XXXX XXXX {{card.last4}}</div>
+        <div class="exp-date-wrapper">
+          <div class="left-label">EXPIRES END</div>
+          <div class="exp-date">
+            <div class="date">{{card.exp_month}}/{{card.exp_year}}</div>
+            <div class="upper-labels">MONTH / YEAR</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lines-down"></div>
+      <div class="lines-up"></div>
+
+
+    </div>
+  </div>
+
+  <!-- <div class="cards-container">
+    <div class="payment-card" *ngFor="let card of cards">
+      <div class="card-actions">
+        <span (click)="onCardDefaultBtnClicked(card)"
+              [md-tooltip]="card.card_id == defaultCard ? 'Default card' : 'Set as default card for future payments'"
+              [class.active]="card.card_id == defaultCard"><md-icon>{{card.card_id == defaultCard ? 'star' : 'star_border'}}</md-icon></span>
+        <span (click)="onCardRemoveBtnClicked(card)"
+              md-tooltip="Remove card"><md-icon>clear</md-icon></span>
+      </div>
+      <div class="brand" style="align-self: flex-end">{{card.brand}}</div>
+      <div class="number">XXXX XXXX XXXX {{card.last4}}</div>
+      <div class="country">{{card.country}}</div>
+    </div>
+  </div> -->
+</div>

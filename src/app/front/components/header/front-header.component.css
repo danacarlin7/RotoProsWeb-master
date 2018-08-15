@@ -1,0 +1,170 @@
+/* The container <div> - needed to position the dropdown content */
+.lineup-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 5px 12px !important;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown-content a:first-child:hover {
+  background-color: #f1f1f1;
+  border-radius: 5px 5px 0 0;
+}
+
+.dropdown-content a:last-child:hover {
+  background-color: #f1f1f1;
+  border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content:after {
+  content: "";
+  position: absolute;
+  right: 22px;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #f9f9f9 transparent;
+  z-index: 9998;
+}
+
+/* Show the dropdown menu on hover */
+.lineup-dropdown:hover .dropdown-content {
+  display: block;
+  -webkit-animation: mymove 250ms; /* Safari 4.0 - 8.0 */
+  animation: mymove 250ms;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@media (max-width: 1024px) {
+  .dropdown-content:after {
+    display: none;
+  }
+
+  .dropdown-content {
+    left: 20px;
+    right: 20px;
+  }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+/*.lineup-menu-full-view {
+  display: block;
+}
+
+.lineup-menu-mobile-view {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .lineup-menu-full-view {
+    display: none;
+  }
+
+  .lineup-menu-mobile-view {
+    display: block;
+  }
+}*/
+
+.home-profile {
+
+}
+
+#rss {
+  text-align: center;
+}
+
+#rss a {
+  display: inline-block;
+  text-align: center;
+  padding: 0px;
+}
+
+#rss i {
+  color: orange;
+  font-size: 2em;
+  vertical-align: middle;
+  margin-left: 3px;
+}
+
+.header-margin {
+  height: 85px;
+  width: 100%;
+  z-index: 1;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media (max-width: 1150px){
+  .header-margin {
+    height: 76px;
+  }
+}
+@media (max-width: 767px){
+  .header-margin {
+    height: 69px;
+  }
+}
+
+@media (max-width: 479px){
+  .header-margin {
+    height: 65px;
+  }
+}
+
+.bottomHeader{
+
+  border-bottom-color: #f8c534;
+  border-bottom-width: 10px;
+  border-bottom-style: double;
+}
+

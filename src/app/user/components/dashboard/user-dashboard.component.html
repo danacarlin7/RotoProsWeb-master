@@ -1,0 +1,138 @@
+<!-- DashBoard Home Starts -->
+<section class="dashboardHome">
+  <div class="container">
+    <div class="common-loader" *ngIf="isLoading">
+      <md-progress-spinner mode="indeterminate" color="accent" style="width: 50px;height: 50px"></md-progress-spinner>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dashboardContainer">
+        <rp-dashboard-filter (filterChanged)="updateDashboard($event)"></rp-dashboard-filter>
+        <div class="dashboardContainerWrapper fixdPad">
+          <div>
+            <rp-dashboard-statics [contestData]="staticsData"></rp-dashboard-statics>
+          </div>
+          <div class="profitSection">
+            <div class="dHedin">
+              <h3>Cumulative Profit By Day of The Week</h3>
+            </div>
+            <div class="sortByMonth">
+              <div class="form-group">
+              </div>
+            </div>
+            <div class="">
+              <div #lineChart>
+              </div>
+            </div>
+          </div>
+
+          <div class="profitCategory">
+            <div class="profitCategoryLft">
+              <rp-dashboard-top-wins [winRecords]="topWinData"></rp-dashboard-top-wins>
+            </div>
+            <div class="profitCategoryRght">
+              <div class="table-responsive" style="overflow: visible">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <th width="86%">By Site</th>
+                    <th width="14%">Contests</th>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: center">
+                      <div #bySiteChart></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="table-responsive" style="overflow: visible">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <th width="86%">By Sport</th>
+                    <th width="14%">Contests</th>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: center">
+                      <div #bySportChart></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <!--<div class="table-responsive" style="overflow: visible">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <th width="86%">By Category</th>
+                    <th width="14%">Contests</th>
+                  </tr>
+                  <tr>
+                    <td><div #byCategoryChart></div></td>
+                  </tr>
+                </table>
+              </div>-->
+
+              <div class="table-responsive" style="overflow: visible">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+
+                  <tr>
+                    <th width="86%">By Day of Week</th>
+                    <th width="14%">Contests</th>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: center">
+                      <div #byDayOfWeekChart></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="profitByCat">
+            <div class="profitByCatLft">
+              <div class="dHedin">
+                <h3>Profit By Category</h3>
+              </div>
+              <div class="sortByMonth">
+                <div class="form-group">
+                  <label class="">Sort By</label>
+                  <div class="dropdownSelect">
+                    <a href="javascript:void(0)" class="dropdownSelectClick form-control">Month</a>
+                    <ul class="dropdownSelectMenu">
+                      <li><a href="javascript:void(0)">1</a></li>
+                      <li><a href="javascript:void(0)">2</a></li>
+                      <li><a href="javascript:void(0)">3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="">
+                <img src="../../../../assets/images/profitByCat_chart.png" alt="" class="img-responsive"/>
+              </div>
+            </div>
+            <div class="profitByCatRght">
+              <ul>
+                <li class="redGre">
+                  <div>
+                    <h4>$19,000</h4>
+                    <p>GPP</p>
+                  </div>
+                </li>
+                <li class="greenGre">
+                  <div>
+                    <h4>$25,000</h4>
+                    <p>Qualifier</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>-->
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- DashBoard Home Ends -->

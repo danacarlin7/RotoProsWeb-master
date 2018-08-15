@@ -1,0 +1,36 @@
+.free-Month{
+  color: #000000;
+  margin:15px;
+  font-size: medium;
+}
+.free-Month #fanduel{
+
+  color: #1a37f4;
+  font-weight: bold;
+  font-size: large;
+}
+.free-Month #fanduel:hover{
+  text-decoration: underline;
+}
+
+.freeMonthOffer{
+color:#000000;;
+  margin: 15px;
+  font-size: medium;
+}
+
+.freeMonthOffer #membership-link {
+  color: #1a37f4;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
+.freeMonthOffer #membership-link:hover{
+  text-decoration: underline;
+
+}
+.freeOfferBold{
+  font-weight: bold;
+  color: #000000;
+
+}

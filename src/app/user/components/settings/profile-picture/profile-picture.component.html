@@ -1,0 +1,15 @@
+<div class="settings-content">
+  <form class="form-horizontal" #f="ngForm">
+    <div>
+      <h1 class="dashboardMainHedin">Upload Files</h1>
+      <p class="dashboardMainPara">Alternatively, you can drag and drop an entry history file below.</p>
+      <div class="dUpldBxWrapper" style="border-bottom: transparent !important;">
+        <div class="dUpldBxLft">
+          <dropzone [config]="configUpload" class="file-drop-zone" [message]="'Drop file here'"
+                    (error)="onUploadError($event)"
+                    (success)="onUploadSuccess($event)" (sending)="onSending($event)"></dropzone>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
